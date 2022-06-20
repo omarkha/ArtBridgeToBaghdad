@@ -18,7 +18,7 @@ require("dotenv").config(); // Add this line
 let dbUrl =
   process.env.NODE_ENV === "production"
     ? process.env.MONGODB_URI
-    : "mongodb://127.0.0.1:27017/gallerydb";
+    : process.env.ATLAS_URI;
 
 mongoose
   .connect(dbUrl)
@@ -33,6 +33,6 @@ const db = mongoose.connection;
 
 module.exports = db;
 
-app.listen(process.env.port || 5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running on Port: ${port}`);
 });
