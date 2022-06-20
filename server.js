@@ -13,7 +13,6 @@ app.get("/*", (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`);
 });
 
-const mongoose = require("mongoose");
 require("dotenv").config(); // Add this line
 
 let dbUrl =
