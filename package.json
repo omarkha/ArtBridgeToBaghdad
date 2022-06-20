@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "online gallery website",
   "main": "index.js",
+  "proxy": "http://localhost:3001",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "cd client && rm -rf build && npm install && npm run build"
   },
   "repository": {
     "type": "git",
