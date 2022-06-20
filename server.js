@@ -24,6 +24,6 @@ client.connect((err) => {
   client.close();
 });
 
-app.listen(port, () => {
+app.listen(process.env.port || 5000, () => {
   console.log(`Server is running on Port: ${port}`);
 });
