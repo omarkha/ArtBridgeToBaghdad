@@ -15,21 +15,19 @@ app.get("/*", (req, res) => {
 
 require("dotenv").config(); // Add this line
 
-let dbUrl =
-  process.env.NODE_ENV === "production"
-    ? process.env.MONGODB_URI
-    : process.env.ATLAS_URI;
-
-mongoose
-  .connect(dbUrl)
-  .then(() => {
-    console.log("Successfully connected to MongoDB!");
-  })
-  .catch((e) => {
-    console.error("Connection error", e.message);
-  });
-mongoose.set("debug", true);
-const db = mongoose.connection;
+const { MongoClient, ServerApiVersion } = require("mongodb");
+const uri =
+  "mongodb+srv://Copyres:Soridl846@cluster0.ohmco.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverApi: ServerApiVersion.v1,
+});
+client.connect((err) => {
+  const collection = client.db("gallerydb").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
 
 // Routes
 //
