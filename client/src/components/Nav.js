@@ -15,7 +15,7 @@ import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 
 const Nav = () => {
   return (
-    <Navbar sticky="top" bg="light" variant="light" expand="lg">
+    <Navbar sticky="top" bg="dark" variant="dark" expand="sm" size="sm">
       <div className="container">
         <Link to="/" className="navbar-brand">
           <img className="icon" src={Images.logo} />

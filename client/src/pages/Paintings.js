@@ -24,7 +24,7 @@ const Paintings = () => {
   });
   */
   return (
-    <div className="page">
+    <div className="paintings-page">
       <div className="results-heading">
         <h3> Happy Viewing! </h3>
       </div>
@@ -74,8 +74,35 @@ const Paintings = () => {
         />
       </div>
       <div className="results-bottom">
-        <button>{"<="}</button>
-        <button>{"=>"}</button>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">
+                Previous
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                1
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                2
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                3
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                Next
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   );

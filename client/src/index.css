@@ -22,12 +22,12 @@ body {
 
 .jumbotron {
   background-color: rgba(101, 25, 63, 0.38);
-  background: url("./images/baghdad-3.jpg") no-repeat;
+  background: url("./images/baghdad-2.jpg") no-repeat;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   background-size: 100% auto;
-  height: 610px;
+  height: 500px;
   max-height: 610px;
   padding-top: 144px;
   color: #fff;
