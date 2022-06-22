@@ -1,40 +1,7 @@
 import React, { useState } from "react";
 import Painting from "../../components/Painting";
-import { Axios } from "axios";
-import { Image } from "cloudinary-react";
-import { TiThLarge } from "react-icons/ti";
 
 const Inventory = () => {
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-  const [price, setPrice] = useState(0);
-  const [title, setTitle] = useState("");
-  const [imageSelected, setImageSelected] = useState("");
-
-  const uploadImage = (files) => {
-    const formData = new FormData();
-    formData.append("file", files[0]);
-    formData.append("upload", "paintings");
-
-    Axios.post(
-      "https://api.cloudinary.com/v1_1/copyres/image/upload",
-      formData
-    ).then((res) => console.log(res));
-  };
-
-  const handleAdd = () => {
-    uploadImage();
-  };
-
-  const [image, setImage] = useState(null);
-
-  const onImageChange = (event) => {
-    if (event.target.files && event.target.files[0]) {
-      setImage(URL.createObjectURL(event.target.files[0]));
-    }
-    console.log(image);
-  };
-
   return (
     <div className="page">
       <div className="container-inventory">
