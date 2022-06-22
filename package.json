@@ -33,6 +33,5 @@
     "mongoose": "^6.3.6",
     "serve": "^13.0.2"
   },
-  "devDependencies": {},
   "keywords": []
 }
