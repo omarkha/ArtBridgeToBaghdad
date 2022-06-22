@@ -18,6 +18,8 @@ const Images = {
   food: require("./food.jpg"),
   net_cafe: require("./net-cafe.jpg"),
   surgeon: require("./surgeon.jpg"),
+  logo: require("./logo.png"),
+  video: require("./file.mp4"),
 };
 
 export default Images;

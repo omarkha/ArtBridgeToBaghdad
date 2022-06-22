@@ -4,13 +4,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgb(0, 0, 40);
+
   font-family: sans-serif;
-  background-color: rgb(25, 25, 25);
   background-size: cover;
   margin: 0;
   padding: 0px;
   position: relative;
+}
+
+.video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.jumbotron {
+  background-color: rgba(101, 25, 63, 0.38);
+  background: url("./images/baghdad-8.jpg") no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% auto;
+  height: 610px;
+  max-height: 610px;
+  padding-top: 144px;
+  color: antiquewhite;
+  text-shadow: 1px 1px 3px #222;
+  background-blend-mode: hard-light;
 }
 
 h4 {
@@ -22,60 +44,18 @@ code {
     monospace;
 }
 
-header {
-  margin: 0 auto;
-  padding: 13px;
-  height: 377px;
-  background-color: rgba(0, 0, 0, 0.38);
-  background-position-y: 0;
-  background-image: url("./images/bg-7.jpg");
-  background-blend-mode: luminosity;
-  background-size: cover;
-}
-
-.title h3 {
-  color: #000;
-  font-family: "BIZ UDPMincho", serif;
-  word-spacing: 13px;
-}
-
-.header {
+#galleryfounder {
+  font-family: "Anek Latin", sans-serif;
+  color: rgb(255, 255, 255);
   text-align: left;
-  position: relative;
-  display: flex;
+  margin-right: 144px;
 }
 
-#subhead {
-  font-family: sans-serif;
-  margin-left: 233px;
-  word-spacing: 13px;
-  color: rgb(255, 160, 185);
-  font-size: 34px;
-  text-align: left;
-  text-shadow: 0 0 13px rgb(0, 0, 40);
+.carousel-item {
+  max-height: 610px;
 }
-
-.header h1 {
-  margin: 0;
-  padding: 0px 21px 0 89px;
-  font-size: 89px;
-  color: rgb(200, 101, 160);
-  float: left;
-  text-shadow: 3px 2px 2px rgb(25, 25, 25);
-  letter-spacing: 13px;
-  font-family: "Saira Extra Condensed", sans-serif;
-  line-height: 89px;
-}
-
-nav {
-  position: sticky;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-color: rgb(200, 101, 160, 0.62);
-  z-index: 100;
-  display: grid;
-  grid-template-columns: 7fr 1fr;
+.carousel-item img {
+  border-radius: 0;
 }
 
 .page {
@@ -86,28 +66,8 @@ nav {
   position: relative;
 }
 
-ul {
-  padding: 5px;
-}
-
-.title {
-  background-size: cover;
-  padding-top: 89px;
-  border-radius: 21px;
-  background-blend-mode: lighten;
-}
-
 .link {
   padding: 0 8px;
-}
-
-li {
-  list-style: none;
-  display: inline;
-  padding: 0 13px;
-  font-size: 18px;
-  color: rgb(255, 255, 255);
-  letter-spacing: 1px;
 }
 
 .cart-page a:hover {
@@ -133,10 +93,6 @@ article {
 }
 
 .home-page {
-  background-color: rgb(25, 25, 25);
-  background-blend-mode: soft-light;
-  background-image: url("./images/painting.jpg");
-  background-size: cover;
   margin: 0;
 }
 
@@ -172,15 +128,6 @@ article {
 
 .home-page .main-article p {
   padding: 0 55px;
-  text-shadow: 1px 1px 21px rgb(255, 160, 215);
-}
-article p {
-  font-size: 21px;
-  color: rgb(200, 185, 200);
-  word-spacing: 13px;
-  font-weight: bold;
-  line-height: 34px;
-  letter-spacing: 1px;
 }
 
 .headline h1 {
@@ -202,32 +149,6 @@ a {
   border-top-right-radius: 55px;
   border-top-left-radius: 55px;
   background-color: rgba(200, 200, 200, 0.5);
-}
-
-article h3 {
-  font-family: "Saira Extra Condensed", sans-serif;
-  padding: 0 144px;
-  font-size: 34px;
-  word-spacing: 13px;
-  color: rgb(255, 200, 215);
-}
-
-.culture-images img {
-  border-radius: 0;
-  width: 15%;
-  margin: 13px;
-  transition: width 1.618s ease-in-out;
-}
-.culture-images img:hover {
-  border-radius: 0;
-  width: 38%;
-  margin: 13px;
-  transition: width 1.618s ease-in-out;
-}
-
-.culture-images {
-  padding: 13px;
-  border: 1px solid rgb(255, 185, 30);
 }
 
 .name {
@@ -254,26 +175,47 @@ article h3 {
 }
 
 .selected-painting {
-  width: 38%;
-  margin: 0 auto;
+  width: 86%;
   padding: 13px;
   border-radius: 34px;
   margin-top: 21px;
-  grid-row: 2/3;
+  box-shadow: 5px 5px 13px rgba(25, 25, 25, 0.92);
+  display: flex;
+  flex-direction: column;
 }
 
 .selected-painting:hover {
-  width: 38%;
-  background-color: aliceblue;
-  margin: 0 auto;
+  width: 86%;
   padding: 13px;
   border-radius: 34px;
   margin-top: 21px;
-  grid-row: 2/3;
 }
 
 .selected-painting img {
   width: 86%;
+  margin: 0 auto;
+}
+
+.selected-painting button {
+  width: 55px;
+  font-size: 13px;
+  background: none;
+  color: rgb(101, 101, 101);
+  justify-self: flex-start;
+  margin: 0;
+}
+
+.selected-painting button .icon {
+  font-size: 30px;
+}
+
+.selected-painting button:hover {
+  color: rgb(101, 25, 0);
+}
+
+.selected-painting button:active {
+  color: red;
+  background: none;
 }
 
 .cart-view {
@@ -284,20 +226,10 @@ article h3 {
   margin-top: 34px;
   background-color: rgb(220, 200, 220);
   padding: 55px 55px;
-  display: column;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   overflow: scroll;
   gap: 13px;
-}
-
-.cart-page button {
-  padding: 5px 13px;
-  font-size: 21px;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 8px;
-}
-.cart-page button:active {
-  background-color: rgb(101, 160, 63);
 }
 
 .cart-purchase {
@@ -340,6 +272,7 @@ footer h3 {
 }
 .about-page img {
   width: 38%;
+  margin-bottom: 34px;
 }
 .about-teaching {
   background-size: cover;
@@ -352,12 +285,6 @@ footer h3 {
   padding-top: 89px;
   background-size: cover;
   background-blend-mode: overlay;
-}
-
-.about-page p {
-  padding: 0 55px;
-  color: rgb(255, 215, 200);
-  text-shadow: 1px 1px 21px rgb(255, 160, 215);
 }
 
 .about-cafe {
@@ -400,20 +327,21 @@ footer h3 {
 .results {
   margin: 0 auto;
   background-color: rgba(220, 200, 220, 0.82);
-  padding: 34px 21px;
+  padding: 34px 34px 34px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 34px;
-  height: 987px;
-  overflow: scroll;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   border: 1px solid rgb(255, 185, 30);
 }
 
 .painting {
-  border: 1px solid rgb(255, 185, 30);
-  background-color: rgba(25, 25, 25, 0.92);
-  width: 30%;
+  box-shadow: 5px 5px 13px rgba(25, 25, 25, 0.92);
+  min-width: 30%;
   border-radius: 13px;
   color: #fff;
   display: flex;
@@ -421,8 +349,12 @@ footer h3 {
   padding-top: 34px;
 }
 
+.painting #title {
+  margin: 21px 0 0 0;
+}
+
 .painting .info {
-  padding: 55px 13px;
+  padding: 21px 13px;
 }
 
 .painting img {
@@ -439,14 +371,14 @@ footer h3 {
 }
 .painting h5 {
   margin: 13px auto;
-  color: rgb(255, 255, 255);
+  color: rgb(40, 40, 40);
   font-size: 21px;
   font-family: "BIZ UDPMincho", serif;
   letter-spacing: 3px;
 }
 
 .painting h7 {
-  color: rgb(255, 185, 30);
+  color: rgb(160, 63, 101);
   font-size: 21px;
   font-family: "BIZ UDPMincho", serif;
   letter-spacing: 3px;
@@ -458,19 +390,6 @@ button {
   background-color: rgba(25, 101, 160);
   border: 0;
   color: #fff;
-}
-
-.nav-2 {
-  justify-self: end;
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-2 li {
-  border-radius: 8px;
-  margin: 8px 3px;
-  padding: 13px 8px 8px 8px;
 }
 
 .results-heading {
@@ -495,7 +414,6 @@ button {
 
 .newsletter {
   padding: 23px 13px;
-  background-color: rgba(25, 101, 160, 0.38);
   border-radius: 13px;
   grid-column: 1/5;
   color: rgb(200, 185, 200);
@@ -515,8 +433,8 @@ img {
   border-radius: 21px;
   box-shadow: 0 0 13px #000;
 }
-form {
-  width: 38%;
+.newsletter .fields {
+  width: 377px;
   margin: 0 auto;
   padding: 34px 21px;
   border: 1px solid rgb(255, 185, 30);
@@ -524,9 +442,25 @@ form {
   border-radius: 8px;
 }
 
-form label {
+.fields label {
   display: block;
   margin: 8px 0;
+}
+
+.purchase-page section h1 {
+  color: rgb(101, 160, 63);
+}
+
+.purchase-page section {
+  margin-top: 0;
+  background-color: #111;
+  height: 500px;
+  padding: 55px 34px 34px 34px;
+}
+
+.purchase-page {
+  margin: 0;
+  padding: 0;
 }
 
 label {
@@ -553,7 +487,7 @@ button[type="submit"] {
   border-radius: 8px;
 }
 
-form div {
+.fields div {
   margin: 8px 0;
 }
 
@@ -561,22 +495,31 @@ input[type="text"],
 form input[type="password"] {
   font-size: 21px;
   background-color: antiquewhite;
-  width: 233px;
+  width: 61.8%;
   height: 30px;
   border-radius: 5px;
   letter-spacing: 2px;
   word-spacing: 3px;
   text-align: center;
   border: 1px solid #000;
+  margin: 13px 0;
 }
 
 aside {
+  margin: 0;
+  padding: 21px 0;
   width: 23%;
-  margin-top: 233px;
   background-color: rgba(0, 0, 0, 0.82);
+  height: 610px;
+}
+
+.icon {
+  width: 34px;
+  margin-right: 21px;
 }
 
 aside li {
+  margin: 34px 0;
   display: block;
 }
 
@@ -606,12 +549,25 @@ aside li {
 .input-area label {
   display: block;
   margin: 13px;
+  color: rgb(200, 101, 160);
 }
 
 .results-area {
   width: 61.8%;
-  background-color: rgba(40, 40, 40, 0.86);
+  background-color: rgba(220, 200, 220, 0.82);
 }
+
+.results-area .painting {
+  width: 377px;
+  margin: 34px auto;
+}
+
+ul li {
+  display: inline;
+  list-style: none;
+  margin: 13px 21px;
+}
+
 .invenrtory-area {
   height: 300px;
 }
@@ -670,4 +626,77 @@ input[type="file"] {
 
 .home-page p {
   margin: 55px auto;
+}
+
+@media screen and (max-width: 960px) {
+  .jumbotron {
+    padding-top: 21px;
+  }
+  .home-page .main-article {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact {
+    padding: 8px;
+  }
+  .contact h3 {
+    font-size: 13px;
+  }
+  .contact p {
+    font-size: 13px;
+  }
+  .newsletter .fields {
+    width: 100%;
+  }
+  .home-page .main-article {
+    margin-top: 0;
+  }
+  .home-page {
+    margin-top: 0;
+  }
+  .jumbotron {
+    margin-bottom: 0;
+  }
+  .about-page img {
+    width: 62%;
+  }
+  .painting {
+    width: 86%;
+  }
+  .painting button {
+    margin: 0 3px;
+  }
+  .cart-view {
+    width: 100%;
+    border-top-right-radius: 34px;
+    border-top-left-radius: 34px;
+    margin: 0 auto;
+    margin-top: 34px;
+    background-color: rgb(220, 200, 220);
+    padding: 55px 55px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+  }
+
+  .cart-purchase {
+    width: 100%;
+    text-align: right;
+    background-color: azure;
+    margin: 0 auto;
+    border-bottom-right-radius: 34px;
+    border-bottom-left-radius: 34px;
+    padding: 34px 55px;
+  }
+  .cart-info {
+    margin: 0;
+    margin-bottom: 34px;
+  }
+  .cart-page a {
+    margin: 21px;
+    border-radius: 8px;
+    padding: 13px 13px;
+    color: rgb(40, 101, 200);
+    border: 2px solid rgb(40, 101, 200);
+  }
 }

@@ -31,7 +31,13 @@ mongoose
 mongoose.set("debug", true);
 const db = mongoose.connection;
 
-module.exports = db;
+// Routes
+
+const paintingsRouter = require("./routes/paintings");
+app.use("/api/paintings", paintingsRouter);
+
+const antiquesRouter = require("./routes/antiques");
+app.use("/api/antiques", paintingsRouter);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running on Port: ${port}`);

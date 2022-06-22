@@ -4,6 +4,9 @@ const Schema = mongoose.Schema;
 
 const paintingSchema = new Schema(
   {
+    title: {
+      type: String,
+    },
     height: {
       type: Number,
       required: true,
@@ -16,7 +19,7 @@ const paintingSchema = new Schema(
       type: String,
       required: true,
     },
-    sold: {
+    is_sold: {
       type: Boolean,
       default: false,
     },

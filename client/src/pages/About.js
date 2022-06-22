@@ -17,15 +17,16 @@ const About = () => {
           </h3>
 
           <p>
-            I was born in 1962, in Baghdad, Iraq. Growing up, I loved art in
-            general. I painted well over 2000 pieces through out my career as an
-            artist and I learned how to paint with the instructions of infamous
-            Iraqi artist Hafidh Al Douroubi. My main themes are those that
-            capture life in Iraq throughout the ages. During the 80s, I drew a
-            portrait for former President of Iraq, Saddam Hussein. Saddam liked
-            my portrait and met with me in the presidential palace to thank me.
-            Then he decided to hang up the portrait in one of Baghdad's historic
-            squares.{" "}
+            From a young age, I realized that I could draw rather well and so I
+            pursued drawing and aimed to develop as an artist. Fortunately for
+            me, I found one of the best mentors one could - The infamous Iraqi
+            artist Hafidh Al Douroubi. He supervised as I drew and taught me so
+            much. The main themes I like to employ are those that capture life
+            in Iraq throughout the ages, modesty and nostolgia. During the 80s,
+            I drew a portrait for former President of Iraq, Saddam Hussein.
+            Saddam liked my portrait and met with me in the presidential palace
+            to thank me. Then he decided to hang up the portrait in one of
+            Baghdad's historic squares.
           </p>
         </article>
         <article className="about-teaching">
@@ -33,8 +34,10 @@ const About = () => {
           <h3> Former High School Teacher </h3>
           <p>
             {" "}
-            During the 80s, I was a High School teacher for a Baghdad High
-            School. Preparing students for college.
+            During the 80s, I taught in many different High Schools across Iraq;
+            Preparing young students for success in college. I taught many
+            different subjects; Mainly, economics, algebra, mathmetatics,
+            marketing and more subjects.
           </p>
         </article>
         <article className="about-restaurant">
@@ -66,8 +69,10 @@ const About = () => {
           <h3> Working with NGOs </h3>
           <p>
             {" "}
-            I was working with Doctors Without Borders non-governmental
-            organization. Our mission was to treat injured Iraqi civilians.
+            I worked with Doctors Without Borders - a non-governmental
+            organization. Our mission was to treat injured Iraqi civilians. I
+            also worked with other humanitarian organizations during my stay in
+            the Middle East.
           </p>
         </article>
 

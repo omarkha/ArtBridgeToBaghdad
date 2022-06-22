@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
-import NavBar from "./components/NavBar";
+import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -13,13 +13,13 @@ import Cart from "./pages/Cart";
 import Account from "./pages/Account";
 import ControlPanel from "./pages/admin-pages/ControlPanel";
 import Inventory from "./pages/admin-pages/Inventory";
-import Culture from "./pages/Culture";
+import Purchase from "./pages/Purchase";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar />
+        <Nav />
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -27,11 +27,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/paintings" element={<Paintings />} />
           <Route path="/antiques" element={<Antiques />} />
-          <Route path="/culture" element={<Culture />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/cart/purchase" element={<Purchase />} />
           <Route path="/account" element={<Account />} />
           <Route path="/control-panel" element={<ControlPanel />} />
-          <Route path="/inventory" element={<Inventory />} />
+          <Route path="/control-panel/inventory" element={<Inventory />} />
         </Routes>
       </div>
       <Footer />

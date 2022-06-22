@@ -1,33 +1,36 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const antiqueSchema = new Schema({
+const antiqueSchema = new Schema(
+  {
     title: {
-        type: String,
+      type: String,
     },
     description: {
-        type: String,
+      type: String,
     },
     img_url: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
-    sold: {
-        type: Boolean,
-        required: true,
+    is_sold: {
+      type: Boolean,
+      required: true,
     },
     datesold: {
-        type: String,
+      type: mongoose.SchemaTypes.Date,
     },
     price: {
-        type: Number,
-        required: true,
-    }
-    }, {
-        timestamps: true,
-    });
+      type: Number,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-    const Antique = mongoose.model('Antique', antiqueSchema);
+const Antique = mongoose.model("Antique", antiqueSchema);
 
-    module.exports = Antique;
+module.exports = Antique;

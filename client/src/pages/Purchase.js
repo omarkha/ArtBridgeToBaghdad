@@ -2,9 +2,9 @@ import React from "react";
 
 const Purchase = () => {
   return (
-    <div>
+    <div className="purchase-page">
       <section>
-        <h1>Thanks for your business...</h1>
+        <div></div>
       </section>
     </div>
   );

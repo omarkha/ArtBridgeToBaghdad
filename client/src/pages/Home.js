@@ -2,14 +2,16 @@ import React from "react";
 import Header from "../components/Header";
 import Images from "../images";
 import NewsLetter from "../components/NewsLetter";
+import HomeCarousel from "../components/HomeCarousel";
 
 const Home = () => {
   return (
     <div className="home">
       <Header />
+
       <div className="home-page">
         <article className="main-article">
-          <h3>
+          <h3 className="h3">
             <br />
             Now Online, The Art Bridge to Baghdad to enrich Your Life With
             Mesopotamian Art!
@@ -17,11 +19,11 @@ const Home = () => {
 
           <div className="div-1">
             <p>
-              Iraq has risen from the ashes once again! The Cradle of
-              Civilization, Iraq had been torn by wars in the past 4 decades.
-              But, with the defeat of ISIS in Iraq on the hands of the Iraqi
-              Army, security levels have gotten to be better than ever before;
-              Even safer than countries in South America!
+              Iraq has risen from the ashes. Once, The Cradle of Civilization,
+              Iraq had been torn by wars in the past 4 decades. But, with the
+              defeat of ISIS in Iraq on the hands of the Iraqi Army, security
+              levels have gotten to be better than ever before; Even safer than
+              countries in South America.
               <br />
             </p>
           </div>
@@ -52,12 +54,8 @@ const Home = () => {
             <p>
               I learned to paint under the mentorship of Hafidh Al Doroubi, who
               was mentored by Silvador. International and local Iraqi press
-              repeatedly featured my paintings since the 80s and to this day.
-            </p>
-          </div>
-          <div className="div-5">
-            <p>
-              Former President of Iraq, Saddam Hussein had seen and liked a
+              repeatedly featured my paintings since the 80s and to this
+              day.Former President of Iraq, Saddam Hussein had seen and liked a
               portrait I made of him so much he personally met with me and
               decided to hang the portrait up in one of Baghdad's squares.
             </p>

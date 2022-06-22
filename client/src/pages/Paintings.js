@@ -1,16 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Painting from "../components/Painting";
 import Images from "../images";
+import axios from "axios";
 
 const desc =
   "A piece that I drew in 2007. It resembles the hardships of life in old Iraq.";
 
 const Paintings = () => {
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [paintingsPerPage, setPaintingsPerPage] = useState(4);
+  const [paintings, setPaintings] = useState([]);
+
+  /*
+  useEffect(() => {
+    const fetchPaintings = async () => {
+      const res = await axios.get(
+        "https://artbridgetobaghdad.herokuapp.com/paintings"
+      );
+      setPaintings(res.data);
+      setLoading(false);
+    };
+    fetchPaintings();
+  });
+  */
   return (
     <div className="page">
       <div className="results-heading">
         <h3> Happy Viewing! </h3>
       </div>
+
       <div className="results">
         <Painting
           price="334.99"
