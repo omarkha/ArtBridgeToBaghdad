@@ -77,8 +77,20 @@ article {
   margin-bottom: 55px;
 }
 
-.home-page {
+.home-page p {
+  color: #fff;
+}
+
+.home-page h3 {
+  color: rgb(215, 185, 200);
+}
+
+.home-page article {
   margin: 0;
+  background-color: #222;
+  background-image: url("./images/painting.jpg");
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
 .home-page article {
@@ -89,6 +101,7 @@ article {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 21px;
+  margin: 0;
 }
 
 .home-page .main-article h3 {
@@ -113,6 +126,11 @@ article {
 
 .home-page .main-article p {
   padding: 0 55px;
+}
+
+header {
+  margin: 0;
+  padding: 0;
 }
 
 .headline h1 {
@@ -646,6 +664,10 @@ input[type="file"] {
   .home-page .main-article {
     display: flex;
     flex-direction: column;
+  }
+  header {
+    height: 233px;
+    padding: 0;
   }
   .contact {
     padding: 8px;
