@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Painting from "../../components/Painting";
-import { Axios } from "axios";
-import { Image } from "cloudinary-react";
 import { TiThLarge } from "react-icons/ti";
 
 const Inventory = () => {
@@ -16,12 +14,13 @@ const Inventory = () => {
     formData.append("file", files[0]);
     formData.append("upload", "paintings");
 
+    /*
     Axios.post(
       "https://api.cloudinary.com/v1_1/copyres/image/upload",
       formData
     ).then((res) => console.log(res));
+    */
   };
-
   const handleAdd = () => {
     uploadImage();
   };

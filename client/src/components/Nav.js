@@ -9,22 +9,20 @@ import { MdAccountCircle } from "react-icons/md";
 import { BsCartCheckFill } from "react-icons/bs";
 import { GiEarthAfricaEurope } from "react-icons/gi";
 import "bootstrap/dist/css/bootstrap.css";
-import { Navbar } from "react-bootstrap";
 import Images from "../images/index";
-import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 
 const Nav = () => {
   return (
-    <Navbar sticky="top" bg="dark" variant="dark" expand="sm" size="sm">
+    <nav sticky="top" bg="dark" variant="dark" expand="sm" size="sm">
       <div className="container">
         <Link to="/" className="navbar-brand">
           <img className="icon" src={Images.logo} />
           Art Bridge to Baghdad
         </Link>
 
-        <NavbarToggle />
+        <div className="navbar-toggler" />
 
-        <Navbar.Collapse>
+        <div className="collapse navbar-collapse">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/">
@@ -57,9 +55,9 @@ const Nav = () => {
               </Link>
             </li>
           </ul>
-        </Navbar.Collapse>
+        </div>
       </div>
-    </Navbar>
+    </nav>
   );
 };
 
