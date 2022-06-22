@@ -9,11 +9,7 @@ const Header = () => {
         <h1 className="display-4">The Art Bridge To Baghdad</h1>
         <p className="lead">For Authentic Mesopotamian Artwork</p>
         <hr className="my-4" />
-        <p>
-          {" "}
-          Welcome to the official Art Gallery of Iraqi artist Amal Maseer -
-          student of artist Hafidh Al Doroubi
-        </p>
+        <p> Welcome to the official Art Gallery of Iraqi artist Amal Maseer</p>
         <p className="lead">
           <Link className="btn btn-primary btn-lg" to="/about" role="button">
             Learn more

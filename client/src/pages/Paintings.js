@@ -15,7 +15,7 @@ const Paintings = () => {
   useEffect(() => {
     const fetchPaintings = async () => {
       const res = await axios.get(
-        "https://artbridgetobaghdad.herokuapp.com/paintings"
+        "https://artbridgetobaghdad.herokuapp.com/api/paintings"
       );
       setPaintings(res.data);
       setLoading(false);

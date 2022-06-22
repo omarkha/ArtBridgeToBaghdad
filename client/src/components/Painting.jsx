@@ -14,9 +14,9 @@ const Painting = (props) => {
         <h5>${props.price}</h5>
 
         <div className="painting-buttons">
-          <button>Share</button>
-          <button>Add to Cart</button>
-          <button>Like</button>
+          <button className="btn btn-primary">Share</button>
+          <button className="btn btn-primary">Add to Cart</button>
+          <button className="btn btn-primary">Like</button>
         </div>
       </div>
     </div>

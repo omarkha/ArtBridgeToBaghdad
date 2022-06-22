@@ -103,7 +103,9 @@ const Cart = () => {
           </h3>
         </div>
 
-        <Link to="./purchase">Purchase Items</Link>
+        <Link to="./purchase" className="btn btn-success">
+          Purchase Items
+        </Link>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ body {
 
 .jumbotron {
   background-color: rgba(101, 25, 63, 0.38);
-  background: url("./images/baghdad-8.jpg") no-repeat;
+  background: url("./images/baghdad-3.jpg") no-repeat;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
@@ -30,7 +30,7 @@ body {
   height: 610px;
   max-height: 610px;
   padding-top: 144px;
-  color: antiquewhite;
+  color: #fff;
   text-shadow: 1px 1px 3px #222;
   background-blend-mode: hard-light;
 }
@@ -70,11 +70,6 @@ code {
   padding: 0 8px;
 }
 
-.cart-page a:hover {
-  background-color: rgba(101, 160, 25, 0.38);
-  border: 2px solid #222;
-  border-radius: 5px;
-}
 nav a:hover {
   color: rgba(255, 160, 200);
   border-radius: 5px;
@@ -248,12 +243,6 @@ a {
 }
 
 .cart-page a {
-  margin: 21px;
-  border-radius: 8px;
-  padding: 13px 13px;
-  color: rgb(40, 101, 200);
-  border: 2px solid rgb(40, 101, 200);
-  margin: 21px 233px;
 }
 
 footer {
@@ -336,7 +325,6 @@ footer h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 1px solid rgb(255, 185, 30);
 }
 
 .painting {
@@ -471,6 +459,7 @@ label {
   margin: 89px auto;
 }
 
+/*
 .painting-buttons button {
   padding: 5px 13px;
   font-size: 18px;
@@ -480,6 +469,7 @@ label {
 button:active {
   background-color: rgb(101, 185, 30);
 }
+*/
 
 button[type="submit"] {
   padding: 5px 13px;
@@ -628,6 +618,23 @@ input[type="file"] {
   margin: 55px auto;
 }
 
+.contact-page a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact-page .contact h3 {
+  font-size: 21px;
+}
+
+.contact-page .contact {
+  padding: 13px;
+}
+
+.painting .painting-buttons button {
+  margin: 5px;
+}
+
 @media screen and (max-width: 960px) {
   .jumbotron {
     padding-top: 21px;
@@ -696,7 +703,5 @@ input[type="file"] {
     margin: 21px;
     border-radius: 8px;
     padding: 13px 13px;
-    color: rgb(40, 101, 200);
-    border: 2px solid rgb(40, 101, 200);
   }
 }

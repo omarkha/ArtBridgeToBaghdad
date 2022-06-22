@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../components/Header";
 import Images from "../images";
 import NewsLetter from "../components/NewsLetter";
-import HomeCarousel from "../components/HomeCarousel";
 
 const Home = () => {
   return (
