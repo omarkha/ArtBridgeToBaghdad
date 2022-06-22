@@ -760,4 +760,7 @@ input[type="file"] {
     font-size: 13px;
     justify-content: center;
   }
+  .home-page h3 {
+    margin-top: 144px;
+  }
 }
