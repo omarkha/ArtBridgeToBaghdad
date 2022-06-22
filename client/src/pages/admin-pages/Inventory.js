@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Painting from "../../components/Painting";
-import axios from "axios";
 import { Axios } from "axios";
 import { Image } from "cloudinary-react";
 import { TiThLarge } from "react-icons/ti";

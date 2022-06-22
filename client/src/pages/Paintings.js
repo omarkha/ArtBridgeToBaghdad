@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Painting from "../components/Painting";
 import Images from "../images";
-import axios from "axios";
 
 const desc =
   "A piece that I drew in 2007. It resembles the hardships of life in old Iraq.";

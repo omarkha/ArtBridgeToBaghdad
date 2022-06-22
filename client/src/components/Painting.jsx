@@ -1,15 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
 
 const Painting = (props) => {
-  const mapStateToProps = (state) => {
-    return {};
-  };
-
-  const mapActionsToProps = (dispatch) => {
-    return {};
-  };
-
   return (
     <div className="painting">
       <div>
