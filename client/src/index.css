@@ -636,6 +636,12 @@ input[type="file"] {
 @media screen and (max-width: 960px) {
   .jumbotron {
     padding-top: 21px;
+    height: 987px;
+  }
+
+  .pagination .page-item {
+    font-size: 8px;
+    margin: 3px;
   }
   .home-page .main-article {
     display: flex;
@@ -655,6 +661,9 @@ input[type="file"] {
   }
   .newsletter {
     width: 92%;
+  }
+  .home-page .newsletter {
+    width: 100%;
   }
   .home-page .main-article {
     margin-top: 0;
