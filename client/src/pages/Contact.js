@@ -20,40 +20,41 @@ const Contact = () => {
             </p>
           </div>
         </div>
-
-        <div className="contact">
-          <a href="https://www.linkedin.com/in/amal-maseer-790b14a1/">
-            <h3>Linkedin</h3>
-            <div>
-              <img src={Images.linkedin_icon} />
-              <p>Connect with me on Linkedin!</p>
-            </div>
-          </a>
-        </div>
-
-        <div className="contact">
-          <a href="https://www.facebook.com/amal.maseer">
-            <h3>Facebook</h3>
-            <div>
-              <img src={Images.facebook_icon} />
-              <p>My facebook page!</p>
-            </div>
-          </a>
-        </div>
-
-        <div className="contact">
-          <h3>Instagram</h3>
-          <div>
-            <img src={Images.instagram_icon} />
-            <p>Follow me on Instagram!</p>
+        <div className="socials">
+          <div className="contact">
+            <a href="https://www.linkedin.com/in/amal-maseer-790b14a1/">
+              <h3>Linkedin</h3>
+              <div>
+                <img src={Images.linkedin_icon} />
+                <p>Connect with me on Linkedin!</p>
+              </div>
+            </a>
           </div>
-        </div>
 
-        <div className="contact">
-          <h3>Twitter</h3>
-          <div>
-            <img src={Images.twitter_icon} />
-            <p>My tweets on Twitter!</p>
+          <div className="contact">
+            <a href="https://www.facebook.com/amal.maseer">
+              <h3>Facebook</h3>
+              <div>
+                <img src={Images.facebook_icon} />
+                <p>My facebook page!</p>
+              </div>
+            </a>
+          </div>
+
+          <div className="contact">
+            <h3>Instagram</h3>
+            <div>
+              <img src={Images.instagram_icon} />
+              <p>Follow me on Instagram!</p>
+            </div>
+          </div>
+
+          <div className="contact">
+            <h3>Twitter</h3>
+            <div>
+              <img src={Images.twitter_icon} />
+              <p>My tweets on Twitter!</p>
+            </div>
           </div>
         </div>
         <NewsLetter />

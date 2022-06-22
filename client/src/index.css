@@ -290,6 +290,14 @@ footer h3 {
   border-radius: 21px;
 }
 
+.socials {
+  grid-column: 1/5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 21px;
+}
+
 .contact {
   background-color: rgba(101, 25, 63, 0.38);
   border-radius: 21px;
@@ -645,6 +653,9 @@ input[type="file"] {
   .newsletter .fields {
     width: 100%;
   }
+  .newsletter {
+    width: 92%;
+  }
   .home-page .main-article {
     margin-top: 0;
   }
@@ -693,5 +704,21 @@ input[type="file"] {
     margin: 21px;
     border-radius: 8px;
     padding: 13px 13px;
+  }
+
+  .contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #contactpage-banner {
+    grid-column: 1/5;
+  }
+
+  #contact-info {
+    grid-column: 1/5;
+  }
+
+  .contact-section .newsletter {
+    margin-left: 18px;
   }
 }

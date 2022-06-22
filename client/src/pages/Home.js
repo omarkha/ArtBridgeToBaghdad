@@ -60,10 +60,7 @@ const Home = () => {
             </p>
           </div>
         </article>
-
-        <article>
-          <NewsLetter />
-        </article>
+        <NewsLetter />
       </div>
     </div>
   );
