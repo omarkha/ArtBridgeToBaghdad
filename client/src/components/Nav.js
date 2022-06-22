@@ -13,16 +13,25 @@ import Images from "../images/index";
 
 const Nav = () => {
   return (
-    <nav sticky="top" bg="dark" variant="dark" expand="sm" size="sm">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <Link to="/" className="navbar-brand">
           <img className="icon" src={Images.logo} />
           Art Bridge to Baghdad
         </Link>
 
-        <div className="navbar-toggler" />
-
-        <div className="collapse navbar-collapse">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar1"
+          aria-controls="navbar1"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbar1">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/">

@@ -21,18 +21,17 @@ body {
 }
 
 .jumbotron {
-  background-color: rgba(101, 25, 63, 0.38);
-  background: url("./images/baghdad-2.jpg") no-repeat;
+  background: url("./images/baghdad-8.jpg") no-repeat;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   background-size: 100% auto;
-  height: 500px;
+  background-position-y: 0;
+  height: 610px;
   max-height: 610px;
   padding-top: 144px;
   color: #fff;
   text-shadow: 1px 1px 3px #222;
-  background-blend-mode: hard-light;
 }
 
 h4 {
@@ -64,15 +63,6 @@ code {
 
 .account {
   position: relative;
-}
-
-.link {
-  padding: 0 8px;
-}
-
-nav a:hover {
-  color: rgba(255, 160, 200);
-  border-radius: 5px;
 }
 
 .cart-info {
