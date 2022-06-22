@@ -32,12 +32,12 @@ mongoose.set("debug", true);
 const db = mongoose.connection;
 
 // Routes
-
 const paintingsRouter = require("./routes/paintings");
 app.use("/api/paintings", paintingsRouter);
 
 const antiquesRouter = require("./routes/antiques");
-app.use("/api/antiques", paintingsRouter);
+app.use("/api/antiques", antiquesRouter);
+//
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running on Port: ${port}`);
