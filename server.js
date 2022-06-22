@@ -32,11 +32,11 @@ mongoose.set("debug", true);
 const db = mongoose.connection;
 
 // Routes
-const paintingsRouter = require("./routes/paintings");
-app.use("/api/paintings", paintingsRouter);
+const paintingsrouter = require("./routes/paintings");
+app.use("/api/paintings", paintingsrouter);
 
-const antiquesRouter = require("./routes/antiques");
-app.use("/api/antiques", antiquesRouter);
+const antiquesrouter = require("./routes/antiques");
+app.use("/api/antiques", antiquesrouter);
 //
 
 app.listen(process.env.PORT || 5000, () => {
