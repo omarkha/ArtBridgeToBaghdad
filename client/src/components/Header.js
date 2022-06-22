@@ -15,7 +15,7 @@ const Header = () => {
           student of artist Hafidh Al Doroubi
         </p>
         <p className="lead">
-          <Link classNames="btn btn-primary btn-lg" to="/about" role="button">
+          <Link className="btn btn-primary btn-lg" to="/about" role="button">
             Learn more
           </Link>
         </p>
