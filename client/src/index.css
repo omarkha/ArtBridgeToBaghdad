@@ -709,6 +709,7 @@ input[type="file"] {
   .contact-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
   }
   #contactpage-banner {
     grid-column: 1/5;
@@ -720,5 +721,12 @@ input[type="file"] {
 
   .contact-section .newsletter {
     margin-left: 18px;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    justify-content: center;
   }
 }
