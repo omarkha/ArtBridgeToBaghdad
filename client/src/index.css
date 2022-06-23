@@ -816,7 +816,6 @@ input[type="file"] {
     display: none;
   }
   .cart {
-    text-align: center;
-    padding-right: 130px;
+    margin-left: 210px;
   }
 }
