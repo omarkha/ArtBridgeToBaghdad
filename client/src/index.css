@@ -815,9 +815,7 @@ input[type="file"] {
     width: 100%;
     margin-bottom: 34px;
   }
-  .brandtitle {
-    display: none;
-  }
+
   .extra-info {
     display: none;
   }
