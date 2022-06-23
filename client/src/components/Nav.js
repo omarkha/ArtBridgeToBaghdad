@@ -51,7 +51,7 @@ const Nav = () => {
           </ul>
         </div>
         <ul className="navbar-nav ms-auto">
-          <li className="nav-item">
+          <li className="nav-item cart">
             <Link className="nav-link" to="cart">
               <BsCartCheckFill />{" "}
               {cartItems.length > 0 ? cartItems.length : null} Cart

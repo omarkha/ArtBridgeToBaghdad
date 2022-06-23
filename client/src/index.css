@@ -203,6 +203,11 @@ a {
   flex-direction: column;
 }
 
+.selected-painting h3 {
+  margin-top: 13px;
+  font-size: 21px;
+}
+
 .selected-painting:hover {
   width: 86%;
   padding: 13px;
@@ -238,12 +243,10 @@ a {
 }
 
 .cart-view {
-  width: 86%;
   border-top-right-radius: 34px;
   border-top-left-radius: 34px;
   margin: 0 auto;
   margin-top: 34px;
-  background-color: rgb(220, 200, 220);
   padding: 55px 55px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -811,5 +814,9 @@ input[type="file"] {
   }
   .extra-info {
     display: none;
+  }
+  .cart {
+    text-align: center;
+    padding-right: 130px;
   }
 }

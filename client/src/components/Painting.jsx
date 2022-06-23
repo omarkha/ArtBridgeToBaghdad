@@ -34,6 +34,8 @@ const Painting = (props) => {
 
         <div className="painting-buttons">
           <button className="btn btn-primary">Share</button>
+
+          <button className="btn btn-primary">Like</button>
           <button
             onClick={() => {
               if (cartItems.length >= 1) {
@@ -52,7 +54,6 @@ const Painting = (props) => {
           >
             {added ? "remove" : "add"}
           </button>
-          <button className="btn btn-primary">Like</button>
         </div>
       </div>
     </div>
