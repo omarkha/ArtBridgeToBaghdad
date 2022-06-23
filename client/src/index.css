@@ -778,6 +778,6 @@ input[type="file"] {
     margin-bottom: 34px;
   }
   .brandtitle {
-    visibility: hidden;
+    display: none;
   }
 }
