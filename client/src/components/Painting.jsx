@@ -11,6 +11,15 @@ const Painting = (props) => {
     );
   };
 
+  const removeItem = () => {
+    removeCartItem(props.id);
+    setAdded(false);
+  };
+
+  const addItem = () => {
+    addCartItem("painting", props.id);
+    setAdded(true);
+  };
   return (
     <div className="painting">
       <div>
@@ -27,18 +36,17 @@ const Painting = (props) => {
           <button className="btn btn-primary">Share</button>
           <button
             onClick={() => {
-              if (cartItems.length > 0) {
-                cartItems.map((item) =>
-                  item.id === props.id
-                    ? removeCartItem(props.id)
-                    : addCartItem("painting", props.id)
-                );
+              if (cartItems.length >= 1) {
+                if (!added) {
+                  cartItems.map((item) =>
+                    item.id == props.id ? removeItem() : addItem()
+                  );
+                } else {
+                  removeItem();
+                }
               } else {
-                addCartItem("painting", props.id);
-                setAdded(true);
+                addItem();
               }
-
-              checkAdded();
             }}
             className="btn btn-primary"
           >
