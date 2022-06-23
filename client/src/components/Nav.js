@@ -14,7 +14,7 @@ import { CartContext } from "../context/cartContext";
 const Nav = () => {
   const { cartItems } = useContext(CartContext);
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div className="container">
         <Link to="/" className="navbar-brand">
           <img className="icon" src={Images.logo} />
