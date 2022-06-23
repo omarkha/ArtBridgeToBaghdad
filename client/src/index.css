@@ -93,10 +93,6 @@ article {
 
 .home-page article {
   margin: 0;
-  background-color: #222;
-  background-image: url("./images/painting.jpg");
-  background-size: cover;
-  background-blend-mode: overlay;
 }
 
 .home-page article {
@@ -154,6 +150,14 @@ header {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.home-page {
+  background-color: rgb(0, 0, 0);
+  background-color: #222;
+  background-image: url("./images/painting.jpg");
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
 .headline {
@@ -707,6 +711,7 @@ input[type="file"] {
   }
   .newsletter .fields {
     width: 100%;
+    padding: 21px;
   }
   .newsletter {
     width: 92%;
@@ -719,6 +724,7 @@ input[type="file"] {
   }
   .home-page {
     margin-top: 0;
+    background-color: rgb(40, 40, 40);
   }
   .jumbotron {
     margin-bottom: 0;
@@ -768,6 +774,7 @@ input[type="file"] {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
+    padding: 0;
   }
   #contactpage-banner {
     grid-column: 1/5;
