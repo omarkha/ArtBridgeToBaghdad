@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div className="contact-page">
       <section className="contact-section">
-        <img id="contactpage-banner" src={Images.amal_image_2} />
+        <img id="contactpage-banner" src={Images.amals_banner} />
         <div className="contact" id="contact-info">
           <h3>Contact Info:</h3>
 

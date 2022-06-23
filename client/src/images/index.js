@@ -20,6 +20,7 @@ const Images = {
   surgeon: require("./surgeon.jpg"),
   logo: require("./logo.png"),
   video: require("./file.mp4"),
+  amals_banner: require("./amals-banner.jpg"),
 };
 
 export default Images;

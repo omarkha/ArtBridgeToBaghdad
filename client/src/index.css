@@ -24,17 +24,20 @@ body {
 }
 
 .jumbotron {
-  background: url("./images/baghdad-8.jpg") no-repeat center center;
+  background: url("./images/baghdad-5.jpg") no-repeat center center;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   background-size: 100% auto;
-  background-position-y: 0;
+  background-position-y: -144px;
+  background-blend-mode: soft-light;
   height: 610px;
   max-height: 610px;
   padding-top: 89px;
   color: #fff;
   text-shadow: 1px 1px 3px #222;
+  padding-left: 89px;
+  text-align: left;
 }
 
 h4 {
@@ -668,6 +671,7 @@ input[type="file"] {
   .jumbotron {
     padding-top: 34px;
     height: 987px;
+    background-position-y: -55px;
   }
 
   .pagination .page-item {
@@ -681,7 +685,7 @@ input[type="file"] {
     background-color: rgb(40, 40, 40);
   }
   header {
-    height: 200px;
+    height: 233px;
     padding: 0;
   }
   .contact {
