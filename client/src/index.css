@@ -769,6 +769,10 @@ input[type="file"] {
   .home-page h3 {
     margin-top: 144px;
   }
+
+  .jumbotron p {
+    font-size: 13px;
+  }
   .about-page img {
     width: 100%;
     margin-bottom: 34px;
