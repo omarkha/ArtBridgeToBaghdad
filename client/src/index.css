@@ -724,6 +724,7 @@ input[type="file"] {
   }
   .home-page {
     margin-top: 0;
+    background-image: none;
     background-color: rgb(40, 40, 40);
   }
   .jumbotron {
