@@ -21,13 +21,20 @@ const Nav = () => {
           <span className="brandtitle">Art Bridge to Baghdad</span>
         </Link>
 
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar1"
+          aria-controls="navbar1"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
         <div className="collapse navbar-collapse" id="navbar1">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
-                <FaHome /> Home
-              </Link>
-            </li>
             <li className="nav-item">
               <Link className="nav-link" to="about">
                 <BsBookFill /> About
@@ -48,25 +55,14 @@ const Nav = () => {
                 <AiFillStar /> Antiques
               </Link>
             </li>
+            <li className="nav-item cart">
+              <Link className="nav-link" to="cart">
+                <BsCartCheckFill /> Cart{" ("}
+                {cartItems.length})
+              </Link>
+            </li>
           </ul>
         </div>
-        <button className="cart-button">
-          <Link className="nav-link" to="cart">
-            <BsCartCheckFill /> {cartItems.length > 0 ? cartItems.length : null}{" "}
-            Cart
-          </Link>
-        </button>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar1"
-          aria-controls="navbar1"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
       </div>
     </nav>
   );
