@@ -18,7 +18,6 @@ const Nav = () => {
       <div className="container">
         <Link to="/" className="navbar-brand">
           <img className="icon" src={Images.logo} />
-          Art Bridge to Baghdad
         </Link>
 
         <button
@@ -57,12 +56,6 @@ const Nav = () => {
             <li className="nav-item">
               <Link className="nav-link" to="antiques">
                 <AiFillStar /> Antiques
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="cart">
-                <BsCartCheckFill />{" "}
-                {cartItems.length > 0 ? cartItems.length : null} Cart
               </Link>
             </li>
           </ul>
