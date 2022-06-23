@@ -14,24 +14,13 @@ import { CartContext } from "../context/cartContext";
 const Nav = () => {
   const { cartItems } = useContext(CartContext);
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-0">
       <div className="container">
         <Link to="/" className="navbar-brand">
           <img className="icon" src={Images.logo} />
           <span className="brandtitle">Art Bridge to Baghdad</span>
         </Link>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar1"
-          aria-controls="navbar1"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
         <div className="collapse navbar-collapse" id="navbar1">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
@@ -61,7 +50,7 @@ const Nav = () => {
             </li>
           </ul>
         </div>
-        <ul className="navbar-nav">
+        <ul className="navbar-nav ms-auto">
           <li className="nav-item">
             <Link className="nav-link" to="cart">
               <BsCartCheckFill />{" "}
@@ -69,6 +58,17 @@ const Nav = () => {
             </Link>
           </li>
         </ul>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar1"
+          aria-controls="navbar1"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
       </div>
     </nav>
   );
