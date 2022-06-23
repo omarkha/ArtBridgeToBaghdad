@@ -16,7 +16,14 @@ const Header = () => {
           <Link className="btn btn-primary btn-lg" to="/about" role="button">
             About Me
           </Link>
-        </p>
+        </p>{" "}
+        <div className="extra-info">
+          <h3>Welcome!</h3>
+          <p>
+            Dear visitors, we at last, announce the launch of the Art Bridge!
+            thanks for your visit and happy browsing!
+          </p>
+        </div>
       </div>
     </header>
   );

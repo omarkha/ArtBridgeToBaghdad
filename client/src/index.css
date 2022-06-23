@@ -24,7 +24,7 @@ body {
 }
 
 .jumbotron {
-  background: url("./images/baghdad-5.jpg") no-repeat center center;
+  background: url("./images/baghdad-11.jpg") no-repeat center center;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
@@ -137,6 +137,12 @@ article {
 header {
   margin: 0;
   padding: 0;
+}
+.jumbotron .extra-info {
+  width: 24%;
+  text-align: center;
+  margin: 0 auto;
+  margin-left: 610px;
 }
 
 .headline h1 {
@@ -793,6 +799,9 @@ input[type="file"] {
     margin-bottom: 34px;
   }
   .brandtitle {
+    display: none;
+  }
+  .extra-info {
     display: none;
   }
 }
