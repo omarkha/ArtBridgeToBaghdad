@@ -672,6 +672,8 @@ input[type="file"] {
     padding-top: 34px;
     height: 987px;
     background-position-y: 0px;
+    text-align: center;
+    padding-left: 0;
   }
 
   .pagination .page-item {
