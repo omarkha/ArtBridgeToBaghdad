@@ -18,6 +18,7 @@ const Nav = () => {
       <div className="container">
         <Link to="/" className="navbar-brand">
           <img className="icon" src={Images.logo} />
+          <span className="brandtitle">Art Bridge to Baghdad</span>
         </Link>
 
         <button
