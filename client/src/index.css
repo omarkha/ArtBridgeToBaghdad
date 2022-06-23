@@ -680,6 +680,12 @@ input[type="file"] {
   font-family: "smooch", cursive;
 }
 
+.cart-button {
+  background: none;
+  display: inline;
+  margin-left: 210px;
+}
+
 @media screen and (max-width: 960px) {
   .jumbotron {
     padding-top: 34px;
@@ -814,8 +820,5 @@ input[type="file"] {
   }
   .extra-info {
     display: none;
-  }
-  .cart {
-    margin-left: 210px;
   }
 }

@@ -50,14 +50,12 @@ const Nav = () => {
             </li>
           </ul>
         </div>
-        <ul className="navbar-nav me-auto">
-          <li className="nav-item cart">
-            <Link className="nav-link" to="cart">
-              <BsCartCheckFill />{" "}
-              {cartItems.length > 0 ? cartItems.length : null} Cart
-            </Link>
-          </li>
-        </ul>
+        <button className="cart-button">
+          <Link className="nav-link" to="cart">
+            <BsCartCheckFill /> {cartItems.length > 0 ? cartItems.length : null}{" "}
+            Cart
+          </Link>
+        </button>
         <button
           className="navbar-toggler"
           type="button"
