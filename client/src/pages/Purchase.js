@@ -4,7 +4,9 @@ const Purchase = () => {
   return (
     <div className="purchase-page">
       <section>
-        <div></div>
+        <div>
+          <p>Credit/Debit Card and personal info form</p>
+        </div>
       </section>
     </div>
   );

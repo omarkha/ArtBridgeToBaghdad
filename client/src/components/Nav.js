@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { BsBookFill } from "react-icons/bs";
@@ -10,8 +10,9 @@ import { BsCartCheckFill } from "react-icons/bs";
 import { GiEarthAfricaEurope } from "react-icons/gi";
 import "bootstrap/dist/css/bootstrap.css";
 import Images from "../images/index";
-
+import { CartContext } from "../context/cartContext";
 const Nav = () => {
+  const { cartItems } = useContext(CartContext);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
@@ -58,13 +59,22 @@ const Nav = () => {
                 <AiFillStar /> Antiques
               </Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link className="nav-link" to="cart">
-                <BsCartCheckFill /> Cart
+                <BsCartCheckFill />{" "}
+                {cartItems.length > 0 ? cartItems.length : null} Cart
               </Link>
             </li>
           </ul>
         </div>
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link className="nav-link" to="cart">
+              <BsCartCheckFill />{" "}
+              {cartItems.length > 0 ? cartItems.length : null} Cart
+            </Link>
+          </li>
+        </ul>
       </div>
     </nav>
   );
