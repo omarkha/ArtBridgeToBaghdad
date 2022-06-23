@@ -24,7 +24,7 @@ body {
 }
 
 .jumbotron {
-  background: url("./images/baghdad-8.jpg") no-repeat;
+  background: url("./images/baghdad-8.jpg") no-repeat center center;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
@@ -666,7 +666,7 @@ input[type="file"] {
 
 @media screen and (max-width: 960px) {
   .jumbotron {
-    padding-top: 21px;
+    padding-top: 34px;
     height: 987px;
   }
 
@@ -677,6 +677,8 @@ input[type="file"] {
   .home-page .main-article {
     display: flex;
     flex-direction: column;
+    background-image: none;
+    background-color: rgb(40, 40, 40);
   }
   header {
     height: 200px;
