@@ -80,6 +80,30 @@ const Paintings = (props) => {
           img_url={Images.painting_1}
           description={desc}
         />
+        <Painting
+          id="p4"
+          price="224.99"
+          height="32"
+          width="18"
+          img_url={Images.painting_4}
+          description={desc}
+        />
+        <Painting
+          id="p5"
+          price="349.99"
+          height="44"
+          width="32"
+          img_url={Images.painting_5}
+          description={desc}
+        />
+        <Painting
+          id="p6"
+          price="349.99"
+          height="21"
+          width="18"
+          img_url={Images.painting_1}
+          description={desc}
+        />
       </div>
       <div className="results-bottom">
         <nav aria-label="Page navigation example">
