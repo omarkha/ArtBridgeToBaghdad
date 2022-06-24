@@ -24,8 +24,8 @@ const Header = () => {
           <h3>Welcome!</h3>
           <hr />
           <p>
-            At last, we announce the launch of the Art Bridge! thanks for your
-            visit and happy browsing!
+            At last, I announce the launch of the Art Bridge to Baghdad Gallery!
+            thanks for your visit and happy browsing!
           </p>
         </div>
       </div>
