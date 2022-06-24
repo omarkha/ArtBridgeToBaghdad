@@ -2,8 +2,10 @@ import React from "react";
 import Header from "../components/Header";
 import Images from "../images";
 import NewsLetter from "../components/NewsLetter";
+import Carousel from "../components/Carousel";
 
 const Home = () => {
+  const carouselImages = [Images.amal_image, Images.amal_image_2];
   return (
     <div className="home">
       <Header />
