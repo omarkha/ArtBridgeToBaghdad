@@ -151,7 +151,7 @@ header {
 }
 
 .lead {
-  color: rgb(160, 63, 101);
+  color: rgb(200, 101, 160);
 }
 
 a {
@@ -816,7 +816,8 @@ input[type="file"] {
   }
 
   .jumbotron p {
-    font-size: 13px;
+    font-size: 21px;
+    text-shadow: 1px 1px 5px #222;
   }
   .about-page img {
     width: 100%;
