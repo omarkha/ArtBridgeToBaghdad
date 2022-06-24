@@ -702,7 +702,8 @@ input[type="file"] {
   .home-page .main-article {
     display: flex;
     flex-direction: column;
-    background-size: contain;
+    background-image: none;
+    background-color: rgb(25, 25, 25);
   }
   header {
     height: 200px;
@@ -817,9 +818,5 @@ input[type="file"] {
 
   .extra-info {
     display: none;
-  }
-  .home-page {
-    background-image: url("./images//bg-mobile-4.jpg");
-    background-size: contain;
   }
 }
