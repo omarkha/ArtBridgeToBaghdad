@@ -24,13 +24,15 @@ body {
 }
 
 .jumbotron {
-  background: url("./images/baghdad-6.jpg") no-repeat center center;
+  background-color: rgb(255, 255, 255);
+  background-image: url("./images/baghdad-8.jpg");
+  background-repeat: no-repeat;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   background-size: 100% auto;
   background-position-y: 0;
-  background-blend-mode: soft-light;
+  background-blend-mode: multiply;
   height: 610px;
   max-height: 610px;
   padding-top: 89px;
@@ -144,6 +146,10 @@ header {
   border: 1px solid rgb(200, 200, 200);
 }
 
+.jumbotron .extra-info h3 {
+  color: rgb(101, 200, 255);
+}
+
 .headline h1 {
   color: rgb(0, 0, 0);
   letter-spacing: 3px;
@@ -151,7 +157,7 @@ header {
 }
 
 .lead {
-  color: rgb(200, 101, 255);
+  color: rgb(101, 200, 255);
 }
 
 a {
