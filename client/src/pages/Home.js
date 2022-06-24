@@ -12,18 +12,27 @@ const Home = () => {
         <article className="main-article">
           <h3 className="h3">
             <br />
-            Now Online, The Art Bridge to Baghdad to enrich Your Life With
-            Mesopotamian Art!
+            Dear Visitors, I'm glad to announce the launch of my online store
+            for Iraqi artwork! if you love art, we might have something that
+            interests you!
           </h3>
 
           <div className="div-1">
+            <h5> The Cradle of Civilization </h5>
             <p>
-              Iraq has risen from the ashes. Once, The Cradle of Civilization,
-              Iraq had been torn by wars in the past 4 decades. But, with the
-              defeat of ISIS in Iraq on the hands of the Iraqi Army, security
-              levels have gotten to be better than ever before; Even safer than
-              countries in South America.
-              <br />
+              Everywhere in the world, kids are taught about Mesopotamia. A land
+              which hosted some of the world's earliest civilizations like
+              Babylon, Summeria and Assyria. Because of it's strategic and
+              central location, Iraq has always been a place where people from
+              different cultures met and melted together and not just because of
+              the temperature. Nope. It might come as a surprise, but Iraq has a
+              lot more sceneric landscapes than deserts. There is the UNESCO
+              Heritage Site of the Mesopotamian marshes in the southern city of
+              Basra. In the North there is the cool and mountaneous region of
+              Iraqi Kurdistan. And There are the Tigris and Euphrates rivers
+              than run across the map. Besides the amazing and exotic
+              landscapes, Iraq is home to a multitude of ethnicies and religious
+              groups.
             </p>
           </div>
           <img src={Images.painting_4} />

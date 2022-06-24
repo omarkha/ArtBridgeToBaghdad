@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { BsBookFill } from "react-icons/bs";
@@ -13,6 +13,7 @@ import Images from "../images/index";
 import { CartContext } from "../context/cartContext";
 const Nav = () => {
   const { cartItems } = useContext(CartContext);
+  const [expanded, setExpanded] = useState(false);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-0">
       <div className="container">
@@ -29,29 +30,46 @@ const Nav = () => {
           aria-controls="navbar1"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          expanded="true"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbar1">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="about">
+            <li>
+              <Link
+                className="nav-link"
+                to="about"
+                onClick={() => setExpanded(!expanded)}
+              >
                 <BsBookFill /> About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="contact">
+              <Link
+                className="nav-link"
+                to="contact"
+                onClick={() => setExpanded(false)}
+              >
                 <RiContactsFill /> Contact
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="paintings">
+              <Link
+                className="nav-link"
+                to="paintings"
+                onClick={() => setExpanded(false)}
+              >
                 <TiHeart /> Paintings
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="antiques">
+              <Link
+                className="nav-link"
+                to="antiques"
+                onClick={() => setExpanded(false)}
+              >
                 <AiFillStar /> Antiques
               </Link>
             </li>
