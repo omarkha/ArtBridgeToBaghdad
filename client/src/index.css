@@ -819,4 +819,8 @@ input[type="file"] {
   .extra-info {
     display: none;
   }
+
+  .home-page .main-article p {
+    padding: 0;
+  }
 }
