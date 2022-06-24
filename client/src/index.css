@@ -25,13 +25,13 @@ body {
 
 .jumbotron {
   background-color: rgb(255, 255, 255);
-  background-image: url("./images/baghdad-12.jpg");
+  background-image: url("./images/baghdad-13.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   background-size: 100% auto;
-  background-position-y: 0;
+  background-position-y: -144px;
   background-blend-mode: multiply;
   height: 610px;
   max-height: 610px;
@@ -157,7 +157,7 @@ header {
 }
 
 .lead {
-  color: rgb(101, 200, 255);
+  color: rgb(0, 160, 255);
 }
 
 a {
