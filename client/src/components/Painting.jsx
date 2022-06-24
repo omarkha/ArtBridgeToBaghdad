@@ -1,25 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { CartContext } from "../context/cartContext";
+import { FaShareAlt } from "react-icons/fa";
+import { AiFillLike } from "react-icons/ai";
 
 const Painting = (props) => {
-  const { cartItems, addCartItem, removeCartItem } = useContext(CartContext);
+  const id = props.id;
+
+  const { cartItems, addCartItem, removeCartItem, printCartItems } =
+    useContext(CartContext);
   const [added, setAdded] = useState(false);
   const checkAdded = () => {
-    cartItems.map((item) =>
-      item.id === props.id ? setAdded(false) : setAdded(true)
-    );
+    cartItems.map((item) => (item.id === id ? setAdded(true) : ""));
   };
 
   const removeItem = () => {
-    removeCartItem(props.id);
+    removeCartItem(id);
     setAdded(false);
   };
 
   const addItem = () => {
-    addCartItem("painting", props.id);
+    addCartItem("painting", id);
     setAdded(true);
   };
+
+  useEffect(() => checkAdded(), []);
+
+  const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (
     <div className="painting">
       <div>
@@ -33,15 +40,20 @@ const Painting = (props) => {
         <h5>${props.price}</h5>
 
         <div className="painting-buttons">
-          <button className="btn btn-primary">Share</button>
+          <button className="btn btn-primary">
+            <FaShareAlt />
+          </button>
 
-          <button className="btn btn-primary">Like</button>
+          <button className="btn btn-primary" onClick={() => printCartItems()}>
+            <AiFillLike />
+          </button>
           <button
             onClick={() => {
-              if (cartItems.length >= 1) {
+              if (cartItems.length > 0) {
+                checkAdded();
                 if (!added) {
                   cartItems.map((item) =>
-                    item.id == props.id ? removeItem() : addItem()
+                    item.id === id ? removeItem() : addItem()
                   );
                 } else {
                   removeItem();
@@ -49,10 +61,11 @@ const Painting = (props) => {
               } else {
                 addItem();
               }
+              printCartItems();
             }}
-            className="btn btn-primary"
+            className={addButtonStyle}
           >
-            {added ? "remove" : "add"}
+            {added ? "remove" : "add to cart"}
           </button>
         </div>
       </div>

@@ -81,7 +81,7 @@ const Paintings = (props) => {
           description={desc}
         />
         <Painting
-          id="p4"
+          id="p7"
           price="224.99"
           height="32"
           width="18"
@@ -89,7 +89,7 @@ const Paintings = (props) => {
           description={desc}
         />
         <Painting
-          id="p5"
+          id="p8"
           price="349.99"
           height="44"
           width="32"
@@ -97,7 +97,7 @@ const Paintings = (props) => {
           description={desc}
         />
         <Painting
-          id="p6"
+          id="p9"
           price="349.99"
           height="21"
           width="18"

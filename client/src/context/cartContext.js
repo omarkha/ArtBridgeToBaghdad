@@ -5,14 +5,24 @@ export const CartContext = createContext();
 
 const CartContextProvider = (props) => {
   const [cartItems, setCartItems] = useState([]);
-  const addCartItem = (type, id) => {
-    setCartItems([...cartItems, { type: type, id: id }]);
+
+  const addCartItem = (xtype, xid) => {
+    setCartItems([...cartItems, { type: xtype, id: xid }]);
+    console.log("item: " + xid + " is added. ");
   };
-  const removeCartItem = (id) => {
-    setCartItems(cartItems.filter((item) => item.id !== id));
+  const removeCartItem = (xid) => {
+    setCartItems(cartItems.filter((item) => item.id !== xid));
+    console.log("item: " + xid + " is removed. ");
   };
+
+  const printCartItems = () => {
+    console.log(cartItems);
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems, addCartItem, removeCartItem }}>
+    <CartContext.Provider
+      value={{ cartItems, addCartItem, removeCartItem, printCartItems }}
+    >
       {props.children}
     </CartContext.Provider>
   );
