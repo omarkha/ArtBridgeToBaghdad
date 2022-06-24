@@ -13,9 +13,12 @@ const Home = () => {
           <h3 className="h3">
             <br />
             Dear Visitors, I'm glad to announce the launch of my online store
-            for Iraqi artwork! if you love art, we might have something that
-            interests you!
+            for Iraqi artwork!
           </h3>
+          <h4 className="h4">
+            if you love art and appreciate different cultures, then we've got
+            new, exotic paintings for you!
+          </h4>
 
           <div className="div-1">
             <h5> The Cradle of Civilization </h5>

@@ -30,7 +30,6 @@ const Nav = () => {
           aria-controls="navbar1"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          expanded="true"
         >
           <span className="navbar-toggler-icon"></span>
         </button>

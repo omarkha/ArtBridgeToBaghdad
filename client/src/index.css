@@ -433,6 +433,13 @@ button {
   margin-top: 55px;
   margin-bottom: 13px;
 }
+
+.home-page .main-article h4 {
+  color: #fff;
+  margin-top: 21px;
+  margin-bottom: 55px;
+  grid-column: 1/4;
+}
 .results-heading {
   background-color: rgb(63, 101, 200);
   margin: 0 auto;
