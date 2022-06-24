@@ -7,16 +7,19 @@ const Header = () => {
     <header>
       <div className="jumbotron text-left">
         <h1 className="display-4">The Art Bridge To Baghdad</h1>
-        <p className="lead">Mesopotamian Artwork Gallery</p>
-        <p>
-          {" "}
-          founded by <br /> Iraqi artist Amal Maseer
-        </p>
-        <p className="lead">
-          <Link className="btn btn-primary btn-lg" to="/about" role="button">
-            About Me
-          </Link>
-        </p>{" "}
+        <div className="jumbo-content">
+          <p className="lead">Mesopotamian Artwork Gallery</p>
+          <p>
+            {" "}
+            founded by <br /> Iraqi artist Amal Maseer
+          </p>
+          <p className="lead">
+            <Link className="btn btn-primary btn-lg" to="/about" role="button">
+              About Me
+            </Link>
+          </p>{" "}
+        </div>
+
         <div className="extra-info">
           <h3>Welcome!</h3>
           <hr />
