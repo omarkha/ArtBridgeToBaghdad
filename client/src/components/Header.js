@@ -19,9 +19,10 @@ const Header = () => {
         </p>{" "}
         <div className="extra-info">
           <h3>Welcome!</h3>
+          <hr />
           <p>
-            Dear visitors, we at last, announce the launch of the Art Bridge!
-            thanks for your visit and happy browsing!
+            At last, we announce the launch of the Art Bridge! thanks for your
+            visit and happy browsing!
           </p>
         </div>
       </div>
