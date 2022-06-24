@@ -696,6 +696,9 @@ input[type="file"] {
     padding-left: 0;
   }
 
+  .header {
+    background-position-y: 0;
+  }
   .pagination .page-item {
     font-size: 8px;
     margin: 3px;
