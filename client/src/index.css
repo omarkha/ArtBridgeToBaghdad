@@ -150,6 +150,10 @@ header {
   font-family: "Alegreya Sans SC", sans-serif;
 }
 
+.lead {
+  color: rgb(160, 63, 101);
+}
+
 a {
   color: #fff;
   text-decoration: none;

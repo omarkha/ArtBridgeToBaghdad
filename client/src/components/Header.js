@@ -7,7 +7,7 @@ const Header = () => {
     <header>
       <div className="jumbotron text-left">
         <h1 className="display-4">The Art Bridge To Baghdad</h1>
-        <p className="lead">Authentic Mesopotamian Artwork Gallery</p>
+        <p className="lead">Mesopotamian Artwork Gallery</p>
         <p>
           {" "}
           founded by <br /> Iraqi artist Amal Maseer
