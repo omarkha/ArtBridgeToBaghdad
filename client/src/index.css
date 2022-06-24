@@ -151,7 +151,7 @@ header {
 }
 
 .lead {
-  color: rgb(200, 101, 160);
+  color: rgb(200, 101, 255);
 }
 
 a {
@@ -215,16 +215,10 @@ a {
   font-size: 21px;
 }
 
-.selected-painting:hover {
-  width: 86%;
-  padding: 13px;
-  border-radius: 34px;
-  margin-top: 21px;
-}
-
 .selected-painting img {
   width: 86%;
   margin: 0 auto;
+  margin-bottom: 8px;
 }
 
 .selected-painting button {
@@ -687,12 +681,6 @@ input[type="file"] {
   font-family: "smooch", cursive;
 }
 
-.cart {
-  background: none;
-  display: inline;
-  margin-right: 55px;
-}
-
 @media screen and (max-width: 960px) {
   .jumbotron {
     padding-top: 34px;
@@ -815,9 +803,13 @@ input[type="file"] {
     margin-top: 34px;
   }
 
-  .jumbotron p {
-    font-size: 21px;
+  .jumbotron .lead {
     text-shadow: 1px 1px 5px #222;
+    font-size: 18px;
+  }
+
+  .jumbotron p {
+    font-size: 13px;
   }
   .about-page img {
     width: 100%;
