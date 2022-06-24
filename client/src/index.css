@@ -737,7 +737,7 @@ input[type="file"] {
     margin-top: 0;
   }
   .home-page .main-article h3 {
-    margin-top: 89px;
+    margin-top: 144px;
   }
   .home-page {
     margin-top: 0;
@@ -812,9 +812,6 @@ input[type="file"] {
     font-size: 13px;
     justify-content: center;
   }
-  .home-page h3 {
-    margin-top: 34px;
-  }
 
   .jumbotron .lead {
     text-shadow: 1px 1px 5px #222;
@@ -822,7 +819,7 @@ input[type="file"] {
   }
 
   .jumbo-content {
-    margin-top: 89px;
+    margin-top: 144px;
   }
   .jumbotron p {
     font-size: 13px;
