@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Joan&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Smooch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@1&display=swap");
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -147,9 +150,11 @@ header {
 @keyframes animate-header {
   from {
     background-color: #222;
+    background-size: 115% auto;
   }
   to {
     background-color: #fff;
+    background-size: 100% auto;
   }
 }
 
@@ -161,18 +166,6 @@ header {
   background-color: rgba(25, 25, 25, 0.92);
   padding: 21px;
   border: 1px solid rgb(200, 200, 200);
-  animation: animate-jumbo-extrainfo 3.62s ease-in-out;
-}
-
-@keyframes animate-jumbo-extrainfo {
-  from {
-    margin-left: 0;
-    opacity: 0;
-  }
-  to {
-    margin-left: 754px;
-    opacity: 1;
-  }
 }
 
 .jumbotron .extra-info h3 {
@@ -728,13 +721,14 @@ input[type="file"] {
 }
 
 .brandtitle {
-  font-family: "smooch", cursive;
+  font-family: "Archivo Narrow", sans-serif;
 }
 
 @media screen and (max-width: 960px) {
   .jumbotron {
+    margin: 0;
     padding-top: 34px;
-    height: 987px;
+    height: 610px;
     background-position-y: 0px;
     text-align: center;
     padding-left: 0;
@@ -744,6 +738,8 @@ input[type="file"] {
     position: relative;
     top: 0;
     z-index: 2;
+    margin: 0;
+    padding: 0;
     background-position-y: 0;
   }
   .pagination .page-item {
@@ -758,7 +754,7 @@ input[type="file"] {
   }
   header {
     background-position-y: 0;
-    height: 200px;
+    height: 300px;
     padding: 0;
   }
   .contact {
