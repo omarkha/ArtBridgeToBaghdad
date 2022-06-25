@@ -31,6 +31,7 @@ body {
   text-shadow: 1px 1px 3px #222;
   padding-left: 144px;
   text-align: left;
+  margin-top: 55px;
 }
 
 h4 {
@@ -140,7 +141,18 @@ header {
   background-blend-mode: multiply;
   margin: 0;
   padding: 0;
+  animation: animate-header 3.62s ease-in-out;
 }
+
+@keyframes animate-header {
+  from {
+    background-color: #222;
+  }
+  to {
+    background-color: #fff;
+  }
+}
+
 .jumbotron .extra-info {
   width: 24%;
   text-align: center;
@@ -149,6 +161,18 @@ header {
   background-color: rgba(25, 25, 25, 0.92);
   padding: 21px;
   border: 1px solid rgb(200, 200, 200);
+  animation: animate-jumbo-extrainfo 3.62s ease-in-out;
+}
+
+@keyframes animate-jumbo-extrainfo {
+  from {
+    margin-left: 0;
+    opacity: 0;
+  }
+  to {
+    margin-left: 754px;
+    opacity: 1;
+  }
 }
 
 .jumbotron .extra-info h3 {

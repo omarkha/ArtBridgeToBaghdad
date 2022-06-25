@@ -9,11 +9,11 @@ const NewsLetter = () => {
       <div className="fields">
         <div>
           <label>Full Name</label>
-          <input type="text" />
+          <input type="text" placeholder="..." />
         </div>
         <div>
           <label>Email</label>
-          <input type="text" />
+          <input type="text" placeholder="..." />
         </div>
         <button onClick={() => subscribe()}>Subscribe</button>
       </div>

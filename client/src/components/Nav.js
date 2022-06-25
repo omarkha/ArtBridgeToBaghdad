@@ -36,24 +36,6 @@ const Nav = () => {
 
         <div className="collapse navbar-collapse" id="navbar1">
           <ul className="navbar-nav ms-auto">
-            <li>
-              <Link
-                className="nav-link"
-                to="about"
-                onClick={() => setExpanded(!expanded)}
-              >
-                <BsBookFill /> About
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className="nav-link"
-                to="contact"
-                onClick={() => setExpanded(false)}
-              >
-                <RiContactsFill /> Contact
-              </Link>
-            </li>
             <li className="nav-item">
               <Link
                 className="nav-link"
@@ -70,6 +52,24 @@ const Nav = () => {
                 onClick={() => setExpanded(false)}
               >
                 <AiFillStar /> Antiques
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="nav-link"
+                to="about"
+                onClick={() => setExpanded(!expanded)}
+              >
+                <BsBookFill /> About
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link"
+                to="contact"
+                onClick={() => setExpanded(false)}
+              >
+                <RiContactsFill /> Contact
               </Link>
             </li>
             <li className="nav-item cart">
