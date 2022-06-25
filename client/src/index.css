@@ -716,7 +716,10 @@ input[type="file"] {
     padding-left: 0;
   }
 
-  .header {
+  header {
+    position: relative;
+    top: 0;
+    z-index: 2;
     background-position-y: 0;
   }
   .pagination .page-item {
@@ -760,6 +763,7 @@ input[type="file"] {
     margin-top: 165px;
   }
   .home-page {
+    z-index: 2;
     margin-top: 0;
     background-image: none;
     background-color: rgb(40, 40, 40);
