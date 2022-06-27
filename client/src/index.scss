@@ -20,12 +20,12 @@
 }
 .btn-slide:hover {
   color: #fff;
-  box-shadow: inset 184px 0 0 0 #d80286;
-  border: 2px solid #d80286;
+  box-shadow: inset 184px 0 0 0 rgb(63, 160, 251);
+  border: 2px solid rgb(63, 160, 251);
 }
 
 .text-gradient {
-  background-image: linear-gradient(to top, $primary, #fff);
+  background-image: linear-gradient(to top, $secondary, #fff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
