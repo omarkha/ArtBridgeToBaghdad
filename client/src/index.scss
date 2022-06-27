@@ -20,8 +20,21 @@
 }
 .btn-slide:hover {
   color: #fff;
-  box-shadow: inset 200px 0 0 0 #d80286;
+  box-shadow: inset 184px 0 0 0 #d80286;
   border: 2px solid #d80286;
+}
+
+.text-gradient {
+  background-image: linear-gradient(to top, $primary, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-header {
+  color: #fff;
+  font-size: 55px;
+  font-family: "Joan";
+  font-weight: bold;
 }
 
 .container {
@@ -189,13 +202,18 @@ header {
 }
 
 .jumbotron .extra-info {
+  max-width: 250px;
+  padding: 1rem;
+  color: white;
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, $primary, rgba(0, 0, 0, 0)) 1 100%;
   width: 24%;
   text-align: center;
   margin: 0 auto;
   margin-left: 754px;
-  background-color: rgba(25, 25, 25, 0.92);
+  background-color: rgba(25, 25, 25, 0.86);
   padding: 21px;
-  border: 1px solid rgb(200, 200, 200);
 }
 
 .jumbotron .extra-info h3 {

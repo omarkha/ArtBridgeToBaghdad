@@ -6,24 +6,24 @@ const Header = () => {
   return (
     <header>
       <div className="jumbotron text-left">
-        <h1 className="display-4">The Art Bridge To Baghdad</h1>
+        <h1 className="text-header text-gradient">The Art Bridge To Baghdad</h1>
         <div className="jumbo-content">
           <p className="lead">Mesopotamian Artwork Gallery</p>
           <p>
             {" "}
             founded by <br /> Iraqi artist Amal Maseer
           </p>
-          <p className="lead">
+          <p className="lead py-3">
             <Link className="btn-slide" to="/about" role="button">
-              About Me
+              Our Story
             </Link>
           </p>{" "}
         </div>
 
         <div className="extra-info">
-          <h3>Welcome!</h3>
+          <h3 className="text-primary">Welcome!</h3>
           <hr />
-          <p>
+          <p className="text-light">
             At last, I announce the launch of the Art Bridge to Baghdad Gallery!
             thanks for your visit and happy browsing!
           </p>
