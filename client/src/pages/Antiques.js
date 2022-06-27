@@ -7,7 +7,7 @@ const desc =
 
 const Antiques = () => {
   return (
-    <div className="page">
+    <div className="container">
       <div className="results-heading">
         <h3>Scroll Down for Our inventory</h3>
       </div>

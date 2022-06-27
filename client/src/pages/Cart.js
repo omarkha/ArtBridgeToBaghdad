@@ -79,7 +79,7 @@ const Cart = () => {
 
   useEffect(() => getTotal(), []);
   return (
-    <div className="cart-page">
+    <div className="container">
       <div className="cart-view">
         {selections.length > 0 ? (
           selections.map((e, i) => (

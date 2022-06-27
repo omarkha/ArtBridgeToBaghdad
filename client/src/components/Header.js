@@ -14,7 +14,7 @@ const Header = () => {
             founded by <br /> Iraqi artist Amal Maseer
           </p>
           <p className="lead">
-            <Link className="btn btn-primary btn-lg" to="/about" role="button">
+            <Link className="btn-slide" to="/about" role="button">
               About Me
             </Link>
           </p>{" "}

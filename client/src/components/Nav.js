@@ -15,7 +15,7 @@ const Nav = () => {
   const { cartItems } = useContext(CartContext);
   const [expanded, setExpanded] = useState(false);
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-0">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-0 my-0">
       <div className="container">
         <Link to="/" className="navbar-brand">
           <img className="icon" src={Images.logo} />
@@ -42,7 +42,7 @@ const Nav = () => {
                 to="paintings"
                 onClick={() => setExpanded(false)}
               >
-                <TiHeart /> Paintings
+                Paintings
               </Link>
             </li>
             <li className="nav-item">
@@ -51,7 +51,7 @@ const Nav = () => {
                 to="antiques"
                 onClick={() => setExpanded(false)}
               >
-                <AiFillStar /> Antiques
+                Antiques
               </Link>
             </li>
             <li>
@@ -60,7 +60,7 @@ const Nav = () => {
                 to="about"
                 onClick={() => setExpanded(!expanded)}
               >
-                <BsBookFill /> About
+                About
               </Link>
             </li>
             <li className="nav-item">
@@ -69,7 +69,7 @@ const Nav = () => {
                 to="contact"
                 onClick={() => setExpanded(false)}
               >
-                <RiContactsFill /> Contact
+                Contact
               </Link>
             </li>
             <li className="nav-item cart">

@@ -27,114 +27,116 @@ const Paintings = (props) => {
   */
   return (
     <div className="paintings-page">
-      <div className="results-heading">
-        <h3> Happy Viewing! </h3>
-      </div>
+      <div className="container">
+        <div className="results-heading">
+          <h3> Happy Viewing! </h3>
+        </div>
 
-      <div className="results">
-        <Painting
-          id="p1"
-          price="334.99"
-          height="23"
-          width="36"
-          img_url={Images.painting_1}
-          description={desc}
-        />
-        <Painting
-          id="p2"
-          price="379.99"
-          height="42"
-          width="34"
-          img_url={Images.painting_2}
-          description={desc}
-        />
-        <Painting
-          id="p3"
-          price="149.99"
-          height="18"
-          width="32"
-          img_url={Images.painting_3}
-          description={desc}
-        />
-        <Painting
-          id="p4"
-          price="224.99"
-          height="32"
-          width="18"
-          img_url={Images.painting_4}
-          description={desc}
-        />
-        <Painting
-          id="p5"
-          price="349.99"
-          height="44"
-          width="32"
-          img_url={Images.painting_5}
-          description={desc}
-        />
-        <Painting
-          id="p6"
-          price="349.99"
-          height="21"
-          width="18"
-          img_url={Images.painting_1}
-          description={desc}
-        />
-        <Painting
-          id="p7"
-          price="224.99"
-          height="32"
-          width="18"
-          img_url={Images.painting_4}
-          description={desc}
-        />
-        <Painting
-          id="p8"
-          price="349.99"
-          height="44"
-          width="32"
-          img_url={Images.painting_5}
-          description={desc}
-        />
-        <Painting
-          id="p9"
-          price="349.99"
-          height="21"
-          width="18"
-          img_url={Images.painting_1}
-          description={desc}
-        />
-      </div>
-      <div className="results-bottom">
-        <nav aria-label="Page navigation example">
-          <ul className="pagination">
-            <li className="page-item">
-              <Link className="page-link" to="#">
-                Previous
-              </Link>
-            </li>
-            <li className="page-item">
-              <Link className="page-link" to="#">
-                1
-              </Link>
-            </li>
-            <li className="page-item">
-              <Link className="page-link" to="#">
-                2
-              </Link>
-            </li>
-            <li className="page-item">
-              <Link className="page-link" to="#">
-                3
-              </Link>
-            </li>
-            <li className="page-item">
-              <Link className="page-link" to="#">
-                Next
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="results">
+          <Painting
+            id="p1"
+            price="334.99"
+            height="23"
+            width="36"
+            img_url={Images.painting_1}
+            description={desc}
+          />
+          <Painting
+            id="p2"
+            price="379.99"
+            height="42"
+            width="34"
+            img_url={Images.painting_2}
+            description={desc}
+          />
+          <Painting
+            id="p3"
+            price="149.99"
+            height="18"
+            width="32"
+            img_url={Images.painting_3}
+            description={desc}
+          />
+          <Painting
+            id="p4"
+            price="224.99"
+            height="32"
+            width="18"
+            img_url={Images.painting_4}
+            description={desc}
+          />
+          <Painting
+            id="p5"
+            price="349.99"
+            height="44"
+            width="32"
+            img_url={Images.painting_5}
+            description={desc}
+          />
+          <Painting
+            id="p6"
+            price="349.99"
+            height="21"
+            width="18"
+            img_url={Images.painting_1}
+            description={desc}
+          />
+          <Painting
+            id="p7"
+            price="224.99"
+            height="32"
+            width="18"
+            img_url={Images.painting_4}
+            description={desc}
+          />
+          <Painting
+            id="p8"
+            price="349.99"
+            height="44"
+            width="32"
+            img_url={Images.painting_5}
+            description={desc}
+          />
+          <Painting
+            id="p9"
+            price="349.99"
+            height="21"
+            width="18"
+            img_url={Images.painting_1}
+            description={desc}
+          />
+        </div>
+        <div className="results-bottom">
+          <nav aria-label="Page navigation example">
+            <ul className="pagination">
+              <li className="page-item">
+                <Link className="page-link" to="#">
+                  Previous
+                </Link>
+              </li>
+              <li className="page-item">
+                <Link className="page-link" to="#">
+                  1
+                </Link>
+              </li>
+              <li className="page-item">
+                <Link className="page-link" to="#">
+                  2
+                </Link>
+              </li>
+              <li className="page-item">
+                <Link className="page-link" to="#">
+                  3
+                </Link>
+              </li>
+              <li className="page-item">
+                <Link className="page-link" to="#">
+                  Next
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   );

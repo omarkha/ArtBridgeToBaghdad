@@ -3,7 +3,7 @@ import Images from "../images";
 
 const About = () => {
   return (
-    <div className="page">
+    <div className="container">
       <div className="about-page">
         <article className="about-intro">
           <div>
