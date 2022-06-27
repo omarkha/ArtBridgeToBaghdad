@@ -11,7 +11,7 @@ const Home = () => {
       <Header />
 
       <div className="home-page">
-        <div className="container-lg">
+        <div className="container">
           <section className="main-article row justify-content-center justify-items-center">
             <div className="col-md-12 text-center">
               <h3 className="display-3 text-center">
@@ -90,10 +90,10 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <section className="row justify-content-center justify-items-center">
-            <NewsLetter />
-          </section>
         </div>
+        <section className="row justify-content-center justify-items-center">
+          <NewsLetter />
+        </section>
       </div>
     </div>
   );

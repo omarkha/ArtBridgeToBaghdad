@@ -592,9 +592,9 @@ button[type="submit"] {
 
 input[type="text"],
 form input[type="password"] {
-  font-size: 21px;
+  font-size: 18px;
   background-color: antiquewhite;
-  width: 61.8%;
+  width: 86%;
   height: 30px;
   border-radius: 5px;
   letter-spacing: 2px;
@@ -759,6 +759,14 @@ input[type="file"] {
     padding-left: 0;
   }
 
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0;
+    box-sizing: border-box;
+  }
+
   .btn-slide {
     color: #fff;
     box-shadow: inset 184px 0 0 0 #d80286;
@@ -787,9 +795,7 @@ input[type="file"] {
     margin: 3px;
   }
   .home-page .main-article {
-    display: flex;
-    flex-direction: column;
-    background-image: none;
+    padding-top: 233px;
     background-color: rgb(25, 25, 25);
   }
   header {

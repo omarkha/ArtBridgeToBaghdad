@@ -8,12 +8,16 @@ const NewsLetter = () => {
       <h4 className="lead">get updated with the hottest new pieces we add!</h4>
       <div className="fields my-4">
         <div>
-          <label>Full Name</label>
-          <input type="text" placeholder="..." />
+          <label>Name</label>
+          <input type="text" placeholder="e.g. Mario" />
         </div>
         <div>
           <label>Email</label>
-          <input className="text-input" type="text" placeholder="..." />
+          <input
+            className="text-input"
+            type="text"
+            placeholder="e.g. mario@example.com"
+          />
         </div>
         <button className="btn btn-primary" onClick={() => subscribe()}>
           Subscribe
