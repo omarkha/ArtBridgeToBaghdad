@@ -21,6 +21,8 @@ const Images = {
   logo: require("./logo.png"),
   video: require("./file.mp4"),
   amals_banner: require("./amals-banner.jpg"),
+  baghdad_15: require("./baghdad-15.jpg"),
+  baghdad_12: require("./baghdad-12.jpg"),
 };
 
 export default Images;
