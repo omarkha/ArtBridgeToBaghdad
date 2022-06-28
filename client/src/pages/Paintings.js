@@ -28,7 +28,7 @@ const Paintings = (props) => {
   return (
     <div className="paintings-page">
       <div className="container">
-        <div className="results-heading">
+        <div className="results-heading bg-primary">
           <h3> Happy Viewing! </h3>
         </div>
 
@@ -106,7 +106,7 @@ const Paintings = (props) => {
             description={desc}
           />
         </div>
-        <div className="results-bottom">
+        <div className="results-bottom bg-secondary">
           <nav aria-label="Page navigation example">
             <ul className="pagination">
               <li className="page-item">

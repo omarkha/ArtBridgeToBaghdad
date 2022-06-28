@@ -28,7 +28,7 @@ const Painting = (props) => {
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (
-    <div className="painting">
+    <div className="painting bg-light col-md-4">
       <div>
         <img src={props.img_url} />
       </div>

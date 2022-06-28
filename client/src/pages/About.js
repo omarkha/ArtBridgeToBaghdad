@@ -5,11 +5,7 @@ import { Parallax, ParallaxLayer } from "react-parallax";
 const About = () => {
   return (
     <div>
-      <Parallax
-        strength={-200}
-        blur={{ min: -15, max: 15 }}
-        bgImage={Images.painting}
-      >
+      <Parallax blur={14} strength={-200} bgImage={Images.painting}>
         <div className="about-page py-5">
           <div className="container">
             <article className="about-intro">
@@ -18,12 +14,12 @@ const About = () => {
                 <img src={Images.painting_5} />
                 <img src={Images.painting_2} />
               </div>
-              <h3 className="text-light">
+              <h3 className="text-light text-shadow">
                 Hi there, I am Amal Maseer, owner of the Art Bridge to Baghdad
                 gallery
               </h3>
 
-              <p className="text-light ts-sm">
+              <p className="text-light ts-sm text-shadow">
                 From a young age, I realized that I could draw rather well and
                 so I pursued drawing and aimed to develop as an artist.
                 Fortunately for me, I found one of the best mentors one could -
@@ -40,17 +36,16 @@ const About = () => {
           </div>
         </div>
       </Parallax>
-      <Parallax
-        strength={100}
-        blur={{ min: -15, max: 15 }}
-        bgImage={Images.teaching_2}
-      >
+      <Parallax blur={14} strength={100} bgImage={Images.teaching_2}>
         <div className="about-page py-5">
           <div className="container">
             <article className="about-teaching">
               <img src={Images.teaching_2} />
-              <h3 className="text-light"> Former High School Teacher </h3>
-              <p className="text-light">
+              <h3 className="text-light text-shadowt">
+                {" "}
+                Former High School Teacher{" "}
+              </h3>
+              <p className="text-light text-shadow">
                 {" "}
                 During the 80s, I taught in many different High Schools across
                 Iraq; Preparing young students for success in college. I taught
@@ -61,17 +56,15 @@ const About = () => {
           </div>
         </div>
       </Parallax>
-      <Parallax
-        strength={162}
-        blur={{ min: -15, max: 15 }}
-        bgImage={Images.food}
-      >
+      <Parallax blur={14} strength={162} bgImage={Images.food}>
         <div className="about-page py-5">
           <div className="container">
             <article className="about-restaurant">
               <img src={Images.food} />
-              <h3 className="text-light">Former Owner of Amal's Cuisine</h3>
-              <p className="text-light">
+              <h3 className="text-light text-shadow">
+                Former Owner of Amal's Cuisine
+              </h3>
+              <p className="text-light text-shadow">
                 As well as being an artist, I am a reporter, political and
                 social activist as well as a businesswoman. I owned a restaurant
                 in the town of New Paltz, NY called Amal's Authentic Middle
@@ -85,17 +78,16 @@ const About = () => {
           </div>
         </div>
       </Parallax>
-      <Parallax
-        strength={262}
-        blur={{ min: -15, max: 15 }}
-        bgImage={Images.net_cafe}
-      >
+      <Parallax blur={14} strength={262} bgImage={Images.net_cafe}>
         <div className="about-page py-5">
           <div className="container">
             <article className="about-cafe">
               <img src={Images.net_cafe} />
-              <h3 className="text-light"> My Internet Cafe in Baghdad </h3>
-              <p className="text-light">
+              <h3 className="text-light text-shadow">
+                {" "}
+                My Internet Cafe in Baghdad{" "}
+              </h3>
+              <p className="text-light text-shadow">
                 In 2007, I along with my nephew and another partner opened up an
                 Internet Cafe in the city of baghdad.
               </p>
@@ -104,17 +96,13 @@ const About = () => {
         </div>
       </Parallax>
 
-      <Parallax
-        strength={362}
-        blur={{ min: -15, max: 15 }}
-        bgImage={Images.surgeon}
-      >
+      <Parallax blur={14} strength={362} bgImage={Images.surgeon}>
         <div className="about-page py-5">
           <div className="container">
             <article>
               <img src={Images.surgeon} />
-              <h3 className="text-light"> Working with NGOs </h3>
-              <p className="text-light">
+              <h3 className="text-light text-shadow"> Working with NGOs </h3>
+              <p className="text-light text-shadow">
                 {" "}
                 I worked with Doctors Without Borders - a non-governmental
                 organization. Our mission was to treat injured Iraqi civilians.
@@ -126,16 +114,14 @@ const About = () => {
         </div>
       </Parallax>
 
-      <Parallax
-        strength={100}
-        blur={{ min: -15, max: 15 }}
-        bgImage={Images.baghdad}
-      >
+      <Parallax blur={14} strength={100} bgImage={Images.baghdad}>
         <div className="about=page py-5">
           <div className="container">
             <article>
-              <h3 className="text-light">Articles and News Pieces</h3>
-              <p className="text-light">
+              <h3 className="text-light text-shadow">
+                Articles and News Pieces
+              </h3>
+              <p className="text-light text-shadow">
                 I would like to give special thanks to all the amazing friends
                 who supported me through out the past 3 decades since when I was
                 in Baghdad to my time in the U.S. and thanks also to my son Omar

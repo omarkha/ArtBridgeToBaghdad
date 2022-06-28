@@ -23,6 +23,8 @@ const Images = {
   amals_banner: require("./amals-banner.jpg"),
   baghdad_15: require("./baghdad-15.jpg"),
   baghdad_12: require("./baghdad-12.jpg"),
+  baghdad_9: require("./baghdad-9.jpg"),
+  desert: require("./desert-mask.png"),
 };
 
 export default Images;

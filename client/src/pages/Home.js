@@ -10,55 +10,41 @@ const Home = () => {
   const carouselImages = [Images.amal_image, Images.amal_image_2];
   return (
     <div className="home">
-      <Parallax
-        strength={-100}
-        blur={{ min: -15, max: 15 }}
-        bgImage={Images.baghdad_12}
-      >
-        <div className="header">
-          <div className="jumbotron text-left">
-            <h1 className="text-header text-gradient">
-              The Art Bridge To Baghdad
-            </h1>
-            <div className="jumbo-content">
-              <p className="lead">Mesopotamian Artwork Gallery</p>
-              <p>
-                {" "}
-                founded by <br /> Iraqi artist Amal Maseer
-              </p>
-              <p className="lead py-3">
-                <Link className="btn-slide" to="/about" role="button">
-                  Our Story
-                </Link>
-              </p>{" "}
-            </div>
-
-            <div className="extra-info">
-              <h3 className="text-primary">Welcome!</h3>
-              <hr />
-              <p className="text-light">
-                At last, I announce the launch of the Art Bridge to Baghdad
-                Gallery! thanks for your visit and happy browsing!
-              </p>
-            </div>
-          </div>
+      <Parallax strength={-300} bgImage={Images.baghdad_9}>
+        <div className="header-content">
+          <h1 className="display-1 text-gradient">The Art Bridge To Baghdad</h1>
+          <h3 className="display-6">Mespotamian Art Gallery</h3>
+          <h4 className="lead text-light">
+            The Elegance of Paint, The Arabic way
+          </h4>
+          <p className="lead py-3">
+            <Link className="btn-slide" to="/about" role="button">
+              Read My Story
+            </Link>
+          </p>{" "}
         </div>
       </Parallax>
-      <Parallax
-        strength={-200}
-        blur={{ min: -10, max: 15 }}
-        bgImage={Images.painting}
-      >
-        <div className="home-page">
-          <div className="container">
-            <section className="main-article row justify-content-center justify-items-center">
+
+      <Parallax blur={{ min: -15, max: 15 }} bgImage={Images.painting}>
+        <div style={{ height: "1597px" }}>
+          <h3
+            style={{ position: "relative", top: "610px" }}
+            className="display-1 text-light mt-5"
+          >
+            This is The Cradle of Civilization
+          </h3>
+        </div>
+      </Parallax>
+      <Parallax>
+        <div className="home-page my-0">
+          <div className="container my-0">
+            <section className="main-article row justify-content-center justify-items-center my-0">
               <div className="col-md-12 text-center">
                 <h3 className="display-3 text-center">
                   <br />
-                  Dear Visitors, I'm glad to announce the launch of my online
-                  store for Iraqi artwork!
+                  Announcing the launch of my online store for Iraqi artwork!
                 </h3>
-                <h4 className="lead text-center">
+                <h4 className="lead text-danger text-center">
                   if you love art and appreciate different cultures, then we've
                   got some new, exotic paintings for you!
                 </h4>
@@ -106,19 +92,6 @@ const Home = () => {
               <div className="col-md-12 row">
                 <div className="col-md-8 mt-5 px-5">
                   <p>
-                    Hi there, and welcome to my gallery! I'm Amal Maseer, owner
-                    of the Art Bridge to Baghdad gallery. I would love to share
-                    with you the beauty of Mesopotamia captured by the eyes of
-                    an Iraqi woman.
-                  </p>
-                </div>
-                <img className="col-md-4" src={Images.amal_image} />
-              </div>
-
-              <div className="col-md-12 row">
-                <img className="col-md-4" src={Images.painting_4} />
-                <div className="col-md-8 mt-5 px-5">
-                  <p>
                     I learned to paint under the mentorship of Hafidh Al
                     Doroubi, who was mentored by Silvador. International and
                     local Iraqi press repeatedly featured my paintings since the
@@ -128,16 +101,28 @@ const Home = () => {
                     in one of Baghdad's squares.
                   </p>
                 </div>
+                <img className="col-md-4" src={Images.painting_4} />
+              </div>
+
+              <div className="col-md-12 row">
+                {" "}
+                <img className="col-md-4" src={Images.amal_image} />
+                <div className="col-md-8 mt-5 px-5">
+                  <p>
+                    Hi there, and welcome to my gallery! I'm Amal Maseer, owner
+                    of the Art Bridge to Baghdad gallery. I would love to share
+                    with you the beauty of Mesopotamia captured by the eyes of
+                    an Iraqi woman.
+                  </p>
+                </div>
               </div>
             </section>
           </div>
         </div>
       </Parallax>
-      <Parallax>
-        <section className="row justify-content-center justify-items-center">
-          <NewsLetter />
-        </section>
-      </Parallax>
+      <section className="row justify-content-center justify-items-center">
+        <NewsLetter />
+      </section>
     </div>
   );
 };
