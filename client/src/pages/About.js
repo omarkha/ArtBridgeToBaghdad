@@ -41,7 +41,7 @@ const About = () => {
           <div className="container">
             <article className="about-teaching">
               <img src={Images.teaching_2} />
-              <h3 className="text-light text-shadowt">
+              <h3 className="text-light text-shadow">
                 {" "}
                 Former High School Teacher{" "}
               </h3>

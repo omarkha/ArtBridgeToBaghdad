@@ -12,13 +12,13 @@ const Home = () => {
     <div className="home">
       <Parallax strength={-300} bgImage={Images.baghdad_8}>
         <div className="header-content">
-          <h3 className="display-6 text-muted">Mespotamian Art Gallery</h3>
+          <h4 className="lead text-gradient mb-0">
+            The Elegance of Paint, The Arabic Way
+          </h4>
           <h1 className="display-1 text-gradient-headline">
             Art Bridge To Baghdad
           </h1>
-          <h4 className="lead text-gradient">
-            The Elegance of Paint, The Arabic Way
-          </h4>
+          <h3 className="display-7 text-muted mb-0">Mespotamian Art Gallery</h3>
           <h6 className="lead text-muted mt-5">by Amal Maseer</h6>
           <p className="lead py-3">
             <Link className="btn-slide my-5" to="/about" role="button">

@@ -566,7 +566,7 @@ button {
 }
 
 nav .nav-link {
-  color: $blue;
+  color: $light;
 }
 nav .nav-link {
   border-radius: 5px;
@@ -747,6 +747,10 @@ input[type="file"] {
   margin: 0 auto;
   border-radius: 8px;
   margin-top: 34px;
+}
+
+.text-shadow {
+  text-shadow: 0 3px 5px #222;
 }
 
 .container-inventory button {
@@ -947,10 +951,6 @@ input[type="file"] {
     flex-wrap: wrap;
     font-size: 13px;
     justify-content: center;
-  }
-
-  .text-shadow {
-    text-shaw: 0 3px 5px #222;
   }
   .jumbotron .lead {
     text-shadow: 1px 1px 5px #222;
