@@ -26,15 +26,30 @@ const Home = () => {
         </div>
       </Parallax>
 
-      <Parallax blur={{ min: -14, max: 15 }} bgImage={Images.baghdad_13}>
+      <Parallax blur={{ min: -15, max: 15 }} bgImage={Images.baghdad_15}>
         <div style={{ height: "1597px" }}>
-          <div className="container">
+          <div className="container-lg">
             <h3
-              style={{ position: "relative", top: "610px" }}
-              className="display-1 text-light mt-5"
+              style={{ position: "relative", top: "377px" }}
+              className="display-1 text-light mt-5 row text-shadow"
             >
               Welcome to The Cradle of Civilization...
             </h3>
+
+            <div
+              className="col-md-12 row my-5"
+              style={{ position: "relative", top: "610px" }}
+            >
+              <img className="col-md-4" src={Images.amal_image} />
+              <div className="col-md-8 mt-5 px-5">
+                <p className="text-light h2 text-shadow">
+                  Hi there, and welcome to my gallery! I'm Amal Maseer, owner of
+                  the Art Bridge to Baghdad gallery. I would love to share with
+                  you the beauty of Mesopotamia captured by the eyes of an Iraqi
+                  woman.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </Parallax>
@@ -59,8 +74,8 @@ const Home = () => {
               </div>
 
               <div className="col-md-12 row my-5">
+                <img className="col-md-4" src={Images.painting_4} />
                 <div className="col-md-8 mt-5 px-5">
-                  <img className="col-md-4" src={Images.painting_4} />
                   <h5> The Cradle of Civilization </h5>
                   <p>
                     Everywhere in the world, kids are taught about Mesopotamia.
@@ -109,19 +124,6 @@ const Home = () => {
                     in one of Baghdad's squares.
                   </p>
                 </div>
-              </div>
-
-              <div className="col-md-12 row my-5">
-                {" "}
-                <div className="col-md-8 mt-5 px-5">
-                  <p>
-                    Hi there, and welcome to my gallery! I'm Amal Maseer, owner
-                    of the Art Bridge to Baghdad gallery. I would love to share
-                    with you the beauty of Mesopotamia captured by the eyes of
-                    an Iraqi woman.
-                  </p>
-                </div>
-                <img className="col-md-4" src={Images.amal_image} />
               </div>
             </section>
           </div>
