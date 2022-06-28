@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="home">
       <Parallax strength={-300} bgImage={Images.baghdad_8}>
-        <div className="header-content">
+        <div className="header-content container-lg">
           <h4 className="lead text-gradient mb-0">
             The Elegance of Paint, The Arabic Way
           </h4>
