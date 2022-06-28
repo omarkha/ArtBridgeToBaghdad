@@ -15,9 +15,9 @@ const Nav = () => {
   const { cartItems } = useContext(CartContext);
   const [expanded, setExpanded] = useState(false);
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-0 my-0">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top py-0 my-0">
       <div className="container">
-        <Link to="/" className="navbar-brand text-gradient">
+        <Link to="/" className="navbar-brand text-gradient-headline">
           <img className="icon" src={Images.logo} />
           <span className="brandtitle">Art Bridge to Baghdad</span>
         </Link>
