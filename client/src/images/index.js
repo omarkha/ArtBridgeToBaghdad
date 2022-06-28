@@ -24,6 +24,10 @@ const Images = {
   baghdad_15: require("./baghdad-15.jpg"),
   baghdad_12: require("./baghdad-12.jpg"),
   baghdad_9: require("./baghdad-9.jpg"),
+  baghdad_8: require("./baghdad-8.jpg"),
+  baghdad_13: require("./baghdad-13.jpg"),
+  iraq_map: require("./iraq-map.png"),
+  header_bg: require("./header-bg-1.jpg"),
   desert: require("./desert-mask.png"),
 };
 

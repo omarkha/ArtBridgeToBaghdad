@@ -10,7 +10,7 @@ const Home = () => {
   const carouselImages = [Images.amal_image, Images.amal_image_2];
   return (
     <div className="home">
-      <Parallax strength={-300} bgImage={Images.baghdad_9}>
+      <Parallax strength={-300} bgImage={Images.baghdad_13}>
         <div className="header-content">
           <h1 className="display-1 text-gradient">The Art Bridge To Baghdad</h1>
           <h3 className="display-6">Mespotamian Art Gallery</h3>
@@ -25,17 +25,23 @@ const Home = () => {
         </div>
       </Parallax>
 
-      <Parallax blur={{ min: -15, max: 15 }} bgImage={Images.painting}>
+      <Parallax blur={{ min: -14, max: 15 }} bgImage={Images.baghdad_13}>
         <div style={{ height: "1597px" }}>
-          <h3
-            style={{ position: "relative", top: "610px" }}
-            className="display-1 text-light mt-5"
-          >
-            This is The Cradle of Civilization
-          </h3>
+          <div className="container">
+            <h3
+              style={{ position: "relative", top: "610px" }}
+              className="display-1 text-light mt-5"
+            >
+              Welcome to The Cradle of Civilization...
+            </h3>
+          </div>
         </div>
       </Parallax>
-      <Parallax>
+      <Parallax
+        blur={{ min: -5, max: 15 }}
+        bgImage={Images.painting}
+        strength={-100}
+      >
         <div className="home-page my-0">
           <div className="container my-0">
             <section className="main-article row justify-content-center justify-items-center my-0">
@@ -44,13 +50,13 @@ const Home = () => {
                   <br />
                   Announcing the launch of my online store for Iraqi artwork!
                 </h3>
-                <h4 className="lead text-danger text-center">
+                <h4 className="lead text-light text-center">
                   if you love art and appreciate different cultures, then we've
                   got some new, exotic paintings for you!
                 </h4>
               </div>
 
-              <div className="col-md-12 row">
+              <div className="col-md-12 row my-5">
                 <div className="col-md-8 mt-5 px-5">
                   <h5> The Cradle of Civilization </h5>
                   <p>
@@ -74,7 +80,7 @@ const Home = () => {
                 <img className="col-md-4" src={Images.painting_4} />
               </div>
 
-              <div className="col-md-12 row">
+              <div className="col-md-12 row my-5">
                 <img className="col-md-4" src={Images.painting_2} />
                 <div className="col-md-8 mt-5 px-5">
                   <p>
@@ -89,7 +95,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="col-md-12 row">
+              <div className="col-md-12 row my-5">
                 <div className="col-md-8 mt-5 px-5">
                   <p>
                     I learned to paint under the mentorship of Hafidh Al
@@ -104,7 +110,7 @@ const Home = () => {
                 <img className="col-md-4" src={Images.painting_4} />
               </div>
 
-              <div className="col-md-12 row">
+              <div className="col-md-12 row my-5">
                 {" "}
                 <img className="col-md-4" src={Images.amal_image} />
                 <div className="col-md-8 mt-5 px-5">
@@ -120,9 +126,11 @@ const Home = () => {
           </div>
         </div>
       </Parallax>
-      <section className="row justify-content-center justify-items-center">
-        <NewsLetter />
-      </section>
+      <Parallax bgImage={Images.desert}>
+        <section className="row justify-content-center justify-items-center">
+          <NewsLetter />
+        </section>
+      </Parallax>
     </div>
   );
 };

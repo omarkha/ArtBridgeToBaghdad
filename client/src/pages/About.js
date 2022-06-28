@@ -4,7 +4,7 @@ import { Parallax, ParallaxLayer } from "react-parallax";
 
 const About = () => {
   return (
-    <div>
+    <div className="home">
       <Parallax blur={14} strength={-200} bgImage={Images.painting}>
         <div className="about-page py-5">
           <div className="container">
