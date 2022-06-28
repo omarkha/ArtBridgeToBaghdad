@@ -38,7 +38,7 @@
 
 .header-content {
   z-index: 1;
-  padding: 144px 89px;
+  padding: 233px 89px;
   color: $light;
   margin: 0;
   height: 987px;
@@ -638,20 +638,6 @@ button[type="submit"] {
 
 .fields div {
   margin: 8px 0;
-}
-
-input[type="text"],
-form input[type="password"] {
-  font-size: 18px;
-  background-color: antiquewhite;
-  width: 86%;
-  height: 30px;
-  border-radius: 5px;
-  letter-spacing: 2px;
-  word-spacing: 3px;
-  text-align: center;
-  border: 1px solid #000;
-  margin: 13px 0;
 }
 
 aside {

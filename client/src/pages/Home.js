@@ -18,7 +18,7 @@ const Home = () => {
             The Elegance of Paint, The Arabic way
           </h4>
           <p className="lead py-3">
-            <Link className="btn-slide" to="/about" role="button">
+            <Link className="btn-slide my-5" to="/about" role="button">
               Read My Story
             </Link>
           </p>{" "}
