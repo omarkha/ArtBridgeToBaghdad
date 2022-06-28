@@ -44,7 +44,7 @@ const Home = () => {
         strength={-100}
       >
         <div className="home-page my-0">
-          <div className="container my-0">
+          <div className="container-lg my-0">
             <section className="main-article row justify-content-center justify-items-center my-0">
               <div className="col-md-12 text-center">
                 <h3 className="display-3 text-center">
@@ -60,6 +60,7 @@ const Home = () => {
 
               <div className="col-md-12 row my-5">
                 <div className="col-md-8 mt-5 px-5">
+                  <img className="col-md-4" src={Images.painting_4} />
                   <h5> The Cradle of Civilization </h5>
                   <p>
                     Everywhere in the world, kids are taught about Mesopotamia.
@@ -78,12 +79,9 @@ const Home = () => {
                     and religious groups.
                   </p>
                 </div>
-
-                <img className="col-md-4" src={Images.painting_4} />
               </div>
 
               <div className="col-md-12 row my-5">
-                <img className="col-md-4" src={Images.painting_2} />
                 <div className="col-md-8 mt-5 px-5">
                   <p>
                     <br />
@@ -95,9 +93,11 @@ const Home = () => {
                     one of the world's richest countries in culture!
                   </p>
                 </div>
+                <img className="col-md-4" src={Images.painting_2} />
               </div>
 
               <div className="col-md-12 row my-5">
+                <img className="col-md-4" src={Images.painting_4} />
                 <div className="col-md-8 mt-5 px-5">
                   <p>
                     I learned to paint under the mentorship of Hafidh Al
@@ -109,12 +109,10 @@ const Home = () => {
                     in one of Baghdad's squares.
                   </p>
                 </div>
-                <img className="col-md-4" src={Images.painting_4} />
               </div>
 
               <div className="col-md-12 row my-5">
                 {" "}
-                <img className="col-md-4" src={Images.amal_image} />
                 <div className="col-md-8 mt-5 px-5">
                   <p>
                     Hi there, and welcome to my gallery! I'm Amal Maseer, owner
@@ -123,6 +121,7 @@ const Home = () => {
                     an Iraqi woman.
                   </p>
                 </div>
+                <img className="col-md-4" src={Images.amal_image} />
               </div>
             </section>
           </div>
