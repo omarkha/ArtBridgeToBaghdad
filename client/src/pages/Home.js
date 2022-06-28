@@ -21,17 +21,12 @@ const Home = () => {
               The Elegance of Paint, The Arabic Way
             </h4>
             <h1 className="display-1 text-gradient-headline">
-              The Art Bridge To Baghdad
+              Art Bridge To Baghdad
             </h1>
             <h3 className="display-7 text-muted mb-0">
               Mespotamian Art Gallery
             </h3>
             <h6 className="lead text-muted mt-5">by Amal Maseer</h6>
-            <p className="lead py-3">
-              <Link className="btn-slide my-5" to="/about" role="button">
-                My Story
-              </Link>
-            </p>{" "}
           </div>
         </div>
       </Parallax>
@@ -39,7 +34,7 @@ const Home = () => {
       <Parallax
         blur={{ min: -10, max: 10 }}
         strength={-200}
-        bgImage={Images.baghdad_13}
+        bgImage={Images.painting}
       >
         <div style={{ height: "1597px", margin: "0 auto" }}>
           <div className="container-lg">
@@ -47,7 +42,7 @@ const Home = () => {
               style={{ position: "relative", top: "377px" }}
               className="display-1 text-light mt-5 row text-shadow"
             >
-              Welcome to The Cradle of Civilization...
+              The Arabian Nights
             </h3>
 
             <div
@@ -67,6 +62,11 @@ const Home = () => {
                   I'm Amal Maseer, owner of the Art Bridge to Baghdad gallery.
                   Thanks for your visit, Enjoy your time and happy scrolling!
                 </p>
+                <p className="lead py-3">
+                  <Link className="btn-slide my-5" to="/about" role="button">
+                    My Story
+                  </Link>
+                </p>{" "}
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ const Home = () => {
       </Parallax>
       <Parallax
         blur={{ min: -5, max: 15 }}
-        bgImage={Images.painting}
+        bgImage={Images.baghdad_13}
         strength={-100}
       >
         <div className="home-page my-0">
@@ -86,11 +86,6 @@ const Home = () => {
                   At Last, I am launching my online store for Mesopotamian
                   artwork!
                 </h3>
-                <h4 className="lead text-light text-center">
-                  Are you interested in Arabian Art? if so, I guarantee you'll
-                  love these handmade paintings that I drew across my art
-                  career.
-                </h4>
               </div>
 
               <div className="col-md-12 row my-5">
