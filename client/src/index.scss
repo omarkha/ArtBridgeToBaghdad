@@ -560,14 +560,13 @@ button {
 }
 
 .newsletter {
-  padding: 23px 13px;
+  padding: 23px 0;
   border-radius: 13px;
-  grid-column: 1/5;
   color: rgb(200, 185, 200);
 }
 
 .home .newsletter {
-  width: 62%;
+  width: 92%;
   margin: 0 auto;
 }
 
@@ -831,8 +830,7 @@ input[type="file"] {
     margin: 3px;
   }
   .home-page .main-article {
-    padding-top: 233px;
-    background-color: rgb(25, 25, 25);
+    padding-top: 144px;
   }
   header {
     background-position-y: 0;
@@ -850,10 +848,11 @@ input[type="file"] {
   }
   .newsletter .fields {
     width: 100%;
-    padding: 21px;
+
+    padding-top: 21px;
   }
   .newsletter {
-    width: 92%;
+    width: 115%;
   }
   .home-page .newsletter {
     width: 100%;
@@ -924,10 +923,6 @@ input[type="file"] {
 
   #contact-info {
     grid-column: 1/5;
-  }
-
-  .contact-section .newsletter {
-    margin-left: 18px;
   }
 
   footer {
