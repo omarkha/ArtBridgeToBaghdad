@@ -40,12 +40,20 @@ nav a {
   margin: 0;
 }
 
-.header-content {
+.heading {
   z-index: 1;
   padding: 178px 89px;
   color: $light;
   margin: 0;
   height: 754px;
+}
+
+.heading-content {
+  border: 2px solid $dark;
+  width: fit-content;
+  padding: 13px;
+  margin: 0 auto;
+  background-color: rgba(40, 40, 40, 0.23);
 }
 
 .background {
@@ -70,12 +78,12 @@ nav a {
   -webkit-transition: ease-out 0.38s;
   -moz-transition: ease-out 0.38s;
   transition: ease-out 0.38s;
-  background-color: rgba(13, 110, 253, 0.62);
+  background-color: rgba(13, 110, 253, 0.86);
 }
 .btn-slide:hover {
-  color: #222;
-  box-shadow: inset 200px 0 0 0 rgb(15, 215, 63);
-  border: 2px solid rgb(15, 215, 63);
+  color: $light;
+  box-shadow: inset 200px 0 0 0 $danger;
+  border: 2px solid $danger;
 }
 
 .text-gradient-headline {
@@ -390,13 +398,13 @@ a {
 
 footer {
   position: relative;
-  background-color: $dark;
+  background-color: $light;
   opacity: 1;
   text-align: center;
   padding: 21px;
   bottom: 0;
   margin: 0;
-  color: #fff;
+  color: $dark;
 }
 
 footer h3 {

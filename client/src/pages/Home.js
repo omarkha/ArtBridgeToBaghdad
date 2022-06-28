@@ -10,21 +10,29 @@ const Home = () => {
   const carouselImages = [Images.amal_image, Images.amal_image_2];
   return (
     <div className="home">
-      <Parallax strength={-300} bgImage={Images.baghdad_8}>
-        <div className="header-content container-lg">
-          <h4 className="lead text-gradient mb-0">
-            The Elegance of Paint, The Arabic Way
-          </h4>
-          <h1 className="display-1 text-gradient-headline">
-            Art Bridge To Baghdad
-          </h1>
-          <h3 className="display-7 text-muted mb-0">Mespotamian Art Gallery</h3>
-          <h6 className="lead text-muted mt-5">by Amal Maseer</h6>
-          <p className="lead py-3">
-            <Link className="btn-slide my-5" to="/about" role="button">
-              My Story
-            </Link>
-          </p>{" "}
+      <Parallax
+        strength={-300}
+        blur={{ min: -15, max: 15 }}
+        bgImage={Images.baghdad_8}
+      >
+        <div className="heading container-lg">
+          <div className="heading-content">
+            <h4 className="lead text-dark mb-0">
+              The Elegance of Paint, The Arabic Way
+            </h4>
+            <h1 className="display-1 text-gradient-headline">
+              The Art Bridge To Baghdad
+            </h1>
+            <h3 className="display-7 text-muted mb-0">
+              Mespotamian Art Gallery
+            </h3>
+            <h6 className="lead text-muted mt-5">by Amal Maseer</h6>
+            <p className="lead py-3">
+              <Link className="btn-slide my-5" to="/about" role="button">
+                My Story
+              </Link>
+            </p>{" "}
+          </div>
         </div>
       </Parallax>
 
@@ -79,8 +87,9 @@ const Home = () => {
                   artwork!
                 </h3>
                 <h4 className="lead text-light text-center">
-                  if you love art and appreciate different cultures, then we've
-                  got some new, exotic paintings for you.
+                  Are you interested in Arabian Art? if so, I guarantee you'll
+                  love these handmade paintings that I drew across my art
+                  career.
                 </h4>
               </div>
 

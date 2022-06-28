@@ -73,9 +73,9 @@ const Nav = () => {
               </Link>
             </li>
             <li className="nav-item cart">
-              <Link className="nav-link" to="cart">
-                <BsCartCheckFill /> Cart
-                {cartItems.length}
+              <Link className="nav-link bg-primary text-light px-3" to="cart">
+                {cartItems.length + " " + " "}
+                <BsCartCheckFill style={{ fontSize: "21px" }} />
               </Link>
             </li>
           </ul>
