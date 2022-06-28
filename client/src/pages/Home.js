@@ -12,14 +12,15 @@ const Home = () => {
     <div className="home">
       <Parallax strength={-300} bgImage={Images.baghdad_13}>
         <div className="header-content">
-          <h1 className="display-1 text-gradient">The Art Bridge To Baghdad</h1>
+          <h1 className="display-1 text-gradient">Art Bridge To Baghdad</h1>
           <h3 className="display-6">Mespotamian Art Gallery</h3>
           <h4 className="lead text-light">
             The Elegance of Paint, The Arabic way
           </h4>
+          <h6 className="lead text-primary">by Amal Maseer</h6>
           <p className="lead py-3">
             <Link className="btn-slide my-5" to="/about" role="button">
-              Read My Story
+              My Story
             </Link>
           </p>{" "}
         </div>
@@ -48,11 +49,12 @@ const Home = () => {
               <div className="col-md-12 text-center">
                 <h3 className="display-3 text-center">
                   <br />
-                  Announcing the launch of my online store for Iraqi artwork!
+                  At Last, I am launching my online store for Mesopotamian
+                  artwork!
                 </h3>
                 <h4 className="lead text-light text-center">
                   if you love art and appreciate different cultures, then we've
-                  got some new, exotic paintings for you!
+                  got some new, exotic paintings for you.
                 </h4>
               </div>
 
