@@ -28,7 +28,11 @@ const Home = () => {
         </div>
       </Parallax>
 
-      <Parallax blur={{ min: -10, max: 10 }} bgImage={Images.baghdad_13}>
+      <Parallax
+        blur={{ min: -10, max: 10 }}
+        strength={-200}
+        bgImage={Images.baghdad_13}
+      >
         <div style={{ height: "1597px", margin: "0 auto" }}>
           <div className="container-lg">
             <h3
@@ -68,7 +72,7 @@ const Home = () => {
           <div className="container-lg my-0">
             <section className="main-article row justify-content-center justify-items-center my-0">
               <div className="col-md-12 text-center">
-                <h3 className="display-3 text-center">
+                <h3 className="display-3 text-center mt-5">
                   <br />
                   At Last, I am launching my online store for Mesopotamian
                   artwork!
