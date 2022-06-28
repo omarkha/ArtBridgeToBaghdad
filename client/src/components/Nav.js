@@ -74,8 +74,8 @@ const Nav = () => {
             </li>
             <li className="nav-item cart">
               <Link className="nav-link" to="cart">
-                <BsCartCheckFill /> Cart{" ("}
-                {cartItems.length})
+                <BsCartCheckFill /> Cart
+                {cartItems.length}
               </Link>
             </li>
           </ul>
