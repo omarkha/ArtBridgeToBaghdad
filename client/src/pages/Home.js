@@ -94,8 +94,12 @@ const Home = () => {
               </div>
 
               <div className="col-md-12 row my-5">
-                <img className="col-md-4" src={Images.painting_4} />
-                <div className="col-md-8 mt-5 px-5">
+                <img
+                  className="col-md-4"
+                  style={{ width: "62%", margin: "0 auto" }}
+                  src={Images.baghdad_16}
+                />
+                <div className="col-md-12 mt-5 px-5">
                   <h5> The Cradle of Civilization </h5>
                   <p>
                     Everywhere in the world, kids are taught about Mesopotamia.
