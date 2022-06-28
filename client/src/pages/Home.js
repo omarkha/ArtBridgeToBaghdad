@@ -40,7 +40,11 @@ const Home = () => {
               className="col-md-12 row my-5"
               style={{ position: "relative", top: "610px" }}
             >
-              <img className="col-md-4" src={Images.amal_image} />
+              <img
+                style={{ width: "62%" }}
+                className="col-md-4"
+                src={Images.amal_image}
+              />
               <div className="col-md-8 mt-5 px-5">
                 <p className="text-light h2 text-shadow">
                   Hi there, and welcome to my gallery! I'm Amal Maseer, owner of
