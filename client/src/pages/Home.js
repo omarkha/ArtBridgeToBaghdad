@@ -12,9 +12,9 @@ const Home = () => {
     <div className="home">
       <Parallax strength={-300} bgImage={Images.baghdad_13}>
         <div className="header-content">
+          <h3 className="display-6 text-muted">Mespotamian Art Gallery</h3>
           <h1 className="display-1 text-gradient">Art Bridge To Baghdad</h1>
-          <h3 className="display-6">Mespotamian Art Gallery</h3>
-          <h4 className="lead text-light">
+          <h4 className="lead text-secondary">
             The Elegance of Paint, The Arabic way
           </h4>
           <h6 className="lead text-primary">by Amal Maseer</h6>
