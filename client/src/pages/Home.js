@@ -27,7 +27,7 @@ const Home = () => {
       </Parallax>
 
       <Parallax blur={{ min: -15, max: 15 }} bgImage={Images.baghdad_13}>
-        <div style={{ height: "1597px" }}>
+        <div style={{ height: "1597px", margin: "0 auto" }}>
           <div className="container-lg">
             <h3
               style={{ position: "relative", top: "377px" }}
@@ -41,7 +41,7 @@ const Home = () => {
               style={{ position: "relative", top: "610px" }}
             >
               <img
-                style={{ width: "62%" }}
+                style={{ width: "62%23w" }}
                 className="col-md-4"
                 src={Images.amal_image}
               />
