@@ -53,7 +53,8 @@ const Home = () => {
               />
               <div className="col-md-8 mt-5 px-5">
                 <p className="text-light h2 text-shadow">
-                  Welcome to our shop!
+                  Welcome to my online shop!
+                  <br />
                   <br />
                   I'm Amal Maseer, owner of the Art Bridge to Baghdad gallery.
                   Thanks for your visit, Enjoy your time and happy scrolling!

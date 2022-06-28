@@ -12,7 +12,7 @@ const NewsLetter = () => {
           <input
             type="text"
             className="form-control"
-            placeholder="e.g. Mario"
+            placeholder="e.g. Leonardo McCarthy"
           />
         </div>
         <div>
@@ -20,7 +20,7 @@ const NewsLetter = () => {
           <input
             className="form-control"
             type="text"
-            placeholder="e.g. mario@example.com"
+            placeholder="e.g. leonardo@example.com"
           />
         </div>
         <button className="btn btn-primary my-3" onClick={() => subscribe()}>
