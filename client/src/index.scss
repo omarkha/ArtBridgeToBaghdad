@@ -559,14 +559,15 @@ button {
   background-size: cover;
 }
 
-nav .nav-link:hover {
+nav .nav-link {
   color: $blue;
 }
-
-nav .nav-link:hover {
-  color: $orange;
-  background-color: $dark;
+nav .nav-link {
   border-radius: 5px;
+}
+nav .nav-link:hover {
+  color: $light;
+  background-color: $orange;
 }
 
 .newsletter {
