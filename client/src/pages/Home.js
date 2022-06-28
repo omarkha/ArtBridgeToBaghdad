@@ -13,11 +13,13 @@ const Home = () => {
       <Parallax strength={-300} bgImage={Images.baghdad_8}>
         <div className="header-content">
           <h3 className="display-6 text-muted">Mespotamian Art Gallery</h3>
-          <h1 className="display-1 text-gradient">Art Bridge To Baghdad</h1>
-          <h4 className="lead text-secondary">
+          <h1 className="display-1 text-gradient-headline">
+            Art Bridge To Baghdad
+          </h1>
+          <h4 className="lead text-gradient">
             The Elegance of Paint, The Arabic Way
           </h4>
-          <h6 className="lead text-primary">by Amal Maseer</h6>
+          <h6 className="lead text-muted mt-5">by Amal Maseer</h6>
           <p className="lead py-3">
             <Link className="btn-slide my-5" to="/about" role="button">
               My Story
@@ -26,7 +28,7 @@ const Home = () => {
         </div>
       </Parallax>
 
-      <Parallax blur={{ min: -15, max: 15 }} bgImage={Images.baghdad_13}>
+      <Parallax blur={{ min: -10, max: 10 }} bgImage={Images.baghdad_13}>
         <div style={{ height: "1597px", margin: "0 auto" }}>
           <div className="container-lg">
             <h3
@@ -47,10 +49,10 @@ const Home = () => {
               />
               <div className="col-md-8 mt-5 px-5">
                 <p className="text-light h2 text-shadow">
-                  Hi there, and welcome to my gallery! I'm Amal Maseer, owner of
-                  the Art Bridge to Baghdad gallery. I would love to share with
-                  you the beauty of Mesopotamia captured by the eyes of an Iraqi
-                  woman.
+                  Welcome to our shop!
+                  <br />
+                  I'm Amal Maseer, owner of the Art Bridge to Baghdad gallery.
+                  Thanks for your visit, Enjoy your time and happy scrolling!
                 </p>
               </div>
             </div>

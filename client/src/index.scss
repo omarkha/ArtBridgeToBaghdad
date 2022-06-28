@@ -69,13 +69,19 @@
   background-color: rgba(13, 110, 253, 0.62);
 }
 .btn-slide:hover {
-  color: #fff;
-  box-shadow: inset 200px 0 0 0 rgb(255, 101, 30);
-  border: 2px solid rgb(255, 101, 30);
+  color: #222;
+  box-shadow: inset 200px 0 0 0 rgb(15, 215, 63);
+  border: 2px solid rgb(15, 215, 63);
+}
+
+.text-gradient-headline {
+  background-image: linear-gradient(to top, #222, $primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .text-gradient {
-  background-image: linear-gradient(to top, $secondary, #fff);
+  background-image: linear-gradient(to top, #222, $secondary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -961,7 +967,11 @@ input[type="file"] {
     width: 100%;
     margin-bottom: 34px;
   }
-
+  .home img {
+    width: 61.8%;
+    margin: 0 auto;
+    text-align: center;
+  }
   .extra-info {
     display: none;
   }
