@@ -473,6 +473,14 @@ footer h3 {
   width: 34px;
 }
 
+#cradle_img {
+  width: 62%;
+  margin: 0 auto;
+}
+
+.home img {
+}
+
 .results {
   margin: 0 auto;
   background-color: rgba(25, 25, 25, 0.82);
@@ -983,7 +991,10 @@ input[type="file"] {
   .extra-info {
     display: none;
   }
-
+  #cradle_img {
+    width: 100%;
+    margin: 0 auto;
+  }
   .home-page .main-article p {
     padding: 0;
   }
