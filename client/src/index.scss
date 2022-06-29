@@ -49,7 +49,6 @@ nav a {
 }
 
 .heading-content {
-  border: 2px solid $dark;
   width: fit-content;
   padding: 13px;
   margin: 0 auto;
@@ -78,7 +77,6 @@ nav a {
   -webkit-transition: ease-out 0.38s;
   -moz-transition: ease-out 0.38s;
   transition: ease-out 0.38s;
-  background-color: rgba(13, 110, 253, 0.86);
 }
 .btn-slide:hover {
   color: $light;
@@ -87,7 +85,7 @@ nav a {
 }
 
 .text-gradient-headline {
-  background-image: linear-gradient(to top, #222, $primary);
+  background-image: linear-gradient(to top, $light, $cyan);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

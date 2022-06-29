@@ -37,6 +37,7 @@ const Images = {
   baghdad_birds: require("./baghdad-birds.jpg"),
   baghdad_19: require("./baghdad-19.jpg"),
   moon: require("./moon.png"),
+  painting_knights: require("./painting-knights.jpg"),
 };
 
 export default Images;

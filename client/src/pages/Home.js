@@ -34,7 +34,7 @@ const Home = () => {
       <Parallax
         blur={{ min: -10, max: 10 }}
         strength={-200}
-        bgImage={Images.painting}
+        bgImage={Images.painting_knights}
       >
         <div style={{ height: "1597px", margin: "0 auto" }}>
           <div className="container-lg">
