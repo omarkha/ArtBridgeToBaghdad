@@ -12,7 +12,12 @@ const Paintings = (props) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [paintingsPerPage, setPaintingsPerPage] = useState(4);
   const [paintings, setPaintings] = useState([]);
+  const [enlargedImage, setEnlargedImage] = useState();
   console.log(props);
+
+  const onEnlarge = (img) => {
+    setEnlargedImage(img);
+  };
   /*
   useEffect(() => {
     const fetchPaintings = async () => {
@@ -40,6 +45,7 @@ const Paintings = (props) => {
             width="36"
             img_url={Images.painting_1}
             description={desc}
+            onEnlarge={onEnlarge}
           />
           <Painting
             id="p2"
@@ -48,6 +54,7 @@ const Paintings = (props) => {
             width="34"
             img_url={Images.painting_2}
             description={desc}
+            onEnlarge={onEnlarge}
           />
           <Painting
             id="p3"
@@ -56,6 +63,7 @@ const Paintings = (props) => {
             width="32"
             img_url={Images.painting_3}
             description={desc}
+            onEnlarge={onEnlarge}
           />
           <Painting
             id="p4"
@@ -64,6 +72,7 @@ const Paintings = (props) => {
             width="18"
             img_url={Images.painting_4}
             description={desc}
+            onEnlarge={onEnlarge}
           />
           <Painting
             id="p5"
@@ -72,6 +81,7 @@ const Paintings = (props) => {
             width="32"
             img_url={Images.painting_5}
             description={desc}
+            onEnlarge={onEnlarge}
           />
           <Painting
             id="p6"
@@ -80,6 +90,7 @@ const Paintings = (props) => {
             width="18"
             img_url={Images.painting_1}
             description={desc}
+            onEnlarge={onEnlarge}
           />
           <Painting
             id="p7"
@@ -88,6 +99,7 @@ const Paintings = (props) => {
             width="18"
             img_url={Images.painting_4}
             description={desc}
+            onEnlarge={onEnlarge}
           />
           <Painting
             id="p8"
@@ -96,6 +108,7 @@ const Paintings = (props) => {
             width="32"
             img_url={Images.painting_5}
             description={desc}
+            onEnlarge={onEnlarge}
           />
           <Painting
             id="p9"
@@ -104,6 +117,7 @@ const Paintings = (props) => {
             width="18"
             img_url={Images.painting_1}
             description={desc}
+            onEnlarge={onEnlarge}
           />
         </div>
         <div className="results-bottom bg-secondary">
@@ -136,6 +150,31 @@ const Paintings = (props) => {
               </li>
             </ul>
           </nav>
+        </div>
+      </div>
+      <div
+        className="modal fade"
+        id="reg-modal"
+        tabIndex="-1"
+        aria-aria-labelledby="modal-title"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title ml-4">
+                Life in Mespotamia - Amal Maseer
+              </h5>
+              <button
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              <img src={enlargedImage} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

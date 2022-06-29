@@ -46,7 +46,7 @@ const Home = () => {
             </h3>
 
             <div
-              className="col-md-12 row my-5"
+              className="col-md-12 row my-5 parag"
               style={{ position: "relative", top: "610px" }}
             >
               <img
@@ -83,12 +83,12 @@ const Home = () => {
               <div className="col-md-12 text-center">
                 <h3 className="display-3 text-center mt-5">
                   <br />
-                  At Last, I am launching my online store for Mesopotamian
-                  artwork!
+                  At Last, I launch the official store for my handmade
+                  Mespotomian Paintings!
                 </h3>
               </div>
 
-              <div className="col-md-12 row my-5">
+              <div className="col-md-12 row my-5 parag">
                 <img
                   className="col-md-4"
                   id="cradle_img"
@@ -115,7 +115,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="col-md-12 row my-5">
+              <div className="col-md-12 row my-5 parag">
                 <div className="col-md-8 mt-5 px-5">
                   <p>
                     <br />
@@ -130,7 +130,7 @@ const Home = () => {
                 <img className="col-md-4" src={Images.painting_2} />
               </div>
 
-              <div className="col-md-12 row my-5">
+              <div className="col-md-12 row my-5 parag">
                 <img className="col-md-4" src={Images.painting_4} />
                 <div className="col-md-8 mt-5 px-5">
                   <p>

@@ -30,7 +30,12 @@ const Painting = (props) => {
   return (
     <div className="painting bg-light col-md-4">
       <div>
-        <img src={props.img_url} />
+        <img
+          src={props.img_url}
+          onClick={() => props.onEnlarge(props.img_url)}
+          data-bs-toggle="modal"
+          data-bs-target="#reg-modal"
+        />
       </div>
       <h4 id="painting-title">{props.title}</h4>
       <div className="info">

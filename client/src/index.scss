@@ -55,6 +55,13 @@ nav a {
   background-color: rgba(40, 40, 40, 0.23);
 }
 
+.parag {
+  width: fit-content;
+  padding: 13px;
+  margin: 0 auto;
+  background-color: rgba(40, 40, 40, 0.38);
+}
+
 .background {
   transform: translateZ(-13px) scale(2);
 }
@@ -64,6 +71,15 @@ nav a {
 }
 
 ////////////
+
+p {
+  line-height: 34px;
+  color: $cyan;
+}
+
+#reg-modal img {
+  width: 100%;
+}
 
 .btn-slide {
   cursor: pointer;
@@ -349,6 +365,7 @@ a {
   width: 86%;
   margin: 0 auto;
   margin-bottom: 8px;
+  box-shadow: 1px 3px 5px $dark;
 }
 
 .selected-painting button {
@@ -527,6 +544,7 @@ footer h3 {
 
 .painting img {
   width: 61.8%;
+  box-shadow: 1px 5px 13px $dark;
 }
 
 #contactpage-banner {

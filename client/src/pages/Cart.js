@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import SelectedPainting from "../components/SelectedPainting";
+import { CartContext } from "../context/cartContext";
 import Images from "../images";
 
 const Cart = () => {
+  const { cartItems, addCartItem, removeCartItem } = useContext(CartContext);
+
   const [selections, setSelections] = useState([
     {
       img_url: Images.painting_2,
@@ -80,6 +83,11 @@ const Cart = () => {
   useEffect(() => getTotal(), []);
   return (
     <div className="container">
+      {" "}
+      <h1 className="display-5 my-5">
+        {" "}
+        You have {cartItems.length} items in your Cart
+      </h1>
       <div className="cart-view">
         {selections.length > 0 ? (
           selections.map((e, i) => (
@@ -97,7 +105,7 @@ const Cart = () => {
       </div>
       <div className="cart-purchase">
         <div className="cart-info">
-          <h3>{"You have " + selections.length + "  items selected"}</h3>
+          <h3>{"You have " + cartItems.length + "  items selected"}</h3>
           <h3 id="cart-total" onClick={() => getTotal()}>
             {"Your total is $" + Math.floor(printTotal() * 100) / 100}
           </h3>
