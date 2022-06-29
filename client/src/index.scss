@@ -96,8 +96,8 @@ p {
 }
 .btn-slide:hover {
   color: $light;
-  box-shadow: inset 200px 0 0 0 $danger;
-  border: 2px solid $danger;
+  box-shadow: inset 200px 0 0 0 $cyan;
+  border: 2px solid $cyan;
 }
 
 .text-gradient-headline {
@@ -545,6 +545,7 @@ footer h3 {
 .painting img {
   width: 61.8%;
   box-shadow: 1px 5px 13px $dark;
+  cursor: pointer;
 }
 
 #contactpage-banner {
