@@ -107,7 +107,7 @@ const Cart = () => {
         <div className="cart-info">
           <h3>{"You have " + cartItems.length + "  items selected"}</h3>
           <h3 id="cart-total" onClick={() => getTotal()}>
-            {"Your total is $" + Math.floor(printTotal() * 100) / 100}
+            {"The total is $" + Math.floor(printTotal() * 100) / 100}
           </h3>
         </div>
 
