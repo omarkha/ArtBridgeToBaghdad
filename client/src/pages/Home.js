@@ -11,24 +11,31 @@ const Home = () => {
   return (
     <div className="home">
       <Parallax
-        strength={-300}
+        strength={100}
         blur={{ min: -15, max: 15 }}
-        bgImage={Images.baghdad_19}
+        bgImage={Images.baghdad_20}
+        className="home-hero-background"
       >
-        <div className="heading container-lg">
-          <div className="heading-content">
-            <h4 className="lead text-dark mb-0">
-              The Elegance of Paint, The Arabic Way
-            </h4>
-            <h1 className="display-1 text-gradient-headline">
-              Art Bridge To Baghdad
-            </h1>
-            <h3 className="display-7 text-muted mb-0">
-              Mespotamian Art Gallery
-            </h3>
-            <h6 className="lead text-muted mt-5">by Amal Maseer</h6>
+        <Parallax
+          strength={-361.8}
+          bgImage={Images.night_sky}
+          className="home-hero-foreground"
+        >
+          <div className="heading container-lg">
+            <div className="heading-content">
+              <h4 className="lead text-light mb-0">
+                The Elegance of Paint, The Arabic Way
+              </h4>
+              <h1 className="display-1 text-gradient-headline">
+                Art Bridge To Baghdad
+              </h1>
+              <h3 className="display-7 text-light mb-0">
+                Mespotamian Art Gallery
+              </h3>
+              <h6 className="lead text-cyan mt-5">by Amal Maseer</h6>
+            </div>
           </div>
-        </div>
+        </Parallax>
       </Parallax>
 
       <Parallax

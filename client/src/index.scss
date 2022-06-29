@@ -548,6 +548,29 @@ footer h3 {
   cursor: pointer;
 }
 
+.home-hero-background img {
+  perspective: 62px;
+}
+
+.home-hero-foreground {
+}
+
+.image {
+  display: block;
+  margin: 0 auto;
+}
+
+.home-hero-foreground img {
+  -webkit-mask-image: url("./images/mosque.png");
+  mask-image: url("./images/mosque.png");
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-size: contain;
+  transform: rotateZ(45deg);
+}
+
 #contactpage-banner {
   grid-column: 1/5;
   width: 100%;
@@ -577,6 +600,9 @@ button {
   background-color: rgb(25, 101, 160);
   border: 0;
   color: #fff;
+}
+
+.heading-content .noise {
 }
 
 .home-page .main-article h5 {

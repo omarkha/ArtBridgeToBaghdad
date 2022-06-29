@@ -36,8 +36,12 @@ const Images = {
   desert: require("./desert-mask.png"),
   baghdad_birds: require("./baghdad-birds.jpg"),
   baghdad_19: require("./baghdad-19.jpg"),
+  baghdad_20: require("./baghdad-20.jpg"),
   moon: require("./moon.png"),
   painting_knights: require("./painting-knights.jpg"),
+  night_sky: require("./night-sky.jpg"),
+  flowers: require("./flowers.gif"),
+  bridge_2: require("./bridge-2.jpg"),
 };
 
 export default Images;
