@@ -13,7 +13,7 @@ const Home = () => {
       <Parallax
         strength={-300}
         blur={{ min: -15, max: 15 }}
-        bgImage={Images.baghdad_8}
+        bgImage={Images.baghdad_19}
       >
         <div className="heading container-lg">
           <div className="heading-content">
@@ -42,7 +42,7 @@ const Home = () => {
               style={{ position: "relative", top: "377px" }}
               className="display-1 text-light mt-5 row text-shadow"
             >
-              The Arabian Nights
+              Arabian Nights
             </h3>
 
             <div
@@ -73,7 +73,7 @@ const Home = () => {
         </div>
       </Parallax>
       <Parallax
-        blur={{ min: -5, max: 15 }}
+        blur={{ min: -10, max: 15 }}
         bgImage={Images.baghdad_13}
         strength={-100}
       >
@@ -91,7 +91,7 @@ const Home = () => {
               <div className="col-md-12 row my-5">
                 <img
                   className="col-md-4"
-                  style={{ width: "62%", margin: "0 auto" }}
+                  id="cradle_img"
                   src={Images.baghdad_16}
                 />
                 <div className="col-md-12 mt-5 px-5">

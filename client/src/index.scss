@@ -181,6 +181,15 @@ code {
   position: relative;
 }
 
+.cart-icon {
+  background-color: $cyan;
+  color: $light;
+}
+
+.cart-icon:hover {
+  color: $light;
+}
+
 .cart-info {
   margin: 21px 233px;
   margin-bottom: 34px;
@@ -984,7 +993,7 @@ input[type="file"] {
     margin-bottom: 34px;
   }
   .home img {
-    width: 61.8%;
+    width: 86%;
     margin: 0 auto;
     text-align: center;
   }

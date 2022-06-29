@@ -34,6 +34,9 @@ const Images = {
   iraq_map: require("./iraq-map.png"),
   header_bg: require("./header-bg-1.jpg"),
   desert: require("./desert-mask.png"),
+  baghdad_birds: require("./baghdad-birds.jpg"),
+  baghdad_19: require("./baghdad-19.jpg"),
+  moon: require("./moon.png"),
 };
 
 export default Images;
