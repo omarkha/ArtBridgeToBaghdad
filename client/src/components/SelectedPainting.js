@@ -2,6 +2,9 @@ import React from "react";
 import { TiDeleteOutline } from "react-icons/ti";
 
 const SelectedPainting = (props) => {
+  const removeItem = () => {
+    props.removeItem(props.id);
+  };
   return (
     <div
       className="card selected-painting"
@@ -9,7 +12,7 @@ const SelectedPainting = (props) => {
       id={props.id}
       key={props.id}
     >
-      <button>
+      <button onClick={() => removeItem()}>
         <TiDeleteOutline className="icon" />
       </button>
       <img src={props.img_url} />

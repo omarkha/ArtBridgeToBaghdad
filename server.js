@@ -13,11 +13,17 @@ app.get("/*", (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`);
 });
 
+app.get("/", (req, res) => {
+  res.send("Api running");
+});
+
 require("dotenv").config(); // Add this line
 
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const uri =
-  "mongodb+srv://Copyres:Soridl846@cluster0.ohmco.mongodb.net/?retryWrites=true&w=majority";
+  process.env.NODE_ENV === "production"
+    ? "mongodb+srv://Copyres:Soridl846@cluster0.ohmco.mongodb.net/test?retryWrites=true&w=majority"
+    : "mongodb://127.0.0.1:27017/gallerydb";
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -30,6 +36,7 @@ client.connect((err) => {
 });
 
 // Routes
+app.use("/api/paintings", require("./routes/paintings"));
 //
 
 app.listen(process.env.PORT || 5000, () => {

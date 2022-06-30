@@ -17,7 +17,7 @@ const Home = () => {
         className="home-hero-background"
       >
         <Parallax
-          strength={-361.8}
+          strength={-761.8}
           bgImage={Images.night_sky}
           className="home-hero-foreground"
         >
@@ -43,41 +43,47 @@ const Home = () => {
         strength={-200}
         bgImage={Images.painting_knights}
       >
-        <div style={{ height: "1597px", margin: "0 auto" }}>
-          <div className="container-lg">
-            <h3
-              style={{ position: "relative", top: "377px" }}
-              className="display-1 text-light mt-5 row text-shadow"
-            >
-              Arabian Nights
-            </h3>
+        <Parallax
+          blur={{ min: -10, max: 10 }}
+          strength={661.8}
+          bgImage={Images.desert}
+        >
+          <div style={{ height: "1597px", margin: "0 auto" }}>
+            <div className="container-lg">
+              <h3
+                style={{ position: "relative", top: "377px" }}
+                className="display-1 text-light mt-5 row text-shadow"
+              >
+                Arabian Nights
+              </h3>
 
-            <div
-              className="col-md-12 row my-5 parag"
-              style={{ position: "relative", top: "610px" }}
-            >
-              <img
-                style={{ width: "62%23w" }}
-                className="col-md-4"
-                src={Images.amal_image}
-              />
-              <div className="col-md-8 mt-5 px-5">
-                <p className="text-light h2 text-shadow">
-                  Welcome to my online shop!
-                  <br />
-                  <br />
-                  I'm Amal Maseer, owner of the Art Bridge to Baghdad gallery.
-                  Thanks for your visit, Enjoy your time and happy scrolling!
-                </p>
-                <p className="lead py-3">
-                  <Link className="btn-slide my-5" to="/about" role="button">
-                    My Story
-                  </Link>
-                </p>{" "}
+              <div
+                className="col-md-12 row my-5 parag"
+                style={{ position: "relative", top: "610px" }}
+              >
+                <img
+                  style={{ width: "62%23w" }}
+                  className="col-md-4"
+                  src={Images.amal_image}
+                />
+                <div className="col-md-8 mt-5 px-5">
+                  <p className="text-light h2 text-shadow">
+                    Welcome to my online shop!
+                    <br />
+                    <br />
+                    I'm Amal Maseer, owner of the Art Bridge to Baghdad gallery.
+                    Thanks for your visit, Enjoy your time and happy scrolling!
+                  </p>
+                  <p className="lead py-3">
+                    <Link className="btn-slide my-5" to="/about" role="button">
+                      My Story
+                    </Link>
+                  </p>{" "}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </Parallax>
       </Parallax>
       <Parallax
         blur={{ min: -10, max: 15 }}

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Painting from "../../components/Painting";
 import { TiThLarge } from "react-icons/ti";
+import { RiCompassDiscoverLine } from "react-icons/ri";
+import axios from "axios";
 
 const Inventory = () => {
   const [width, setWidth] = useState(0);
@@ -8,30 +10,47 @@ const Inventory = () => {
   const [price, setPrice] = useState(0);
   const [title, setTitle] = useState("");
   const [imageSelected, setImageSelected] = useState("");
+  const [file, setFile] = useState();
 
-  const uploadImage = (files) => {
-    const formData = new FormData();
-    formData.append("file", files[0]);
-    formData.append("upload", "paintings");
+  const URI_Atlas = "https://artbridgetobaghdad.herokuapp.com";
+  const URI_Local = "http://localhost:5000";
 
-    /*
-    Axios.post(
-      "https://api.cloudinary.com/v1_1/copyres/image/upload",
-      formData
-    ).then((res) => console.log(res));
-    */
+  const uploadImage = async () => {
+    console.log(file);
+    const fdata = new FormData();
+    fdata.append("file", file);
+    fdata.append("upload_preset", "paintings");
+    const res = await axios
+      .post("https://api.cloudinary.com/v1_1/Copyres/image/upload", fdata)
+      .then((res) => {
+        console.log(res);
+        setImageSelected(res.data.URL);
+      })
+      .catch((err) => console.log(err));
   };
   const handleAdd = () => {
     uploadImage();
   };
 
+  const handlePost = () => {
+    const painting = {
+      height: height,
+      width: width,
+      price: price,
+      img_url: imageSelected,
+    };
+    axios
+      .post(`${URI_Atlas}/api/paintings`, painting)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
+
   const [image, setImage] = useState(null);
 
-  const onImageChange = (event) => {
-    if (event.target.files && event.target.files[0]) {
-      setImage(URL.createObjectURL(event.target.files[0]));
+  const onImageChange = (files) => {
+    if (files && files[0]) {
+      setImage(URL.createObjectURL(files[0]));
     }
-    console.log(image);
   };
 
   return (
@@ -69,19 +88,27 @@ const Inventory = () => {
           <div className="imagepicker">
             <input
               type="file"
-              onChange={(e) => onImageChange(e)}
+              onChange={(e) => {
+                onImageChange(e.target.files);
+                setFile(e.target.files[0]);
+              }}
               id="imagepicker"
             />
 
-            <label for="imagepicker">Choose an Image</label>
+            <label for="imagepicker" className="btn btn-primary">
+              Choose Image
+            </label>
           </div>
+          <button onClick={() => handleAdd()} className="btn btn-secondary">
+            Upload Image
+          </button>
           <div className="input-area-buttons">
-            <button onClick={() => handleAdd()} id="add-button">
+            <button className="btn btn-success" onClick={() => handlePost()}>
               Add
             </button>
-            <button id="delete-button">Delete</button>
-            <button id="update-button">Update</button>
-            <button id="search-button">Search</button>
+            <button className="btn btn-danger">Delete</button>
+            <button className="btn btn-warning">Update</button>
+            <button className="btn btn-info">Search</button>
           </div>
         </section>
         <section className="results-area">

@@ -4,6 +4,12 @@ const Schema = mongoose.Schema;
 
 const paintingSchema = new Schema(
   {
+    likes: {
+      type: Number,
+    },
+    shares: {
+      type: Number,
+    },
     title: {
       type: String,
     },
@@ -26,6 +32,18 @@ const paintingSchema = new Schema(
     datesold: {
       type: String,
     },
+    shipping_code: {
+      type: String,
+    },
+    buyer: {
+      name: {
+        type: String,
+      },
+      email: {
+        type: String,
+      },
+    },
+
     price: {
       type: Number,
       required: true,

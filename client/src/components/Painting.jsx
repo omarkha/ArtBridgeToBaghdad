@@ -28,7 +28,7 @@ const Painting = (props) => {
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (
-    <div className="painting bg-light col-md-4">
+    <div className="painting bg-dark col-md-4">
       <div>
         <img
           src={props.img_url}
@@ -37,19 +37,22 @@ const Painting = (props) => {
           data-bs-target="#reg-modal"
         />
       </div>
-      <h4 id="painting-title">{props.title}</h4>
-      <div className="info">
+      <h4 id="painting-title text-light">{props.title}</h4>
+      <div className="info text-light">
         <h4>
-          {props.height} " / {props.width} "{" "}
+          {props.width} " / {props.height} "{" "}
         </h4>
-        <h5>${props.price}</h5>
+        <h5 className="text-light">${props.price}</h5>
 
         <div className="painting-buttons">
-          <button className="btn btn-primary">
+          <button className="btn btn-primary text-light">
             <FaShareAlt />
           </button>
 
-          <button className="btn btn-primary" onClick={() => printCartItems()}>
+          <button
+            className="btn btn-primary text-light"
+            onClick={() => printCartItems()}
+          >
             <AiFillLike />
           </button>
           <button

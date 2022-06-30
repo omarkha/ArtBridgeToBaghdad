@@ -796,10 +796,9 @@ input[type="file"] {
 }
 
 .imagepicker label {
-  color: rgb(40, 40, 40);
+  color: $light;
   padding: 8px 13px;
   font-size: 18px;
-  background-color: rgb(255, 185, 30);
   width: 38%;
   margin: 0 auto;
   border-radius: 8px;

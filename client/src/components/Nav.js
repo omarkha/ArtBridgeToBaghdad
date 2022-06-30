@@ -11,9 +11,12 @@ import { GiEarthAfricaEurope } from "react-icons/gi";
 import "bootstrap/dist/css/bootstrap.css";
 import Images from "../images/index";
 import { CartContext } from "../context/cartContext";
+
 const Nav = () => {
   const { cartItems } = useContext(CartContext);
+
   const [expanded, setExpanded] = useState(false);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top py-0 my-0">
       <div className="container">

@@ -12,53 +12,67 @@ const Cart = () => {
       img_url: Images.painting_2,
       dimensions: '23 " / 34 "',
       price: 199.99,
+      id: "sp1",
     },
     {
       img_url: Images.painting_4,
       dimensions: '20 " / 34 "',
       price: 249.99,
+      id: "sp2",
     },
     {
       img_url: Images.painting_1,
       dimensions: '20 " / 34 "',
       price: 249.99,
+      id: "sp3",
     },
     {
       img_url: Images.painting_5,
       dimensions: '20 " / 34 "',
       price: 249.99,
+      id: "sp4",
     },
     {
       img_url: Images.painting,
       dimensions: '32 " / 20 "',
       price: 299.99,
+      id: "sp5",
     },
     {
       img_url: Images.painting_2,
       dimensions: '23 " / 34 "',
       price: 199.99,
+      id: "sp6",
     },
     {
       img_url: Images.painting_4,
       dimensions: '20 " / 34 "',
       price: 249.99,
+      id: "sp7",
     },
     {
       img_url: Images.painting_1,
       dimensions: '20 " / 34 "',
       price: 249.99,
+      id: "sp8",
     },
     {
       img_url: Images.painting_5,
       dimensions: '20 " / 34 "',
       price: 249.99,
+      id: "sp9",
     },
     {
       img_url: Images.painting,
       dimensions: '32 " / 20 "',
       price: 299.99,
+      id: "sp10",
     },
   ]);
+
+  const removeItem = (id) => {
+    setSelections(selections.filter((e) => e.id !== id));
+  };
 
   const [total, setTotal] = useState(0);
 
@@ -95,8 +109,9 @@ const Cart = () => {
               img_url={e.img_url}
               price={e.price}
               dimensions={e.dimensions}
-              id={"painting_" + i}
-              key={"painting_" + i}
+              id={e.id}
+              key={e.id}
+              removeItem={removeItem}
             />
           ))
         ) : (
