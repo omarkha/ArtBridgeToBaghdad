@@ -39,6 +39,6 @@ client.connect((err) => {
 app.use("/api/paintings", require("./routes/paintings"));
 //
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(port, () => {
   console.log(`Server is running on Port: ${port}`);
 });
