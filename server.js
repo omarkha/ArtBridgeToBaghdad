@@ -20,9 +20,7 @@ require("dotenv").config(); // Add this line
 
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const uri =
-  process.env.NODE_ENV === "production"
-    ? "mongodb+srv://Copyres:Soridl846@cluster0.ohmco.mongodb.net/test?retryWrites=true&w=majority"
-    : "mongodb://127.0.0.1:27017/gallerydb";
+  "mongodb+srv://Copyres:Soridl846@cluster0.ohmco.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
