@@ -38,6 +38,6 @@ client.connect((err) => {
 app.use("/api/paintings", require("./routes/paintings"));
 //
 
-app.listen(port, () => {
+app.listen(process.env.port || 5000, () => {
   console.log(`Server is running on Port: ${port}`);
 });
