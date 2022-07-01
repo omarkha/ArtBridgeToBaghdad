@@ -4,9 +4,12 @@ const app = express();
 const morgan = require("morgan");
 const path = require("path");
 const paintingRoute = require("./routes/paintings");
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
 require("dotenv").config(); // Add this line
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 app.use(express.static(`${__dirname}/client/build`));
 app.get("/*", (req, res) => {
@@ -24,7 +27,7 @@ require("dotenv").config(); // Add this line
 
 let dbUrl =
   process.env.NODE_ENV === "production"
-    ? "mongodb+srv://Copyres:Soridl846@cluster0.ohmco.mongodb.net/test?retryWrites=true&w=majority"
+    ? "mongodb+srv://Copyres:Soridl846@cluster0.ohmco.mongodb.net/gallerydb?retryWrites=true&w=majority"
     : "mongodb://127.0.0.1:27017/gallerydb";
 
 mongoose
@@ -36,10 +39,10 @@ mongoose
     console.error("Connection error", e.message);
   });
 mongoose.set("debug", true);
-mongoose.connection;
+const db = mongoose.connection;
 
 // Routes
-app.use(paintingRoute);
+app.use("/api/paintings", require("./routes/paintings"));
 //
 
 app.listen(port, () => {
