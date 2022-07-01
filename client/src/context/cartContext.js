@@ -6,8 +6,18 @@ export const CartContext = createContext();
 const CartContextProvider = (props) => {
   const [cartItems, setCartItems] = useState([]);
 
-  const addCartItem = (xtype, xid) => {
-    setCartItems([...cartItems, { type: xtype, id: xid }]);
+  const addCartItem = (xtype, xid, ximg_url, xprice, xwidth, xheight) => {
+    setCartItems([
+      ...cartItems,
+      {
+        type: xtype,
+        id: xid,
+        img_url: ximg_url,
+        price: xprice,
+        width: xwidth,
+        height: xheight,
+      },
+    ]);
     console.log("item: " + xid + " is added. ");
   };
   const removeCartItem = (xid) => {

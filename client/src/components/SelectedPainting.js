@@ -17,7 +17,9 @@ const SelectedPainting = (props) => {
       </button>
       <img src={props.img_url} />
       <ul className="list-group list-group-flush">
-        <li className="list-group-item">{props.dimensions}</li>
+        <li className="list-group-item">
+          {props.width + ' " x ' + props.height + ' " '}
+        </li>
         <li className="list-group-item">{"$" + props.price}</li>
       </ul>
     </div>

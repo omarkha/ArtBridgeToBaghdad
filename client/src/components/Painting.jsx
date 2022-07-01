@@ -20,7 +20,14 @@ const Painting = (props) => {
   };
 
   const addItem = () => {
-    addCartItem("painting", id);
+    addCartItem(
+      "painting",
+      props.id,
+      props.img_url,
+      props.price,
+      props.width,
+      props.height
+    );
     setAdded(true);
   };
 

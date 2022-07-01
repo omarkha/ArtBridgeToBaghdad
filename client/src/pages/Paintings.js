@@ -11,7 +11,7 @@ const Paintings = (props) => {
 
   const paintingsPerPage = 10;
   const [paintings, setPaintings] = useState([]);
-  const pagesVisited = currentPage + paintingsPerPage;
+  const pagesVisited = currentPage * paintingsPerPage;
   const displayPaintings = paintings.slice(
     pagesVisited,
     pagesVisited + paintingsPerPage
@@ -36,6 +36,10 @@ const Paintings = (props) => {
     fetchPaintings();
   }, []);
 
+  const changePage = ({ selected }) => {
+    setCurrentPage(selected);
+  };
+
   return (
     <div className="paintings-page">
       <div className="results-heading bg-primary">
@@ -44,10 +48,10 @@ const Paintings = (props) => {
 
       <div className="results">
         <div className="row gap-5 justify-content-center justify-items-center container-lg">
-          {paintings.map((painting) => {
+          {displayPaintings.map((painting) => {
             return (
               <Painting
-                id={painting.id}
+                id={painting._id}
                 price={painting.price}
                 height={painting.height}
                 width={painting.width}
@@ -85,7 +89,17 @@ const Paintings = (props) => {
           </div>
         </div>
       </div>
-      <ReactPaginate />
+      <ReactPaginate
+        previousLabel={"<"}
+        nextLabel={"next"}
+        pageCount={Math.ceil(paintings.length / paintingsPerPage)}
+        onPageChange={changePage}
+        containerClassName={"paginationButtons"}
+        previousLinkClassName={"previousButton"}
+        nextLinkClassName={"nextButton"}
+        disabledClassName={"paginationDisabled"}
+        activeClassName={"paginationActive"}
+      />
     </div>
   );
 };

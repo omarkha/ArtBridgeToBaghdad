@@ -7,78 +7,15 @@ import Images from "../images";
 const Cart = () => {
   const { cartItems, addCartItem, removeCartItem } = useContext(CartContext);
 
-  const [selections, setSelections] = useState([
-    {
-      img_url: Images.painting_2,
-      dimensions: '23 " / 34 "',
-      price: 199.99,
-      id: "sp1",
-    },
-    {
-      img_url: Images.painting_4,
-      dimensions: '20 " / 34 "',
-      price: 249.99,
-      id: "sp2",
-    },
-    {
-      img_url: Images.painting_1,
-      dimensions: '20 " / 34 "',
-      price: 249.99,
-      id: "sp3",
-    },
-    {
-      img_url: Images.painting_5,
-      dimensions: '20 " / 34 "',
-      price: 249.99,
-      id: "sp4",
-    },
-    {
-      img_url: Images.painting,
-      dimensions: '32 " / 20 "',
-      price: 299.99,
-      id: "sp5",
-    },
-    {
-      img_url: Images.painting_2,
-      dimensions: '23 " / 34 "',
-      price: 199.99,
-      id: "sp6",
-    },
-    {
-      img_url: Images.painting_4,
-      dimensions: '20 " / 34 "',
-      price: 249.99,
-      id: "sp7",
-    },
-    {
-      img_url: Images.painting_1,
-      dimensions: '20 " / 34 "',
-      price: 249.99,
-      id: "sp8",
-    },
-    {
-      img_url: Images.painting_5,
-      dimensions: '20 " / 34 "',
-      price: 249.99,
-      id: "sp9",
-    },
-    {
-      img_url: Images.painting,
-      dimensions: '32 " / 20 "',
-      price: 299.99,
-      id: "sp10",
-    },
-  ]);
-
   const removeItem = (id) => {
-    setSelections(selections.filter((e) => e.id !== id));
+    removeCartItem(id);
   };
 
   const [total, setTotal] = useState(0);
 
   const getTotal = () => {
     let prices = [];
-    selections.forEach((e, i) => {
+    cartItems.forEach((e, i) => {
       prices.push(e.price);
     });
     console.log(prices);
@@ -103,12 +40,13 @@ const Cart = () => {
         You have {cartItems.length} items in your Cart
       </h1>
       <div className="cart-view">
-        {selections.length > 0 ? (
-          selections.map((e, i) => (
+        {cartItems.length > 0 ? (
+          cartItems.map((e, i) => (
             <SelectedPainting
               img_url={e.img_url}
               price={e.price}
-              dimensions={e.dimensions}
+              width={e.width}
+              height={e.height}
               id={e.id}
               key={e.id}
               removeItem={removeItem}
