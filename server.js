@@ -1,12 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const morgan = require("morgan");
 const path = require("path");
 const paintingRoute = require("./routes/paintings");
 require("dotenv").config(); // Add this line
 app.use(cors());
 app.use(express.json());
-
+app.use(morgan("dev"));
 app.use(express.static(`${__dirname}/client/build`));
 app.get("/*", (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`);
