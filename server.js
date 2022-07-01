@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
-
+require("dotenv").config(); // Add this line
 app.use(cors());
 app.use(express.json());
 
@@ -11,12 +11,11 @@ app.use(express.static(`${__dirname}/client/build`));
 app.get("/*", (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`);
 });
+
 const port = process.env.port || 5000;
 app.get("/", (req, res) => {
   res.send("Api running");
 });
-
-require("dotenv").config(); // Add this line
 
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const uri =
