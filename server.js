@@ -1,15 +1,11 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const path = require("path");
 const paintingRoute = require("./routes/paintings");
 require("dotenv").config(); // Add this line
 app.use(cors());
 app.use(express.json());
-
-app.use(express.static(`${__dirname}/client/build`));
-app.get("/*", (req, res) => {
-  res.sendFile(`${__dirname}/client/build/index.html`);
-});
 
 const port = process.env.PORT || 5000;
 
@@ -37,7 +33,7 @@ mongoose.set("debug", true);
 const db = mongoose.connection;
 
 // Routes
-app.use(paintingRoute);
+app.use("/api/paintings", paintingRoute);
 //
 
 app.listen(port, () => {

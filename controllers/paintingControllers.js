@@ -4,19 +4,24 @@ const upload = require("../utilities/multer");
 const Painting = require("../models/painting.model");
 const router = express.Router();
 
-///////////////
+const getPaintings = async (req, res) => {
+  try {
+    const painting = await Painting.find();
+    res.json(painting);
+  } catch (err) {
+    res.send("err " + err);
+  }
+};
 
-const postPainting =
-  ("/",
-  (req, res) => {
-    const painting = new Painting(req.body);
+const postPainting = (req, res) => {
+  const painting = new Painting(req.body);
 
-    try {
-      painting.save();
-    } catch (err) {
-      console.log(err);
-    }
-  });
+  try {
+    painting.save();
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 const deletePainting = ("/:d", (req, res) => {});
 
@@ -54,4 +59,5 @@ const updateSoldPainting =
 
 module.exports = {
   postPainting,
+  getPaintings,
 };

@@ -1,8 +1,12 @@
 const router = require("express").Router();
 let painting = require("../models/painting.model");
-const paintingController = require("../controllers/paintingControllers.js");
+const {
+  getPaintings,
+  postPainting,
+} = require("../controllers/paintingControllers");
 const mongoose = require("mongoose");
 
-router.post("/api/paintings", paintingController.postPainting);
+router.get("/", getPaintings);
+router.post("/", postPainting);
 
 module.exports = router;
