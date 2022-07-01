@@ -21,7 +21,12 @@ const uploadPaintingImage =
 const getPaintings =
   ("/",
   (req, res) => {
-    res.json({ msg: "get ALL paintings" });
+    try{
+        const painting = await Painting.find()
+        res.json(painting);
+      }catch(err){
+        res.send("err " + err);
+      }
   });
 
 const postPainting =
