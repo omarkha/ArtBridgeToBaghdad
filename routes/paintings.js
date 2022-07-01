@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let painting = require("../models/league.model");
+let painting = require("../models/painting.model");
 const paintingController = require("../controllers/paintingControllers.js");
 const mongoose = require("mongoose");
 
