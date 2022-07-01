@@ -12,9 +12,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 app.use(express.static(`${__dirname}/client/build`));
-app.get("/*", (req, res) => {
-  res.sendFile(`${__dirname}/client/build/index.html`);
-});
 
 const port = process.env.PORT || 5000;
 
@@ -44,6 +41,9 @@ mongoose.connection;
 // Routes
 app.use("/api/paintings", require("./routes/paintings"));
 //
+app.get("/*", (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`);
+});
 
 app.listen(port, () => {
   console.log(`Server is running on Port: ${port}`);

@@ -13,29 +13,23 @@ const Home = () => {
       <Parallax
         strength={100}
         blur={{ min: -15, max: 15 }}
-        bgImage={Images.baghdad_20}
+        bgImage={Images.baghdad_16}
         className="home-hero-background"
       >
-        <Parallax
-          strength={-761.8}
-          bgImage={Images.night_sky}
-          className="home-hero-foreground"
-        >
-          <div className="heading container-lg">
-            <div className="heading-content">
-              <h4 className="lead text-light mb-0">
-                The Elegance of Paint, The Arabic Way
-              </h4>
-              <h1 className="display-1 text-gradient-headline">
-                Art Bridge To Baghdad
-              </h1>
-              <h3 className="display-7 text-light mb-0">
-                Mespotamian Art Gallery
-              </h3>
-              <h6 className="lead text-cyan mt-5">by Amal Maseer</h6>
-            </div>
+        <div className="heading container-lg">
+          <div className="heading-content">
+            <h4 className="lead text-light mb-0">
+              The Elegance of Paint, The Arabic Way
+            </h4>
+            <h1 className="display-1 text-gradient-headline">
+              Art Bridge To Baghdad
+            </h1>
+            <h3 className="display-7 text-light mb-0">
+              Mespotamian Art Gallery
+            </h3>
+            <h6 className="lead text-cyan mt-5">by Amal Maseer</h6>
           </div>
-        </Parallax>
+        </div>
       </Parallax>
 
       <Parallax
@@ -43,47 +37,37 @@ const Home = () => {
         strength={-200}
         bgImage={Images.painting_knights}
       >
-        <Parallax
-          blur={{ min: -10, max: 10 }}
-          strength={661.8}
-          bgImage={Images.desert}
-        >
-          <div style={{ height: "1597px", margin: "0 auto" }}>
-            <div className="container-lg">
-              <h3
-                style={{ position: "relative", top: "377px" }}
-                className="display-1 text-light mt-5 row text-shadow"
-              >
-                Arabian Nights
-              </h3>
+        <div style={{ height: "1597px", margin: "0 auto" }}>
+          <div className="container-lg">
+            <h3
+              style={{ position: "relative", top: "377px" }}
+              className="display-1 text-light mt-5 row text-shadow"
+            >
+              Arabian Nights
+            </h3>
 
-              <div
-                className="col-md-12 row my-5 parag"
-                style={{ position: "relative", top: "610px" }}
-              >
-                <img
-                  style={{ width: "62%23w" }}
-                  className="col-md-4"
-                  src={Images.amal_image}
-                />
-                <div className="col-md-8 mt-5 px-5">
-                  <p className="text-light h2 text-shadow">
-                    Welcome to my online shop!
-                    <br />
-                    <br />
-                    I'm Amal Maseer, owner of the Art Bridge to Baghdad gallery.
-                    Thanks for your visit, Enjoy your time and happy scrolling!
-                  </p>
-                  <p className="lead py-3">
-                    <Link className="btn-slide my-5" to="/about" role="button">
-                      My Story
-                    </Link>
-                  </p>{" "}
-                </div>
+            <div
+              className="col-md-12 row my-5 parag"
+              style={{ position: "relative", top: "610px" }}
+            >
+              <img className="col-md-4" src={Images.amal_image} />
+              <div className="col-md-8 mt-5 px-5">
+                <p className="text-light h2 text-shadow">
+                  Welcome to my online shop!
+                  <br />
+                  <br />
+                  I'm Amal Maseer, owner of the Art Bridge to Baghdad gallery.
+                  Thanks for your visit, Enjoy your time and happy scrolling!
+                </p>
+                <p className="lead py-3">
+                  <Link className="btn-slide my-5" to="/about" role="button">
+                    My Story
+                  </Link>
+                </p>{" "}
               </div>
             </div>
           </div>
-        </Parallax>
+        </div>
       </Parallax>
       <Parallax
         blur={{ min: -10, max: 15 }}
@@ -161,11 +145,10 @@ const Home = () => {
           </div>
         </div>
       </Parallax>
-      <Parallax bgImage={Images.desert}>
-        <section className="row justify-content-center justify-items-center">
-          <NewsLetter />
-        </section>
-      </Parallax>
+
+      <section className="row justify-content-center justify-items-center">
+        <NewsLetter />
+      </section>
     </div>
   );
 };

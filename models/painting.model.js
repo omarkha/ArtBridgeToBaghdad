@@ -29,6 +29,10 @@ const paintingSchema = new Schema(
       type: Boolean,
       default: false,
     },
+    is_shipped: {
+      type: Boolean,
+      default: false,
+    },
     datesold: {
       type: String,
     },

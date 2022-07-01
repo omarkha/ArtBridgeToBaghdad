@@ -11,7 +11,7 @@ const Inventory = () => {
   const [title, setTitle] = useState("");
   const [imageSelected, setImageSelected] = useState("www.image.com");
   const [file, setFile] = useState();
-
+  const [searchId, setSearchId] = useState("");
   const URI_Atlas = "https://artbridgetobaghdad.herokuapp.com";
   const URI_Local = "http://localhost:5000";
 
@@ -84,7 +84,12 @@ const Inventory = () => {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
-
+          <input
+            placeholder="search by id"
+            type="text"
+            value={searchId}
+            onChange={(e) => setSearchId(e.target.value)}
+          />
           <div className="imagepicker">
             <input
               type="file"
