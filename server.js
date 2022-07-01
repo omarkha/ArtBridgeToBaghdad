@@ -36,7 +36,7 @@ mongoose
     console.error("Connection error", e.message);
   });
 mongoose.set("debug", true);
-const db = mongoose.connection;
+mongoose.connection;
 
 // Routes
 app.use("/api/paintings", require("./routes/paintings"));
