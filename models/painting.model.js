@@ -35,15 +35,6 @@ const paintingSchema = new Schema(
     shipping_code: {
       type: String,
     },
-    buyer: {
-      name: {
-        type: String,
-      },
-      email: {
-        type: String,
-      },
-    },
-
     price: {
       type: Number,
       required: true,
