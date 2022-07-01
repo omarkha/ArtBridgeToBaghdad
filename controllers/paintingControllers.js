@@ -4,19 +4,6 @@ const upload = require("../utilities/multer");
 const Painting = require("../models/painting.model");
 const router = express.Router();
 
-const uploadPaintingImage = async(
-  "/upload",
-  upload.single("Image"),
-  async (req, res) => {
-    try {
-      const result = await cloudinary.upload(req.file.path);
-      res.json(result);
-    } catch (err) {
-      console.log(err);
-    }
-  }
-);
-
 ///////////////
 
 const postPainting =
