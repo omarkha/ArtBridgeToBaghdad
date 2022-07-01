@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-
+const paintingRoute = require("./routes/paintings");
 require("dotenv").config(); // Add this line
 app.use(cors());
 app.use(express.json());
@@ -12,6 +12,7 @@ app.get("/*", (req, res) => {
 });
 
 const port = process.env.PORT || 5000;
+
 app.get("/", (req, res) => {
   res.send("Api running");
 });
@@ -36,7 +37,7 @@ mongoose.set("debug", true);
 const db = mongoose.connection;
 
 // Routes
-app.use("/api/paintings", require("./routes/paintings"));
+app.use(paintingRoute);
 //
 
 app.listen(port, () => {
