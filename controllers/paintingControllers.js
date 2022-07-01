@@ -18,7 +18,7 @@ const uploadPaintingImage =
 
 ///////////////
 
-const getPaintings =
+const getPaintings = async
   ("/",
   (req, res) => {
     try{
