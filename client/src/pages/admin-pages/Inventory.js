@@ -24,7 +24,7 @@ const Inventory = () => {
       .post("https://api.cloudinary.com/v1_1/Copyres/image/upload", fdata)
       .then((res) => {
         console.log(res);
-        setImageSelected(res.data.URL);
+        setImageSelected(res.data.secure_url);
       })
       .catch((err) => console.log(err));
   };
