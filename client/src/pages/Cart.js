@@ -24,6 +24,9 @@ const Cart = () => {
       t += e;
       setTotal(t);
     });
+    if (cartItems.length < 1) {
+      setTotal(0);
+    }
     console.log(total);
   };
 
@@ -31,7 +34,7 @@ const Cart = () => {
     return total;
   };
 
-  useEffect(() => getTotal(), []);
+  useEffect(() => getTotal(), [cartItems]);
   return (
     <div className="container">
       {" "}
