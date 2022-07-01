@@ -23,40 +23,6 @@ const postPainting = (req, res) => {
   }
 };
 
-const deletePainting = ("/:d", (req, res) => {});
-
-const updatePainting = ("/:id", (req, res) => {});
-
-const getSoldPaintings =
-  ("/sold/",
-  (req, res) => {
-    res.json({ msg: "get ALL paintings" });
-  });
-
-const getSoldPainting =
-  ("/sold/:id",
-  (req, res) => {
-    res.json({ msg: "get ALL paintings" });
-  });
-
-const postSoldPainting =
-  ("/sold/:id",
-  (req, res) => {
-    res.json({ msg: "get ALL paintings" });
-  });
-
-const deleteSoldPainting =
-  ("/sold/:id",
-  (req, res) => {
-    res.json({ msg: "get ALL paintings" });
-  });
-
-const updateSoldPainting =
-  ("/sold/:id",
-  (req, res) => {
-    res.json({ msg: "get ALL paintings" });
-  });
-
 module.exports = {
   postPainting,
   getPaintings,
