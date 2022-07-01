@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 const NewsLetter = () => {
-  const subscribe = () => {};
+  const URI_Atlas = "https://artbridgetobaghdad.herokuapp.com";
+  const URI_Local = "http://localhost:5000";
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const subscribe = () => {
+    const subscriber = {
+      name: name,
+      email: email,
+    };
+    axios
+      .post(`${URI_Atlas}/api/subscribers`, subscriber)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
   return (
     <div className="newsletter col-md-12 justify-content-center justify-items-center mt-5">
       <h1>Subscribe to our News Letter</h1>
@@ -11,6 +25,8 @@ const NewsLetter = () => {
           <label>Name</label>
           <input
             type="text"
+            value="name"
+            onChange={(e) => setName(e.target.value)}
             className="form-control"
             placeholder="e.g. Leonardo McCarthy"
           />
@@ -20,6 +36,8 @@ const NewsLetter = () => {
           <input
             className="form-control"
             type="text"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
             placeholder="e.g. leonardo@example.com"
           />
         </div>

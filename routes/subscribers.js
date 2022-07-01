@@ -1,25 +1,9 @@
-const express = require("express");
+const router = require("express").Router();
+let painting = require("../models/subscriber.model");
+const subscriberControllers = require("../controllers/subscruberControllers");
+const mongoose = require("mongoose");
 
-const router = express.Router();
-
-router.get("/", (req, res) => {
-  res.json({ msg: "get ALL subscribers" });
-});
-
-router.post("/:id", (req, res) => {});
-
-router.delete("/:d", (req, res) => {});
-
-router.patch("/:id", (req, res) => {});
-
-router.get("/removed/", (req, res) => {
-  res.json({ msg: "get ALL subscribers" });
-});
-
-router.post("/removed/:id", (req, res) => {});
-
-router.delete("/removed/i:d", (req, res) => {});
-
-router.patch("/removed/:id", (req, res) => {});
+router.get("/", subscriberControllers.getSubscribers);
+router.post("/", subscriberControllers.postSubsriber);
 
 module.exports = router;
