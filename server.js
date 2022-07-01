@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-
 const app = express();
+
 require("dotenv").config(); // Add this line
 app.use(cors());
 app.use(express.json());
@@ -17,19 +17,26 @@ app.get("/", (req, res) => {
   res.send("Api running");
 });
 
-const { MongoClient, ServerApiVersion } = require("mongodb");
-const uri =
-  "mongodb+srv://Copyres:Soridl846@cluster0.ohmco.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  serverApi: ServerApiVersion.v1,
-});
-client.connect((err) => {
-  const collection = client.db("gallerydb").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+const mongoose = require("mongoose");
+require("dotenv").config(); // Add this line
+
+let dbUrl =
+  process.env.NODE_ENV === "production"
+    ? process.env.MONGODB_URI
+    : "mongodb://127.0.0.1:27017/gallerydb";
+
+mongoose
+  .connect(dbUrl)
+  .then(() => {
+    console.log("Successfully connected to MongoDB!");
+  })
+  .catch((e) => {
+    console.error("Connection error", e.message);
+  });
+mongoose.set("debug", true);
+const db = mongoose.connection;
+
+module.exports = db;
 
 // Routes
 app.use("/api/paintings", require("./routes/paintings"));
