@@ -39,7 +39,7 @@ mongoose.set("debug", true);
 const db = mongoose.connection;
 
 // Routes
-app.use("/api/paintings", paintingRoute);
+app.use("/api/paintings", require("./routes/paintings"));
 //
 
 app.listen(port, () => {
