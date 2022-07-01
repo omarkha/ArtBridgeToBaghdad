@@ -18,9 +18,7 @@ const uploadPaintingImage =
 
 ///////////////
 
-const getPaintings = async
-  ("/",
-  (req, res) => {
+const getPaintings = async ("/", (req, res) => {
     try{
         const painting = await Painting.find()
         res.json(painting);
