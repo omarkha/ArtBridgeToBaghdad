@@ -4,7 +4,9 @@ const upload = require("../utilities/multer");
 const Painting = require("../models/painting.model");
 const router = express.Router();
 
-const uploadPaintingImage = async ("/upload", upload.single("Image"),
+const uploadPaintingImage = async(
+  "/upload",
+  upload.single("Image"),
   async (req, res) => {
     try {
       const result = await cloudinary.upload(req.file.path);
@@ -12,18 +14,10 @@ const uploadPaintingImage = async ("/upload", upload.single("Image"),
     } catch (err) {
       console.log(err);
     }
-  });
+  }
+);
 
 ///////////////
-
-const getPaintings = async ("/", (req, res) => {
-    try{
-        const painting = await Painting.find()
-        res.json(painting);
-      }catch(err){
-        res.send("err " + err);
-      }
-  });
 
 const postPainting =
   ("/",
