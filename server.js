@@ -39,7 +39,7 @@ mongoose.set("debug", true);
 mongoose.connection;
 
 // Routes
-app.use("/api/paintings", require("./routes/paintings"));
+app.use(paintingRoute);
 //
 
 app.listen(port, () => {

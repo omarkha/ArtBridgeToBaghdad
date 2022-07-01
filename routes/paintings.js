@@ -6,7 +6,7 @@ const {
 } = require("../controllers/paintingControllers");
 const mongoose = require("mongoose");
 
-router.get("/", getPaintings);
-router.post("/", postPainting);
+router.get("/api/paintings", getPaintings);
+router.post("/api/paintings", postPainting);
 
 module.exports = router;
