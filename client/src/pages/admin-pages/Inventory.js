@@ -33,16 +33,7 @@ const Inventory = () => {
   };
 
   const handlePost = () => {
-    const painting = {
-      height: height,
-      width: width,
-      price: price,
-      img_url: imageSelected,
-    };
-    axios
-      .post(`${URI_Atlas}/api/paintings`, painting)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+    console.log(imageSelected);
   };
 
   const [image, setImage] = useState(null);
