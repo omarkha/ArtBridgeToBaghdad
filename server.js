@@ -7,6 +7,11 @@ require("dotenv").config(); // Add this line
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static(`${__dirname}/client/build`));
+app.get("/*", (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`);
+});
+
 const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
