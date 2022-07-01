@@ -11,7 +11,7 @@ app.use(express.static(`${__dirname}/client/build`));
 app.get("/*", (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`);
 });
-
+const port = process.env.port || 5000;
 app.get("/", (req, res) => {
   res.send("Api running");
 });
@@ -36,6 +36,6 @@ client.connect((err) => {
 app.use("/api/paintings", require("./routes/paintings"));
 //
 
-app.listen(process.env.port || 5000, () => {
+app.listen(port, () => {
   console.log(`Server is running on Port: ${port}`);
 });
