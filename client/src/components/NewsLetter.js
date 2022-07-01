@@ -25,7 +25,7 @@ const NewsLetter = () => {
           <label>Name</label>
           <input
             type="text"
-            value="name"
+            value={name}
             onChange={(e) => setName(e.target.value)}
             className="form-control"
             placeholder="e.g. Leonardo McCarthy"
