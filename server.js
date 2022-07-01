@@ -40,7 +40,7 @@ mongoose.connection;
 
 // Routes
 app.use("/api/paintings", require("./routes/paintings"));
-app.use("/api/subscriber", require("./routes/subscribers"));
+app.use("/api/subscribers", require("./routes/subscribers"));
 //
 app.get("/*", (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`);
