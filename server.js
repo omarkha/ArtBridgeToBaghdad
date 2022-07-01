@@ -35,8 +35,6 @@ mongoose
 mongoose.set("debug", true);
 const db = mongoose.connection;
 
-module.exports = db;
-
 // Routes
 app.use("/api/paintings", require("./routes/paintings"));
 //

@@ -21,11 +21,10 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   const painting = new Painting();
-  painting.title = req.body.title;
-  painting.height = req.body.height;
-  painting.width = req.body.width;
-  painting.price = req.body.price;
-  painting.img_url = req.body.img_url;
+  painting.title = req.params.title;
+  painting.width = req.params.width;
+  painting.price = req.params.price;
+  painting.img_url = req.params.img_url;
 
   try {
     painting.save();
