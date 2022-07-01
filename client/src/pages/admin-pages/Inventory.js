@@ -9,7 +9,7 @@ const Inventory = () => {
   const [height, setHeight] = useState(0);
   const [price, setPrice] = useState(0);
   const [title, setTitle] = useState("");
-  const [imageSelected, setImageSelected] = useState("");
+  const [imageSelected, setImageSelected] = useState("www.image.com");
   const [file, setFile] = useState();
 
   const URI_Atlas = "https://artbridgetobaghdad.herokuapp.com";
@@ -33,7 +33,16 @@ const Inventory = () => {
   };
 
   const handlePost = () => {
-    console.log(imageSelected);
+    const painting = {
+      height: height,
+      width: width,
+      price: price,
+      img_url: imageSelected,
+    };
+    axios
+      .post(`${URI_Atlas}/api/paintings`, painting)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   };
 
   const [image, setImage] = useState(null);
