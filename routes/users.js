@@ -1,4 +1,4 @@
-const mongoose = requir("mongoose");
+const mongoose = require("mongoose");
 const express = require("express");
 const router = express.Router();
 const userControllers = require("../controllers/userControllers");
