@@ -11,13 +11,13 @@ const Home = () => {
   return (
     <div className="home">
       <Parallax
-        strength={100}
+        strength={-200}
         blur={{ min: -15, max: 15 }}
         bgImage={Images.baghdad_17}
         className="home-hero-background"
       >
         <div className="heading container-lg">
-          <div className="heading-content text-start">
+          <div className="heading-content text-center">
             <h1 className="display-1 text-gradient-headline">
               Art Bridge To Baghdad
             </h1>
