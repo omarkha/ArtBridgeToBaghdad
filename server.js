@@ -41,6 +41,7 @@ mongoose.connection;
 // Routes
 app.use("/api/paintings", require("./routes/paintings"));
 app.use("/api/subscribers", require("./routes/subscribers"));
+app.use("/api/user", require("./routes/users"));
 //
 app.get("/*", (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`);

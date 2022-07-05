@@ -7,11 +7,17 @@ const desc =
 
 const Antiques = () => {
   return (
-    <div className="container">
+    <div>
       <div className="results-heading">
         <h3>Scroll Down for Our inventory</h3>
       </div>
-      <div className="results"></div>
+      <div className="results">
+        <div className="containerlg">
+          <h1 className="display-1 py-5 ">
+            This Page is Currently Under Construction, Will Be Coming Soon...
+          </h1>
+        </div>
+      </div>
       <div className="results-bottom">
         <button>{"<="}</button>
         <button>{"=>"}</button>

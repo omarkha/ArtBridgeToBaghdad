@@ -27,14 +27,14 @@ const NewsLetter = () => {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="form-control"
+            className="form-control text-center"
             placeholder="e.g. Leonardo McCarthy"
           />
         </div>
         <div>
           <label>Email</label>
           <input
-            className="form-control"
+            className="form-control text-center"
             type="text"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
