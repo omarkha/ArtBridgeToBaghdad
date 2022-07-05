@@ -649,7 +649,6 @@ button {
 nav .nav-link {
   opacity: 1;
   color: $light;
-  animation: animate-opacity-turn-on 3.62s ease-in-out;
 }
 nav .nav-link {
   border-radius: 5px;
@@ -876,21 +875,6 @@ input[type="file"] {
 
 .painting .painting-buttons button {
   margin: 5px;
-}
-
-.brandtitle {
-  opacity: 1;
-  font-family: "New Times Roman";
-  animation: animate-brand 3.62s ease-in-out;
-}
-
-@keyframes animate-brand {
-  from {
-    letter-spacing: 8px;
-  }
-  to {
-    letter-spacing: normal;
-  }
 }
 
 @media screen and (max-width: 960px) {
