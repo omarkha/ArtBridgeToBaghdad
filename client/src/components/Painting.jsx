@@ -26,7 +26,8 @@ const Painting = (props) => {
       props.img_url,
       props.price,
       props.width,
-      props.height
+      props.height,
+      props.title
     );
     setAdded(true);
   };
@@ -35,7 +36,7 @@ const Painting = (props) => {
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (
-    <div className="painting bg-dark col-md-4">
+    <div className="painting bg-dark col-md-9" key={props.id}>
       <div>
         <img
           src={props.img_url}
@@ -44,15 +45,18 @@ const Painting = (props) => {
           data-bs-target="#reg-modal"
         />
       </div>
-      <h4 id="painting-title text-light">{props.title}</h4>
       <div className="info text-light">
         <h4>
           {props.width} " / {props.height} "{" "}
         </h4>
+        <h3 className="lead">{props.title}</h3>
         <h5 className="text-light">${props.price}</h5>
 
         <div className="painting-buttons">
-          <button className="btn btn-primary text-light">
+          <button
+            className="btn btn-primary text-light"
+            onClick={() => console.log(props.id)}
+          >
             <FaShareAlt />
           </button>
 

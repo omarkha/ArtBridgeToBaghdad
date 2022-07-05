@@ -13,21 +13,24 @@ const Home = () => {
       <Parallax
         strength={100}
         blur={{ min: -15, max: 15 }}
-        bgImage={Images.baghdad_16}
+        bgImage={Images.baghdad_17}
         className="home-hero-background"
       >
         <div className="heading container-lg">
           <div className="heading-content">
-            <h4 className="lead text-light mb-0">
-              The Elegance of Paint, The Arabic Way
-            </h4>
             <h1 className="display-1 text-gradient-headline">
               Art Bridge To Baghdad
             </h1>
-            <h3 className="display-7 text-light mb-0">
+            <h3 className="display-6 text-light mb-0">
               Mespotamian Art Gallery
             </h3>
-            <h6 className="lead text-cyan mt-5">by Amal Maseer</h6>
+            <h4 className="lead text-warning mb-0">Elegance in paint</h4>
+            <h6 className="h6 text-gradient-brandname mt-5">by Amal Maseer</h6>
+            <p className="lead py-3">
+              <Link className="btn-slide my-5" to="/about" role="button">
+                Our Story
+              </Link>
+            </p>{" "}
           </div>
         </div>
       </Parallax>
@@ -59,11 +62,6 @@ const Home = () => {
                   I'm Amal Maseer, owner of the Art Bridge to Baghdad gallery.
                   Thanks for your visit, Enjoy your time and happy scrolling!
                 </p>
-                <p className="lead py-3">
-                  <Link className="btn-slide my-5" to="/about" role="button">
-                    My Story
-                  </Link>
-                </p>{" "}
               </div>
             </div>
           </div>

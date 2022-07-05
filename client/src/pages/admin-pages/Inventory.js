@@ -37,6 +37,7 @@ const Inventory = () => {
       height: height,
       width: width,
       price: price,
+      title: title,
       img_url: imageSelected,
     };
     axios

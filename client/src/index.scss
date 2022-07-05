@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Smooch&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@1,600&display=swap");
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 nav a {
@@ -52,7 +53,7 @@ nav a {
   width: fit-content;
   padding: 13px;
   margin: 0 auto;
-  background-color: rgba(40, 40, 40, 0.23);
+  background-color: rgba(40, 40, 40, 0.92);
 }
 
 .parag {
@@ -86,24 +87,29 @@ p {
   color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
-  border: 2px solid $primary;
+  border: 2px solid $orange;
   border-radius: 3px;
   padding: 13px 34px;
-  box-shadow: inset 0 0 0 0 $primary;
+  box-shadow: inset 0 0 0 0 $orange;
   -webkit-transition: ease-out 0.38s;
   -moz-transition: ease-out 0.38s;
   transition: ease-out 0.38s;
 }
 .btn-slide:hover {
   color: $light;
-  box-shadow: inset 200px 0 0 0 $cyan;
-  border: 2px solid $cyan;
+  box-shadow: inset 200px 0 0 0 $pink;
+  border: 2px solid $pink;
 }
-
-.text-gradient-headline {
-  background-image: linear-gradient(to top, $light, $cyan);
+.text-gradient-brandname {
+  background-image: linear-gradient(to top, $warning, $pink);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.text-gradient-headline {
+  background-image: linear-gradient(to top, $orange, $pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Archivo Narrow";
 }
 
 .text-gradient {
@@ -196,7 +202,7 @@ code {
 }
 
 .cart-icon {
-  background-color: $cyan;
+  background-color: $pink;
   color: $light;
 }
 
@@ -469,7 +475,7 @@ footer h3 {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: rgba(25, 25, 25, 0.82);
+  background-color: $dark;
   grid-gap: 13px;
   padding: 13px;
   color: #fff;
@@ -485,7 +491,7 @@ footer h3 {
 }
 
 .contact {
-  background-color: rgba(101, 25, 63, 0.38);
+  background-color: $purple;
   border-radius: 21px;
 }
 
@@ -618,7 +624,7 @@ button {
   grid-column: 1/4;
 }
 .results-heading {
-  background-color: rgb(63, 101, 200);
+  background-color: $orange;
   margin: 0 auto;
   padding: 21px;
   color: rgb(200, 216, 255);
@@ -631,6 +637,7 @@ button {
 }
 
 .contact-page {
+  background-color: $purple;
   margin: 0;
   padding: 55px 0;
   background-blend-mode: luminosity;
@@ -638,7 +645,7 @@ button {
 }
 
 nav .nav-link {
-  color: $dark;
+  color: $light;
 }
 nav .nav-link {
   border-radius: 5px;

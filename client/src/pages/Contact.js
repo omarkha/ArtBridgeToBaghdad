@@ -15,7 +15,7 @@ const Contact = () => {
           <h3>Contact Info:</h3>
 
           <div>
-            <p>
+            <p className="text-cyan">
               Email: amal4ch@gmail.com
               <br />
               <br />
@@ -29,7 +29,7 @@ const Contact = () => {
               <h3>Linkedin</h3>
               <div>
                 <img src={Images.linkedin_icon} />
-                <p>Connect with me on Linkedin!</p>
+                <p className="text-light">Connect with me on Linkedin!</p>
               </div>
             </a>
           </div>
@@ -39,7 +39,7 @@ const Contact = () => {
               <h3>Facebook</h3>
               <div>
                 <img src={Images.facebook_icon} />
-                <p>My facebook page!</p>
+                <p className="text-light">My facebook page!</p>
               </div>
             </a>
           </div>
@@ -48,7 +48,7 @@ const Contact = () => {
             <h3>Instagram</h3>
             <div>
               <img src={Images.instagram_icon} />
-              <p>Follow me on Instagram!</p>
+              <p className="text-light">Follow me on Instagram!</p>
             </div>
           </div>
 
@@ -56,7 +56,7 @@ const Contact = () => {
             <h3>Twitter</h3>
             <div>
               <img src={Images.twitter_icon} />
-              <p>My tweets on Twitter!</p>
+              <p className="text-light">My tweets on Twitter!</p>
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@ const Contact = () => {
                     className="form-control"
                     style={{ height: "144px" }}
                   ></textarea>
-                  <label for="query">Your Query...</label>
+                  <label for="query">Your Message...</label>
                 </div>
                 <div className="my-4 text-center">
                   <button type="submit" className="btn btn-secondary">

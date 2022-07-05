@@ -42,8 +42,8 @@ const Paintings = (props) => {
 
   return (
     <div className="paintings-page">
-      <div className="results-heading bg-primary">
-        <h3> Happy Viewing! </h3>
+      <div className="results-heading">
+        <h3 className="h3 text-dark"> Happy Viewing! </h3>
       </div>
 
       <div className="results">
@@ -52,9 +52,11 @@ const Paintings = (props) => {
             return (
               <Painting
                 id={painting._id}
+                key={painting._id}
                 price={painting.price}
                 height={painting.height}
                 width={painting.width}
+                title={painting.title}
                 img_url={painting.img_url}
                 onEnlarge={onEnlarge}
               />
@@ -68,7 +70,7 @@ const Paintings = (props) => {
         className="modal fade"
         id="reg-modal"
         tabIndex="-1"
-        aria-aria-labelledby="modal-title"
+        aria-labelledby="modal-title"
         aria-hidden="true"
       >
         <div className="modal-dialog">
