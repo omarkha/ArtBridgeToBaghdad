@@ -36,7 +36,7 @@ const Painting = (props) => {
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (
-    <div className="painting bg-dark col-md-9" key={props.id}>
+    <div className="painting col-md-9" key={props.id}>
       <div>
         <img
           src={props.img_url}
@@ -45,12 +45,12 @@ const Painting = (props) => {
           data-bs-target="#reg-modal"
         />
       </div>
-      <div className="info text-light">
+      <div className="info text-dark">
         <h4>
           {props.width} " / {props.height} "{" "}
         </h4>
         <h3 className="lead">{props.title}</h3>
-        <h5 className="text-light">${props.price}</h5>
+        <h5 className="text-dark">${props.price}</h5>
 
         <div className="painting-buttons">
           <button

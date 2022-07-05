@@ -17,20 +17,30 @@ const Home = () => {
         className="home-hero-background"
       >
         <div className="heading container-lg">
-          <div className="heading-content">
+          <div className="heading-content text-start">
             <h1 className="display-1 text-gradient-headline">
               Art Bridge To Baghdad
             </h1>
-            <h3 className="display-6 text-light mb-0">
+
+            <h3 className="display-6 text-dark mb-0">
               Mespotamian Art Gallery
             </h3>
-            <h4 className="lead text-warning mb-0">Elegance in paint</h4>
-            <h6 className="h6 text-gradient-brandname mt-5">by Amal Maseer</h6>
-            <p className="lead py-3">
-              <Link className="btn-slide my-5" to="/about" role="button">
-                Our Story
-              </Link>
-            </p>{" "}
+            <h4 className="lead text-dark mb-0 ">
+              The Elegance of simpler times
+            </h4>
+            <div className="text-center">
+              <h6
+                className="h5 text-dark mt-5 bg-light py-1"
+                id="galleryfounder"
+              >
+                by Traditional Iraqi Artist, Amal Maseer
+              </h6>
+              <p className="lead py-3">
+                <Link className="btn-slide my-5" to="/about" role="button">
+                  Our Story
+                </Link>
+              </p>{" "}
+            </div>
           </div>
         </div>
       </Parallax>
