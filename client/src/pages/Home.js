@@ -13,7 +13,7 @@ const Home = () => {
       <Parallax
         strength={-200}
         blur={{ min: -15, max: 15 }}
-        bgImage={Images.baghdad_17}
+        bgImage={Images.baghdad_19}
         className="home-hero-background"
       >
         <div className="heading container-lg">
