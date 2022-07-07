@@ -41,14 +41,16 @@ const Painting = (props) => {
         <img
           src={props.img_url}
           onClick={() =>
-            props.onEnlarge({
-              img_url: props.img_url,
-              title: props.title,
-              price: props.price,
-              width: props.width,
-              height: props.height,
-              id: props.id,
-            })
+            !props.modal
+              ? props.onEnlarge({
+                  img_url: props.img_url,
+                  title: props.title,
+                  price: props.price,
+                  width: props.width,
+                  height: props.height,
+                  id: props.id,
+                })
+              : null
           }
           data-bs-toggle="modal"
           data-bs-target="#reg-modal"

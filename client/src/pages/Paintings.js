@@ -6,40 +6,6 @@ import { CartContext } from "../context/cartContext";
 import ReactPaginate from "react-paginate";
 import axios from "axios";
 const Paintings = (props) => {
-  ////// modal add to cart button
-  const { cartItems, addCartItem, removeCartItem, printCartItems } =
-    useContext(CartContext);
-  const [added, setAdded] = useState(false);
-  const checkAdded = () => {
-    cartItems.map((item) =>
-      item.id === enlargedImage.id ? setAdded(true) : ""
-    );
-  };
-
-  const removeItem = () => {
-    removeCartItem(enlargedImage.id);
-    setAdded(false);
-  };
-
-  const addItem = () => {
-    addCartItem(
-      "painting",
-      enlargedImage.id,
-      enlargedImage.img_url,
-      enlargedImage.price,
-      enlargedImage.width,
-      enlargedImage.height,
-      enlargedImage.title
-    );
-    setAdded(true);
-  };
-
-  useEffect(() => checkAdded(), []);
-
-  const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
-
-  /////////
-
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -134,31 +100,14 @@ const Paintings = (props) => {
               </h5>
             </div>
             <div className="modal-body">
-              <img src={enlargedImage.img_url} />
-              <h3 className="h3 mt-5">
-                {enlargedImage.width + ' " x ' + enlargedImage.height + ' " '}
-              </h3>
-              <h4 className="h4">{"$" + enlargedImage.price}</h4>
-              <button
-                onClick={() => {
-                  if (cartItems.length > 0) {
-                    checkAdded();
-                    if (!added) {
-                      cartItems.map((item) =>
-                        item.id === enlargedImage.id ? removeItem() : addItem()
-                      );
-                    } else {
-                      removeItem();
-                    }
-                  } else {
-                    addItem();
-                  }
-                  printCartItems();
-                }}
-                className={addButtonStyle}
-              >
-                {added ? "remove" : "add to cart"}
-              </button>
+              <Painting
+                img_url={enlargedImage.img_url}
+                title={enlargedImage.title}
+                width={enlargedImage.width}
+                height={enlargedImage.height}
+                price={enlargedImage.price}
+                modal={true}
+              />
             </div>
           </div>
         </div>

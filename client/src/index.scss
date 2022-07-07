@@ -88,13 +88,6 @@ p {
   color: $cyan;
 }
 
-#reg-modal img {
-  max-height: 100vh;
-  max-width: 82%;
-  padding-top: 34px;
-  z-index: 100;
-}
-
 .btn-close {
   z-index: 101;
 }
@@ -539,6 +532,15 @@ footer h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.modal .painting {
+  min-width: 100%;
+}
+
+.modal .painting img {
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .painting {
