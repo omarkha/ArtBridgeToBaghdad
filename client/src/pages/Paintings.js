@@ -6,6 +6,40 @@ import { CartContext } from "../context/cartContext";
 import ReactPaginate from "react-paginate";
 import axios from "axios";
 const Paintings = (props) => {
+  ////// modal add to cart button
+  const { cartItems, addCartItem, removeCartItem, printCartItems } =
+    useContext(CartContext);
+  const [added, setAdded] = useState(false);
+  const checkAdded = () => {
+    cartItems.map((item) =>
+      item.id === enlargedImage.id ? setAdded(true) : ""
+    );
+  };
+
+  const removeItem = () => {
+    removeCartItem(enlargedImage.id);
+    setAdded(false);
+  };
+
+  const addItem = () => {
+    addCartItem(
+      "painting",
+      enlargedImage.id,
+      enlargedImage.img_url,
+      enlargedImage.price,
+      enlargedImage.width,
+      enlargedImage.height,
+      enlargedImage.title
+    );
+    setAdded(true);
+  };
+
+  useEffect(() => checkAdded(), []);
+
+  const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
+
+  /////////
+
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -17,11 +51,25 @@ const Paintings = (props) => {
     pagesVisited + paintingsPerPage
   );
 
-  const [enlargedImage, setEnlargedImage] = useState();
+  const [enlargedImage, setEnlargedImage] = useState({
+    img_url: "",
+    title: "",
+    price: 0,
+    width: 0,
+    height: 0,
+    id: "",
+  });
   console.log(props);
 
   const onEnlarge = (img) => {
-    setEnlargedImage(img);
+    setEnlargedImage({
+      img_url: img.img_url,
+      title: img.title,
+      price: img.price,
+      width: img.width,
+      height: img.height,
+      id: img.id,
+    });
   };
 
   useEffect(() => {
@@ -73,20 +121,44 @@ const Paintings = (props) => {
         aria-labelledby="modal-title"
         aria-hidden="true"
       >
-        <div className="modal-dialog">
-          <div className="modal-content">
+        <div className="modal-dialog modal-xl my-0 pb-5">
+          <div className="modal-content pb-5">
             <div className="modal-header">
               <h5 className="modal-title ml-4">
-                Life in Mespotamia - Amal Maseer
+                <button
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+                {enlargedImage.title}
               </h5>
-              <button
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
             </div>
             <div className="modal-body">
-              <img src={enlargedImage} />
+              <img src={enlargedImage.img_url} />
+              <h3 className="h3 mt-5">
+                {enlargedImage.width + ' " x ' + enlargedImage.height + ' " '}
+              </h3>
+              <h4 className="h4">{"$" + enlargedImage.price}</h4>
+              <button
+                onClick={() => {
+                  if (cartItems.length > 0) {
+                    checkAdded();
+                    if (!added) {
+                      cartItems.map((item) =>
+                        item.id === enlargedImage.id ? removeItem() : addItem()
+                      );
+                    } else {
+                      removeItem();
+                    }
+                  } else {
+                    addItem();
+                  }
+                  printCartItems();
+                }}
+                className={addButtonStyle}
+              >
+                {added ? "remove" : "add to cart"}
+              </button>
             </div>
           </div>
         </div>

@@ -89,7 +89,14 @@ p {
 }
 
 #reg-modal img {
-  width: 100%;
+  max-height: 100vh;
+  max-width: 987px;
+  padding-top: 34px;
+  z-index: 100;
+}
+
+.btn-close {
+  z-index: 101;
 }
 
 .btn-slide {
@@ -654,7 +661,7 @@ nav .nav-link {
   border-radius: 5px;
 }
 nav .nav-link:hover {
-  color: $orange;
+  color: $warning;
 }
 
 .newsletter {

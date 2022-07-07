@@ -45,7 +45,7 @@ const Nav = () => {
                 to="paintings"
                 onClick={() => setExpanded(false)}
               >
-                My Paintings
+                Artwork
               </Link>
             </li>
             <li className="nav-item">

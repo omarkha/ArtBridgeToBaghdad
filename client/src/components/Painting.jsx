@@ -36,11 +36,20 @@ const Painting = (props) => {
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (
-    <div className="painting col-md-9" key={props.id}>
+    <div className="painting col-md-7" key={props.id}>
       <div>
         <img
           src={props.img_url}
-          onClick={() => props.onEnlarge(props.img_url)}
+          onClick={() =>
+            props.onEnlarge({
+              img_url: props.img_url,
+              title: props.title,
+              price: props.price,
+              width: props.width,
+              height: props.height,
+              id: props.id,
+            })
+          }
           data-bs-toggle="modal"
           data-bs-target="#reg-modal"
         />
