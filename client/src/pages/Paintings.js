@@ -121,7 +121,7 @@ const Paintings = (props) => {
         aria-labelledby="modal-title"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-xl my-0 pb-5">
+        <div className="modal-dialog modal-lg my-0 pb-5">
           <div className="modal-content pb-5">
             <div className="modal-header">
               <h5 className="modal-title ml-4">
