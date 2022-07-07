@@ -32,7 +32,7 @@ const Painting = (props) => {
     setAdded(true);
   };
 
-  useEffect(() => checkAdded(), [cartItems]);
+  useEffect(() => checkAdded(), []);
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (
@@ -41,16 +41,14 @@ const Painting = (props) => {
         <img
           src={props.img_url}
           onClick={() =>
-            !props.modal
-              ? props.onEnlarge({
-                  img_url: props.img_url,
-                  title: props.title,
-                  price: props.price,
-                  width: props.width,
-                  height: props.height,
-                  id: props.id,
-                })
-              : null
+            props.onEnlarge({
+              img_url: props.img_url,
+              title: props.title,
+              price: props.price,
+              width: props.width,
+              height: props.height,
+              id: props.id,
+            })
           }
           data-bs-toggle="modal"
           data-bs-target="#reg-modal"

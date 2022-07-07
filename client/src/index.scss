@@ -534,13 +534,12 @@ footer h3 {
   flex-wrap: wrap;
 }
 
-.modal .painting {
+.modal {
   min-width: 100%;
 }
 
-.modal .painting img {
-  min-height: 100%;
-  min-width: 100%;
+.modal img {
+  width: 100%;
 }
 
 .painting {

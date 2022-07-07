@@ -100,15 +100,7 @@ const Paintings = (props) => {
               </h5>
             </div>
             <div className="modal-body">
-              <Painting
-                img_url={enlargedImage.img_url}
-                title={enlargedImage.title}
-                width={enlargedImage.width}
-                height={enlargedImage.height}
-                price={enlargedImage.price}
-                id={enlargedImage.id}
-                modal={true}
-              />
+              <img src={enlargedImage.img_url} />
             </div>
           </div>
         </div>
