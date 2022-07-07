@@ -32,7 +32,7 @@ const Painting = (props) => {
     setAdded(true);
   };
 
-  useEffect(() => checkAdded(), []);
+  useEffect(() => checkAdded(), [cartItems]);
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (

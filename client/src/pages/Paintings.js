@@ -106,6 +106,7 @@ const Paintings = (props) => {
                 width={enlargedImage.width}
                 height={enlargedImage.height}
                 price={enlargedImage.price}
+                id={enlargedImage.id}
                 modal={true}
               />
             </div>
