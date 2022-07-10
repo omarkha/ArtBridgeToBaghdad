@@ -20,7 +20,11 @@ const Nav = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-0 my-0">
       <div className="container">
-        <Link to="/" className="navbar-brand text-gradient-brandname ">
+        <Link
+          to="/"
+          className="navbar-brand text-gradient-brandname "
+          style={{ fontSize: "18px" }}
+        >
           <img className="icon" src={Images.logo} />
           <span className="brandtitle">Art Bridge to Baghdad</span>
         </Link>
@@ -45,7 +49,7 @@ const Nav = () => {
                 to="paintings"
                 onClick={() => setExpanded(false)}
               >
-                Artwork
+                My Artwork
               </Link>
             </li>
             <li className="nav-item">

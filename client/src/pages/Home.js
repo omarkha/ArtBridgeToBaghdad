@@ -23,7 +23,7 @@ const Home = () => {
             </h1>
 
             <h3 className="display-6 text-dark mb-0">
-              Mespotamian Art Gallery
+              Mesopotamian Art Gallery
             </h3>
             <h4 className="lead text-dark mb-0 ">
               The Elegance of simpler times
@@ -45,11 +45,7 @@ const Home = () => {
         </div>
       </Parallax>
 
-      <Parallax
-        blur={{ min: -10, max: 10 }}
-        strength={-200}
-        bgImage={Images.painting_knights}
-      >
+      <Parallax strength={-200} bgImage={Images.painting_knights}>
         <div style={{ height: "1597px", margin: "0 auto" }}>
           <div className="container-lg">
             <h3
@@ -60,6 +56,7 @@ const Home = () => {
             </h3>
 
             <div
+              data-aos="fade-up"
               className="col-md-12 row my-5 parag"
               style={{ position: "relative", top: "610px" }}
             >
@@ -77,11 +74,7 @@ const Home = () => {
           </div>
         </div>
       </Parallax>
-      <Parallax
-        blur={{ min: -10, max: 15 }}
-        bgImage={Images.baghdad_13}
-        strength={-100}
-      >
+      <Parallax bgImage={Images.baghdad_13} strength={-100}>
         <div className="home-page my-0">
           <div className="container-lg my-0">
             <section className="main-article row justify-content-center justify-items-center my-0">
@@ -93,13 +86,13 @@ const Home = () => {
                 </h3>
               </div>
 
-              <div className="col-md-12 row my-5 parag">
+              <div data-aos="fade-in" className="col-md-12 row my-5 parag">
                 <img
                   className="col-md-4"
                   id="cradle_img"
                   src={Images.baghdad_16}
                 />
-                <div className="col-md-12 mt-5 px-5">
+                <div data-aos="fade-up" className="col-md-12 mt-5 px-5">
                   <h5> The Cradle of Civilization </h5>
                   <p>
                     Everywhere in the world, kids are taught about Mesopotamia.
@@ -120,8 +113,8 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="col-md-12 row my-5 parag">
-                <div className="col-md-8 mt-5 px-5">
+              <div data-aos="fade-up" className="col-md-12 row my-5 parag">
+                <div data-aos="fade-left" className="col-md-8 mt-5 px-5">
                   <p>
                     <br />
                     Tourists have been flocking to Iraq in recent years, walking
@@ -135,9 +128,9 @@ const Home = () => {
                 <img className="col-md-4" src={Images.painting_2} />
               </div>
 
-              <div className="col-md-12 row my-5 parag">
+              <div data-aos="fade-up" className="col-md-12 row my-5 parag">
                 <img className="col-md-4" src={Images.painting_4} />
-                <div className="col-md-8 mt-5 px-5">
+                <div data-aos="fade-right" className="col-md-8 mt-5 px-5">
                   <p>
                     I learned to paint under the mentorship of Hafidh Al
                     Doroubi, who was mentored by Silvador. International and

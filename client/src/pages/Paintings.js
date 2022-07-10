@@ -6,6 +6,39 @@ import { CartContext } from "../context/cartContext";
 import ReactPaginate from "react-paginate";
 import axios from "axios";
 const Paintings = (props) => {
+  const { cartItems, addCartItem, removeCartItem, printCartItems } =
+    useContext(CartContext);
+  const [added, setAdded] = useState(false);
+  const checkAdded = () => {
+    cartItems.map((item) =>
+      item.id === enlargedImage.id ? setAdded(true) : ""
+    );
+  };
+
+  const removeItem = () => {
+    removeCartItem(enlargedImage.id);
+    setAdded(false);
+  };
+
+  const addItem = () => {
+    addCartItem(
+      "painting",
+      enlargedImage.id,
+      enlargedImage.img_url,
+      enlargedImage.price,
+      enlargedImage.width,
+      enlargedImage.height,
+      enlargedImage.title
+    );
+    setAdded(true);
+  };
+
+  useEffect(() => checkAdded(), [cartItems]);
+
+  const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
+
+  //////////
+
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -60,11 +93,12 @@ const Paintings = (props) => {
         <h3 className="h3 text-dark"> Happy Viewing! </h3>
       </div>
 
-      <div className="results">
+      <div className="results bg-dark">
         <div className="row gap-5 justify-content-center justify-items-center container-lg">
           {displayPaintings.map((painting) => {
             return (
               <Painting
+                data-aos="fade-up"
                 id={painting._id}
                 key={painting._id}
                 price={painting.price}
@@ -78,7 +112,6 @@ const Paintings = (props) => {
           })}
         </div>
       </div>
-      <div className="results-bottom bg-secondary"></div>
 
       <div
         className="modal fade"
@@ -101,6 +134,9 @@ const Paintings = (props) => {
             </div>
             <div className="modal-body">
               <img src={enlargedImage.img_url} />
+              <h3 className="mt-5">
+                {enlargedImage.width + ' " x ' + enlargedImage.height + ' "'}
+              </h3>
             </div>
           </div>
         </div>

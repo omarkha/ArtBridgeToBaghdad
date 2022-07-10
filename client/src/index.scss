@@ -55,6 +55,8 @@ nav a {
   margin: 0 auto;
   opacity: 1;
   animation: animate-opacity-turn-on 3.62s ease-in-out;
+  background-image: url("./images/mask-frame-6.png");
+  background-size: 100% 100%;
 }
 
 @keyframes animate-opacity-turn-on {
@@ -70,7 +72,7 @@ nav a {
   width: fit-content;
   padding: 13px;
   margin: 0 auto;
-  background-color: rgba(40, 40, 40, 0.38);
+  background-color: rgba(40, 40, 40, 0.92);
 }
 
 .background {
@@ -94,7 +96,7 @@ p {
 
 .btn-slide {
   cursor: pointer;
-  color: #ffffff;
+  color: $dark;
   text-decoration: none;
   border-radius: 5px;
   border: 2px solid $red;
@@ -104,7 +106,6 @@ p {
   -webkit-transition: ease-out 0.38s;
   -moz-transition: ease-out 0.38s;
   transition: ease-out 0.38s;
-  background-color: $dark;
 }
 .btn-slide:hover {
   color: $light;
@@ -117,11 +118,10 @@ p {
   -webkit-text-fill-color: transparent;
 }
 .text-gradient-headline {
-  background-image: linear-gradient(45deg, $orange, $red);
+  background-image: linear-gradient(45deg, $warning, $orange);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "New Times Roman";
-  text-shadow: 0 0 34px $warning;
 }
 
 .text-gradient {
@@ -287,7 +287,6 @@ header {
     background-size: 100% auto;
   }
 }
-
 .jumbotron .extra-info {
   max-width: 250px;
   padding: 1rem;
@@ -576,17 +575,6 @@ footer h3 {
   margin: 0 auto;
 }
 
-.home-hero-foreground img {
-  -webkit-mask-image: url("./images/masking.png");
-  mask-image: url("./images/masking.png");
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-position: center;
-  mask-size: contain;
-  transform: rotateZ(45deg);
-}
-
 #contactpage-banner {
   grid-column: 1/5;
   width: 100%;
@@ -657,6 +645,7 @@ button {
 nav .nav-link {
   opacity: 1;
   color: $light;
+  font-size: 18px;
 }
 nav .nav-link {
   border-radius: 5px;

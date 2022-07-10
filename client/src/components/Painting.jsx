@@ -32,11 +32,11 @@ const Painting = (props) => {
     setAdded(true);
   };
 
-  useEffect(() => checkAdded(), []);
+  useEffect(() => checkAdded(), [cartItems]);
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (
-    <div className="painting col-md-7" key={props.id}>
+    <div data-aos="fade-up" className="painting col-md-7" key={props.id}>
       <div>
         <img
           src={props.img_url}
