@@ -98,7 +98,6 @@ const Paintings = (props) => {
           {displayPaintings.map((painting) => {
             return (
               <Painting
-                data-aos="fade-up"
                 id={painting._id}
                 key={painting._id}
                 price={painting.price}
@@ -142,6 +141,7 @@ const Paintings = (props) => {
         </div>
       </div>
       <ReactPaginate
+        onClick={window.scrollTo(0, 0)}
         previousLabel={"<"}
         nextLabel={"next"}
         pageCount={Math.ceil(paintings.length / paintingsPerPage)}

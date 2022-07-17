@@ -36,7 +36,7 @@ const Painting = (props) => {
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (
-    <div data-aos="fade-up" className="painting col-md-7" key={props.id}>
+    <div data-aos="fade" className="painting col-md-7" key={props.id}>
       <div>
         <img
           src={props.img_url}
