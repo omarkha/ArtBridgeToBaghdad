@@ -1,11 +1,12 @@
 import React from "react";
 import Images from "../images";
 import { Parallax, ParallaxLayer } from "react-parallax";
+import painting from "../images/displayimage.jpg";
 
 const About = () => {
   return (
     <div className="home">
-      <Parallax blur={14} strength={-200} bgImage={Images.painting}>
+      <Parallax blur={8} strength={-200} bgImage={painting}>
         <div className="about-page py-5">
           <div className="container">
             <article className="about-intro">
@@ -36,12 +37,7 @@ const About = () => {
           </div>
         </div>
       </Parallax>
-      <Parallax
-        data-aos="fade-up"
-        blur={14}
-        strength={100}
-        bgImage={Images.teaching_2}
-      >
+      <Parallax blur={14} strength={100} bgImage={Images.teaching_2}>
         <div className="about-page py-5">
           <div className="container">
             <article className="about-teaching">
@@ -61,12 +57,7 @@ const About = () => {
           </div>
         </div>
       </Parallax>
-      <Parallax
-        data-aos="fade-up"
-        blur={14}
-        strength={162}
-        bgImage={Images.food}
-      >
+      <Parallax blur={14} strength={162} bgImage={Images.food}>
         <div className="about-page py-5">
           <div className="container">
             <article className="about-restaurant">
@@ -88,12 +79,7 @@ const About = () => {
           </div>
         </div>
       </Parallax>
-      <Parallax
-        data-aos="fade-up"
-        blur={14}
-        strength={262}
-        bgImage={Images.net_cafe}
-      >
+      <Parallax blur={14} strength={262} bgImage={Images.net_cafe}>
         <div className="about-page py-5">
           <div className="container">
             <article className="about-cafe">
@@ -111,12 +97,7 @@ const About = () => {
         </div>
       </Parallax>
 
-      <Parallax
-        data-aos="fade-up"
-        blur={14}
-        strength={362}
-        bgImage={Images.surgeon}
-      >
+      <Parallax blur={14} strength={362} bgImage={Images.surgeon}>
         <div className="about-page py-5">
           <div className="container">
             <article>
@@ -134,12 +115,7 @@ const About = () => {
         </div>
       </Parallax>
 
-      <Parallax
-        data-aos="fade-up"
-        blur={14}
-        strength={100}
-        bgImage={Images.baghdad}
-      >
+      <Parallax blur={14} strength={100} bgImage={Images.baghdad}>
         <div className="about=page py-5">
           <div className="container">
             <article>

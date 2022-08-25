@@ -18,7 +18,7 @@ const Images = {
   food: require("./food.jpg"),
   net_cafe: require("./net-cafe.jpg"),
   surgeon: require("./surgeon.jpg"),
-  logo: require("./logo.png"),
+  logo: require("./logo3.png"),
   video: require("./file.mp4"),
   amals_banner: require("./amals-banner.jpg"),
   baghdad_15: require("./baghdad-15.jpg"),

@@ -141,7 +141,6 @@ const Paintings = (props) => {
         </div>
       </div>
       <ReactPaginate
-        onClick={window.scrollTo(0, 0)}
         previousLabel={"<"}
         nextLabel={"next"}
         pageCount={Math.ceil(paintings.length / paintingsPerPage)}
