@@ -43,7 +43,7 @@ nav a {
 
 #logoimg {
   width: 233px;
-  margin: 55px auto;
+  margin: 8px auto;
 }
 
 .navbar {
@@ -1125,6 +1125,7 @@ input[type="file"] {
     grid-template-columns: 1fr;
     justify-items: center;
     align-content: center;
+    padding-top: 55px;
   }
   .text-gradient-headline {
     background-image: linear-gradient(

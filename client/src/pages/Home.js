@@ -33,6 +33,11 @@ const Home = () => {
             <h4 className="lead text-dark mb-0 ">
               The Elegance of Simpler Times
             </h4>
+            <img id="logoimg" src={logo2} alt="logo" />
+          </div>
+          <div className="heading-imgs">
+            <img id="dimage" src={displayimage} alt="display image" />
+
             <div className="text-center">
               <h6
                 className="h5 text-dark mt-5 bg-light py-1"
@@ -46,10 +51,6 @@ const Home = () => {
                 </Link>
               </p>
             </div>
-          </div>
-          <div className="heading-imgs">
-            <img id="dimage" src={displayimage} alt="display image" />
-            <img id="logoimg" src={logo2} alt="logo" />
           </div>
         </div>
       </Parallax>
