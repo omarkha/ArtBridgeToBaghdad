@@ -63,9 +63,12 @@ const Home = () => {
           <div className="container-lg my-0">
             <section className="main-article row justify-content-center justify-items-center my-0">
               <div className="col-md-12 text-center">
-                <h3 className="display-3 text-center mt-5 text-dark">
+                <h3 className="display-1 text-center mt-5 text-dark">
                   <br />
-                  At Last, We launch the Art Bridge!
+                  At Last, We launch
+                  <br /> the Art Bridge to Baghdad Gallery
+                  <br />
+                  ONLINE!
                 </h3>
               </div>
 
@@ -78,9 +81,9 @@ const Home = () => {
                 <div data-aos="fade-up" className="col-md-12 mt-5 px-5">
                   <h5> The Cradle of Civilization </h5>
                   <p>
-                    Everywhere in the world, kids are taught about Mesopotamia.
-                    The land that hosted some of the world's earliest
-                    civilizations like Babylon, Sumeria, and Assyria.
+                    Everywhere in the world, kids are taught in history class
+                    about Mesopotamia. The land that hosted some of the world's
+                    earliest civilizations like Babylon, Sumeria, and Assyria.
                     <br />
                     <br />
                     Because of its strategic and central location, Iraq has been
@@ -89,15 +92,15 @@ const Home = () => {
                     <br />
                     <br /> While Iraq is home to some beautiful sand dunes.
                     There is also the UNESCO Heritage Site of the Mesopotamian
-                    marshes in the southern city of Basra. In the North, there
-                    is the cool and mountainous region of Iraqi Kurdistan. And
-                    there are the Tigris and Euphrates rivers than run across
-                    the map. <br />
+                    marshes in the southern city of Basra. And In the North,
+                    there is the cool and mountainous region of Iraqi Kurdistan.
+                    And there are the Tigris and Euphrates rivers than run
+                    across the map. <br />
                     <br />
                     Besides the amazing, exotic landscapes, Iraq is home to a
-                    variety of ethnicies and religious groups. Armenians,
-                    Turkmen, Persians, Kurds, Yazidis, Arabs, Circassians and
-                    more.
+                    variety of ethnicies and religious groups. Such as the
+                    Armenians, Turkmen, Persians, Kurds, Yazidis, Arabs,
+                    Circassians and more.
                   </p>
                 </div>
               </div>
@@ -109,20 +112,19 @@ const Home = () => {
                     As safety gradually returned to Iraq. So did tourism.
                     <br />
                     <br />
-                    With tourists from across the world flock to see the world's
-                    oldest country.
+                    With tourists from across the world flocking to see the
+                    world's oldest country and what it has to offer.
                     <br />
                     <br />
-                    YouTube vloggers describe their amazement with the Iraqi
-                    people's hospitality and generosity. as they film their
-                    journey, walking in the streets of Baghdad feeling safe and
-                    welcomed by Iraqis!
+                    YouTube vloggers describe their appreciation at the Iraqi
+                    people's hospitality and generosity, as they film their
+                    journey.
                     <br />
                     <br />
-                    It's a land of great cultural and ethnic diversity, long
-                    history, and strategic location. From Babylon to Summeria to
-                    the Ottoman Empire, Mesopotamia is, undoubtedly, one of the
-                    world's richest countries in culture!
+                    Mesopotamia a land of great cultural and ethnic diversity,
+                    long history, and strategic location. From Babylon to
+                    Summeria to the Ottoman Empire, Iraq is, undoubtedly, one of
+                    the world's richest countries in culture!
                   </p>
                 </div>
                 <img className="col-md-4" src={Images.painting_2} />
@@ -140,15 +142,15 @@ const Home = () => {
                     <br />
                     <br />
                     I learned to paint under the mentorship of Hafidh Al
-                    Doroubi, who was mentored by Silvador.
+                    Doroubi, who was mentored by Spanish artist Salvador Dali.
                     <br />
                     <br />
                     International and local Iraqi press repeatedly featured my
-                    paintings since the 80s and to this day.
+                    paintings since the 80s and to this day...
                     <br />
                     <br />
-                    Former President of Iraq, Saddam Hussein had seen and liked
-                    a portrait I made of him so much, he personally met with me
+                    ... and the former President of Iraq had seen and liked a
+                    portrait I made of him so much, he personally met with me
                     and decided to hang the portrait up in one of Baghdad's
                     squares.
                   </p>
