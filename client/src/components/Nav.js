@@ -25,7 +25,10 @@ const Nav = () => {
           className="navbar-brand text-gradient-brandname "
           style={{ fontSize: "18px" }}
         >
-          <img className="icon" src={Images.logo} />
+          <div
+            className="icon"
+            style={{ backgroundImage: `url('${Images.logo}')` }}
+          ></div>
           <span className="brandtitle">Art Bridge to Baghdad</span>
         </Link>
 

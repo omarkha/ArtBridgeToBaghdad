@@ -116,6 +116,10 @@ nav a {
   border-radius: 21px;
 }
 
+.parag img {
+  height: max-content;
+}
+
 .background {
   transform: translateZ(-13px) scale(2);
 }
@@ -166,6 +170,7 @@ p {
   font-family: "Karla", sans-serif;
   margin: 0 auto;
   font-weight: bold;
+  text-shadow: -5px 5px 13px rgba(25, 25, 25, 0.37);
 }
 
 .text-gradient {
@@ -498,6 +503,7 @@ footer h3 {
   background-blend-mode: soft-light;
   margin: 0;
   background-color: rgba(25, 25, 25, 0.62);
+  border-radius: 55px;
 }
 
 .about-restaurant {
@@ -505,6 +511,7 @@ footer h3 {
   padding-top: 89px;
   background-size: cover;
   background-blend-mode: overlay;
+  border-radius: 55px;
   background-color: rgba(25, 25, 25, 0.62);
 }
 
@@ -512,6 +519,7 @@ footer h3 {
   margin: 0;
   padding-top: 89px;
   background-blend-mode: soft-light;
+  border-radius: 55px;
   background-size: cover;
   background-color: rgba(25, 25, 25, 0.62);
 }
@@ -523,10 +531,12 @@ footer h3 {
 
 .about-intro {
   background-color: rgba(25, 25, 25, 0.62);
+  border-radius: 55px;
 }
 
 .about-ngos {
   background-color: rgba(25, 25, 25, 0.62);
+  border-radius: 55px;
 }
 
 #dimage {
@@ -796,8 +806,17 @@ aside {
 }
 
 .icon {
-  width: 34px;
+  width: 55px;
   margin-right: 21px;
+  height: 55px;
+  background-size: cover;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 aside li {
