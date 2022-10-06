@@ -141,7 +141,7 @@ const Paintings = (props) => {
         </div>
       </div>
       <ReactPaginate
-        previousLabel={"<"}
+        previousLabel={"back"}
         nextLabel={"next"}
         pageCount={Math.ceil(paintings.length / paintingsPerPage)}
         onPageChange={changePage}

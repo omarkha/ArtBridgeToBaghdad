@@ -18,7 +18,7 @@ const Nav = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-lg sticky-top py-0 my-0">
+    <nav className="navbar navbar-expand-lg navbar-dark sticky-top py-0 my-0">
       <div className="container">
         <Link
           to="/"
