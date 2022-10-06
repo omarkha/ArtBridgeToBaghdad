@@ -100,7 +100,7 @@ const About = () => {
       <Parallax blur={14} strength={362} bgImage={Images.surgeon}>
         <div className="about-page py-5">
           <div className="container">
-            <article>
+            <article className="about-ngos">
               <img src={Images.surgeon} />
               <h3 className="text-light text-shadow"> Working with NGOs </h3>
               <p className="text-light text-shadow">

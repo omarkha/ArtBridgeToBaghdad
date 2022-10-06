@@ -48,8 +48,8 @@ const Home = () => {
             </div>
           </div>
           <div className="heading-imgs">
-            <img id="logoimg" src={logo2} alt="logo" />
             <img id="dimage" src={displayimage} alt="display image" />
+            <img id="logoimg" src={logo2} alt="logo" />
           </div>
         </div>
       </Parallax>

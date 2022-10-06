@@ -43,7 +43,7 @@ nav a {
 
 #logoimg {
   width: 233px;
-  margin: 0 auto;
+  margin: 55px auto;
 }
 
 .navbar {
@@ -112,7 +112,7 @@ nav a {
   width: fit-content;
   padding: 13px;
   margin: 0 auto;
-  background-color: rgba(230, 200, 160, 0.62);
+  background-color: rgba(25, 25, 25, 0.62);
   border-radius: 21px;
 }
 
@@ -159,7 +159,7 @@ p {
   -webkit-text-fill-color: transparent;
 }
 .text-gradient-headline {
-  background-image: linear-gradient(45deg, rgb(230, 25, 38), rgb(25, 25, 25));
+  background-image: linear-gradient(45deg, rgb(230, 25, 38), rgb(255, 230, 38));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 89px;
@@ -476,13 +476,13 @@ a {
 
 footer {
   position: relative;
-  background-color: $light;
+  background-color: $dark;
   opacity: 1;
   text-align: center;
   padding: 21px;
   bottom: 0;
   margin: 0;
-  color: $dark;
+  color: $light;
 }
 
 footer h3 {
@@ -497,6 +497,7 @@ footer h3 {
   background-size: cover;
   background-blend-mode: soft-light;
   margin: 0;
+  background-color: rgba(25, 25, 25, 0.62);
 }
 
 .about-restaurant {
@@ -504,6 +505,7 @@ footer h3 {
   padding-top: 89px;
   background-size: cover;
   background-blend-mode: overlay;
+  background-color: rgba(25, 25, 25, 0.62);
 }
 
 .about-cafe {
@@ -511,11 +513,24 @@ footer h3 {
   padding-top: 89px;
   background-blend-mode: soft-light;
   background-size: cover;
+  background-color: rgba(25, 25, 25, 0.62);
 }
 
 .about-intro div img {
   width: 23%;
   margin: 34px;
+}
+
+.about-intro {
+  background-color: rgba(25, 25, 25, 0.62);
+}
+
+.about-ngos {
+  background-color: rgba(25, 25, 25, 0.62);
+}
+
+#dimage {
+  box-shadow: 0 0 21px rgb(25, 25, 25);
 }
 
 .contact-section {

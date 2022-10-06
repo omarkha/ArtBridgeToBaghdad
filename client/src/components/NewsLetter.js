@@ -18,8 +18,10 @@ const NewsLetter = () => {
   };
   return (
     <div className="newsletter col-md-12 justify-content-center justify-items-center mt-5">
-      <h1>Subscribe to our News Letter</h1>
-      <h4 className="lead">get updated with the hottest new pieces we add!</h4>
+      <h1 className="text-dark">Subscribe to our News Letter</h1>
+      <h4 className="text-dark">
+        get updated with the hottest new pieces we add!
+      </h4>
       <div className="fields my-4">
         <div>
           <label>Name</label>

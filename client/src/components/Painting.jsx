@@ -58,7 +58,7 @@ const Painting = (props) => {
         <h4>
           {props.width} " / {props.height} "{" "}
         </h4>
-        <h3 className="lead">{props.title}</h3>
+        <h3 className="lead text-dark">{props.title}</h3>
         <h5 className="text-dark">${props.price}</h5>
 
         <div className="painting-buttons">
