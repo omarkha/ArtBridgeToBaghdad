@@ -946,8 +946,24 @@ input[type="file"] {
   padding: 13px;
 }
 
+.paginationActive {
+  text-decoration: underline;
+}
+
+.paginationContainer {
+  width: 100%;
+}
+
+.paginationButton {
+  text-decoration: none;
+}
+
 .painting .painting-buttons button {
   margin: 5px;
+}
+
+.pagnumber {
+  color: rgb(25, 101, 160);
 }
 
 @media screen and (max-width: 960px) {
@@ -963,18 +979,18 @@ input[type="file"] {
   .container {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
     padding: 0 0;
-    box-sizing: border-box;
   }
   .container-lg {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
     padding: 0 0;
-    box-sizing: border-box;
   }
-
+  .pagnumber {
+    font-size: 13px;
+  }
   .btn-slide {
     cursor: pointer;
     color: $dark;

@@ -141,8 +141,8 @@ const Paintings = (props) => {
         </div>
       </div>
       <ReactPaginate
-        previousLabel={"back"}
-        nextLabel={"next"}
+        previousLabel={"<"}
+        nextLabel={">"}
         pageCount={Math.ceil(paintings.length / paintingsPerPage)}
         onPageChange={changePage}
         containerClassName={"paginationButtons"}
@@ -150,6 +150,7 @@ const Paintings = (props) => {
         nextLinkClassName={"nextButton"}
         disabledClassName={"paginationDisabled"}
         activeClassName={"paginationActive"}
+        pageLinkClassName={"paginationButton"}
       />
     </div>
   );
