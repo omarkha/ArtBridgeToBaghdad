@@ -40,11 +40,11 @@ const Home = () => {
               >
                 by Traditional Iraqi Artist, <br /> Amal Maseer
               </h6>
-              <p className="lead py-3">
+              <p className="py-3">
                 <Link className="btn-slide my-5" to="/about" role="button">
                   Our Story
                 </Link>
-              </p>{" "}
+              </p>
             </div>
           </div>
           <div className="heading-imgs">
