@@ -1108,4 +1108,11 @@ input[type="file"] {
   .home-page .main-article p {
     padding: 0;
   }
+  .heading {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: center;
+  }
 }
