@@ -31,7 +31,7 @@ const Home = () => {
               Mesopotamian Art Gallery
             </h3>
             <h4 className="lead text-dark mb-0 ">
-              The Elegance of simpler times
+              The Elegance of Simpler Times
             </h4>
             <div className="text-center">
               <h6
