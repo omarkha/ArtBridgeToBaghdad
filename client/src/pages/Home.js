@@ -11,7 +11,6 @@ import bgx2 from "../images/sunbg.png";
 import logo2 from "../images/logo2.png";
 
 const Home = () => {
-  const [currentImage, setCurrentImage] = useState(0);
   const carouselImages = [Images.amal_image, Images.amal_image_2];
   return (
     <div className="home">
