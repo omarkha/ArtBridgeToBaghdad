@@ -1132,14 +1132,22 @@ input[type="file"] {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    padding: 13px;
+    padding: 0;
     margin: 0 auto;
     opacity: 1;
     animation: animate-opacity-turn-on 3.62s ease-in-out;
     background-size: cover;
+    justify-content: center;
+    align-items: center;
   }
   .heading span {
     margin: 0 auto;
     font-size: 55px;
+  }
+  #galleryfounder {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    text-shadow: 0 0 13px rgb(25, 25, 101);
+    font-size: 21px;
+    font-weight: bold;
   }
 }
