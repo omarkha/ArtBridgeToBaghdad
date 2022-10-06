@@ -43,6 +43,7 @@ nav a {
 
 #logoimg {
   width: 233px;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -149,7 +150,7 @@ p {
 }
 .btn-slide:hover {
   color: $light;
-  box-shadow: inset 200px 0 0 0 $orange;
+  box-shadow: inset 200px 0 0 0 rgb(230, 63, 25);
   border: 2px solid $orange;
 }
 .text-gradient-brandname {
@@ -158,12 +159,13 @@ p {
   -webkit-text-fill-color: transparent;
 }
 .text-gradient-headline {
-  background-image: linear-gradient(45deg, rgb(230, 230, 160), $orange);
+  background-image: linear-gradient(45deg, rgb(230, 25, 38), rgb(25, 25, 25));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 89px;
   font-family: "Karla", sans-serif;
   margin: 0 auto;
+  font-weight: bold;
 }
 
 .text-gradient {
@@ -224,6 +226,7 @@ code {
   font-family: "Alumni Sans Pinstripe", sans-serif;
   text-shadow: 0 0 13px rgb(25, 25, 101);
   font-size: 34px;
+  font-weight: bold;
 }
 
 .carousel-item {
