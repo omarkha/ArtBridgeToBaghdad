@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../context/cartContext";
 import ReactPaginate from "react-paginate";
 import axios from "axios";
+import { useQuery } from "react-query";
 const Paintings = (props) => {
   const { cartItems, addCartItem, removeCartItem, printCartItems } =
     useContext(CartContext);

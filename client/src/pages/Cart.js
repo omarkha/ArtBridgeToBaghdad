@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import SelectedPainting from "../components/SelectedPainting";
 import { CartContext } from "../context/cartContext";
 import Images from "../images";
+import StripeCheckout from "react-stripe-checkout";
+import axios from "axios";
 
 const Cart = () => {
   const { cartItems, addCartItem, removeCartItem } = useContext(CartContext);
@@ -32,6 +34,24 @@ const Cart = () => {
 
   const printTotal = () => {
     return total;
+  };
+
+  const payNow = async (token) => {
+    try {
+      const response = await axios({
+        url: "http://localhost:5000/payment",
+        method: "post",
+        data: {
+          amount: total * 100,
+          token,
+        },
+      });
+      if (response.status === 200) {
+        console.log("payment successful");
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => getTotal(), [cartItems]);
@@ -66,6 +86,17 @@ const Cart = () => {
             {"The total is $" + Math.floor(printTotal() * 100) / 100}
           </h3>
         </div>
+
+        <StripeCheckout
+          stripeKey="pk_test_51LpwKaItBHTQUADWH08XmDkJCem08nkWM2stMm9yG9cEjPqCU2wBnkAP6mQt9HXgdAAMYdigiaQjiq6rZziLs4DS00qfYCnAIw"
+          label="Pay Now"
+          name="Pay with Credit Card"
+          billingAddress
+          shippingAddress
+          amount={total * 100}
+          description={`your total is ${total}`}
+          token={payNow}
+        />
 
         <Link to="./purchase" className="btn btn-success">
           Purchase Items

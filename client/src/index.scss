@@ -88,6 +88,7 @@ nav a {
   margin: 0;
   padding-top: 89px;
   padding-bottom: 377px;
+  animation: animate-opacity-turn-on 3.62s ease-in-out;
 }
 
 .heading-content {
@@ -95,16 +96,17 @@ nav a {
   padding: 13px;
   margin: 0 auto;
   opacity: 1;
-  animation: animate-opacity-turn-on 3.62s ease-in-out;
   background-size: 100% 100%;
 }
 
 @keyframes animate-opacity-turn-on {
   from {
-    opacity: 0;
+    opacity: 0.15;
+    transform: scale(38.1%);
   }
   to {
     opacity: 1;
+    transform: scale(100%);
   }
 }
 
@@ -459,6 +461,11 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   overflow: scroll;
   gap: 13px;
+}
+
+.cart-view h1 {
+  grid-column: 2/3;
+  text-align: center;
 }
 
 .cart-purchase {

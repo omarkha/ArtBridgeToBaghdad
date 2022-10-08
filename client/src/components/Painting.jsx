@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/cartContext";
 import { FaShareAlt } from "react-icons/fa";
 import { AiFillLike } from "react-icons/ai";
-
+import { Link } from "react-router-dom";
 const Painting = (props) => {
   const id = props.id;
 
@@ -95,6 +95,7 @@ const Painting = (props) => {
           >
             {added ? "remove" : "add to cart"}
           </button>
+          <Link to={`/products/${props.id}`}>See More...</Link>
         </div>
       </div>
     </div>

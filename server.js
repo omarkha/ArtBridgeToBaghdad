@@ -5,6 +5,8 @@ const morgan = require("morgan");
 const path = require("path");
 const paintingRoute = require("./routes/paintings");
 const bodyParser = require("body-parser");
+const Stripe = require("stripe")(process.env.SECRET_KEY);
+
 app.use(bodyParser.json());
 require("dotenv").config(); // Add this line
 app.use(cors());
@@ -37,6 +39,27 @@ mongoose
   });
 mongoose.set("debug", true);
 mongoose.connection;
+
+//Stripe
+
+app.post("/payment", async (req, res) => {
+  let status, error;
+  const { token, amount } = req.body;
+  console.log(token);
+  try {
+    await Stripe.charges.create({
+      source: token.id,
+      amount,
+      currency: usd,
+    });
+    status = "success";
+  } catch (err) {
+    console.log(err);
+    status = "fail";
+  }
+
+  res.json({ error, status });
+});
 
 // Routes
 app.use("/api/paintings", require("./routes/paintings"));

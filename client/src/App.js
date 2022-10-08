@@ -15,27 +15,37 @@ import ControlPanel from "./pages/admin-pages/ControlPanel";
 import Inventory from "./pages/admin-pages/Inventory";
 import Purchase from "./pages/Purchase";
 import CartContextProvider, { CartContext } from "./context/cartContext";
+import PaymentAccepted from "./pages/PaymentAccepted";
+import Product from "./pages/Product";
+import { QueryClientProvider, QueryClient } from "react-query";
+
 function App() {
+  const queryClient = new QueryClient();
+
   return (
     <Router>
-      <div className="App">
-        <CartContextProvider>
-          <Nav />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/paintings" element={<Paintings />} />
-            <Route path="/antiques" element={<Antiques />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/cart/purchase" element={<Purchase />} />
-            <Route path="/account" element={<Account />} />
-            <Route path="/control-panel" element={<ControlPanel />} />
-            <Route path="/control-panel/inventory" element={<Inventory />} />
-          </Routes>
-          <Footer />
-        </CartContextProvider>
-      </div>
+      <QueryClientProvider client={queryClient}>
+        <div className="App">
+          <CartContextProvider>
+            <Nav />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/paintings" element={<Paintings />} />
+              <Route path="/antiques" element={<Antiques />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/cart/purchase" element={<Purchase />} />
+              <Route path="/account" element={<Account />} />
+              <Route path="/control-panel" element={<ControlPanel />} />
+              <Route path="/control-panel/inventory" element={<Inventory />} />
+              <Route path="/products/:productId" element={<Product />} />
+              <Route path="/paymentsuccess" element={<PaymentAccepted />} />
+            </Routes>
+            <Footer />
+          </CartContextProvider>
+        </div>
+      </QueryClientProvider>
     </Router>
   );
 }
