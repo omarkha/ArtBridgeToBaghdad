@@ -11,10 +11,10 @@ const getPaintings = async (req, res) => {
 
 const getPainting = async (req, res) => {
   try {
-    const paint = await Painting.findById(req.body.paintingId);
+    const paint = await Painting.findById(req.body);
 
     if (!paint) {
-      throw Error(`Painting Not Found For ID: ${req.body.paintingId}`);
+      throw Error(`Painting Not Found For ID: ${req.body}`);
     }
     res.json({ paint });
   } catch (err) {
