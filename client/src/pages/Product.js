@@ -11,7 +11,7 @@ const Product = () => {
   useEffect(() => {
     const fetchPaintings = async () => {
       const res = await axios.get(
-        `https://localhost:5000/api/paintings/${productId}`
+        `https://artbridgetobaghdad.herokuapp.com/api/paintings/${productId}`
       );
       setProduct(res.data);
       setLoading(false);
