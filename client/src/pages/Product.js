@@ -16,6 +16,7 @@ const Product = () => {
       setProduct(res.data);
       setLoading(false);
       console.log(res);
+      console.log("product id from params: " + productId);
     };
     fetchPaintings();
   }, []);
