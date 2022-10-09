@@ -1250,4 +1250,15 @@ input[type="file"] {
     margin: 8px auto;
     margin-bottom: 34px;
   }
+  .productpage section {
+    display: flex;
+    flex-direction: column;
+    margin: 34px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 233px;
+  }
+  .productpage section img {
+    margin-bottom: 34px;
+  }
 }
