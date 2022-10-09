@@ -6,7 +6,15 @@ export const CartContext = createContext();
 const CartContextProvider = (props) => {
   const [cartItems, setCartItems] = useState([]);
 
-  const addCartItem = (xtype, xid, ximg_url, xprice, xwidth, xheight) => {
+  const addCartItem = (
+    xtype,
+    xid,
+    ximg_url,
+    xprice,
+    xwidth,
+    xheight,
+    xtitle
+  ) => {
     setCartItems([
       ...cartItems,
       {
@@ -16,6 +24,7 @@ const CartContextProvider = (props) => {
         price: xprice,
         width: xwidth,
         height: xheight,
+        title: xtitle,
       },
     ]);
     console.log("item: " + xid + " is added. ");

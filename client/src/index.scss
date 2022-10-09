@@ -102,12 +102,34 @@ nav a {
 @keyframes animate-opacity-turn-on {
   from {
     opacity: 0.15;
-    transform: scale(38.1%);
+    transform: scale(92%);
   }
   to {
     opacity: 1;
     transform: scale(100%);
   }
+}
+
+.productpage .painting-buttons button {
+  margin: 0 5px;
+}
+
+.productpage img {
+  width: 62%;
+}
+
+.productpage section {
+  display: flex;
+  margin: 34px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 233px;
+}
+
+.productpage .product-info {
+  border: 2px solid rgb(230, 230, 230);
+  padding: 89px 21px;
+  min-width: 377px;
 }
 
 .parag {

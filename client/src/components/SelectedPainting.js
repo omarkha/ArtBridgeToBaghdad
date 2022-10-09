@@ -16,6 +16,7 @@ const SelectedPainting = (props) => {
         <TiDeleteOutline className="icon" />
       </button>
       <img src={props.img_url} />
+      <h3 className="h5">{props.title}</h3>
       <ul className="list-group list-group-flush">
         <li className="list-group-item">
           {props.width + ' " x ' + props.height + ' " '}
