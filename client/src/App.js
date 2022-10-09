@@ -1,8 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
@@ -17,22 +15,33 @@ import Purchase from "./pages/Purchase";
 import CartContextProvider, { CartContext } from "./context/cartContext";
 import PaymentAccepted from "./pages/PaymentAccepted";
 import Product from "./pages/Product";
-import { QueryClientProvider, QueryClient } from "react-query";
-
+import { loadStripe } from "@stripe/stripe-js";
+import { CartProvider } from "use-shopping-cart";
+import { Toaster } from "react-hot-toast";
 function App() {
-  const queryClient = new QueryClient();
+  const stripePromise = loadStripe(
+    "pk_test_51LpwKaItBHTQUADWH08XmDkJCem08nkWM2stMm9yG9cEjPqCU2wBnkAP6mQt9HXgdAAMYdigiaQjiq6rZziLs4DS00qfYCnAIw"
+  );
 
   return (
     <Router>
-      <QueryClientProvider client={queryClient}>
-        <div className="App">
+      <div className="App">
+        <CartProvider
+          mode="payment"
+          cartMode="checkout-session"
+          stripe={stripePromise}
+          currency="USD"
+        >
           <CartContextProvider>
+            <Toaster position="bottom-center" />
             <Nav />
+
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/paintings" element={<Paintings />} />
+              <Route path="/paintings/:pagenumber" element={<Paintings />} />
               <Route path="/antiques" element={<Antiques />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/cart/purchase" element={<Purchase />} />
@@ -42,10 +51,11 @@ function App() {
               <Route path="/products/:productId" element={<Product />} />
               <Route path="/paymentsuccess" element={<PaymentAccepted />} />
             </Routes>
+
             <Footer />
           </CartContextProvider>
-        </div>
-      </QueryClientProvider>
+        </CartProvider>
+      </div>
     </Router>
   );
 }

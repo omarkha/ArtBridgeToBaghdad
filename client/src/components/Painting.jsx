@@ -5,36 +5,51 @@ import { FaShareAlt } from "react-icons/fa";
 import { AiFillLike } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useShoppingCart } from "use-shopping-cart";
+import toast from "react-hot-toast";
+import formatProductPrice from "../utils/formatProductPrice";
 
 const Painting = (props) => {
+  const { addItem, removeItem, cartCount, cartDetails, totalPrice, clearCart } =
+    useShoppingCart();
+
   const id = props.id;
 
-  const { cartItems, addCartItem, removeCartItem, printCartItems } =
-    useContext(CartContext);
   const [added, setAdded] = useState(false);
   const checkAdded = () => {
-    cartItems.map((item) => (item.id === id ? setAdded(true) : ""));
-  };
-
-  const removeItem = () => {
-    removeCartItem(id);
-    setAdded(false);
-  };
-
-  const addItem = () => {
-    addCartItem(
-      "painting",
-      id,
-      props.img_url,
-      props.price,
-      props.width,
-      props.height,
-      props.title
+    Object.keys(cartDetails).map((item) =>
+      cartDetails[item]._id === id ? setAdded(true) : null
     );
-    setAdded(true);
   };
 
-  useEffect(() => checkAdded(), [cartItems]);
+  const removeItemFromCart = () => {
+    Object.keys(cartDetails).map((e, i) => {
+      if (cartDetails[e]._id === props.id) {
+        removeItem(cartDetails[e].id);
+      }
+    });
+
+    setAdded(false);
+    toast.success(
+      props.title
+        ? `${props.title} has been Removed to Your Cart`
+        : "Item Removed to Your Cart"
+    );
+  };
+
+  const addItemToCart = () => {
+    setAdded(true);
+    addItem(props.product);
+    toast.success(
+      props.title
+        ? `${props.title} has been Added to Your Cart!`
+        : "Item Added to Your Cart!"
+    );
+  };
+
+  useEffect(() => checkAdded(), [cartDetails]);
+
+  const price = formatProductPrice(props.product);
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (
@@ -61,7 +76,7 @@ const Painting = (props) => {
           {props.width} " / {props.height} "{" "}
         </h4>
         <h3 className="lead text-dark">{props.title}</h3>
-        <h5 className="text-dark">${props.price}</h5>
+        <h5 className="text-dark">{price}</h5>
 
         <div className="painting-buttons">
           <button
@@ -73,32 +88,33 @@ const Painting = (props) => {
 
           <button
             className="btn btn-primary text-light"
-            onClick={() => printCartItems()}
+            onClick={() => console.log(cartDetails)}
           >
             <AiFillLike />
           </button>
           <button
             onClick={() => {
-              if (cartItems.length > 0) {
+              if (cartCount > 0) {
                 checkAdded();
-                if (!added) {
-                  cartItems.map((item) =>
-                    item.id === id ? removeItem() : addItem()
-                  );
+
+                if (added) {
+                  removeItemFromCart();
                 } else {
-                  removeItem();
+                  addItemToCart();
                 }
               } else {
-                addItem();
+                addItemToCart();
               }
-              printCartItems();
+              console.log(cartDetails);
             }}
             className={addButtonStyle}
           >
             {added ? "remove" : "add to cart"}
           </button>
         </div>
-        <Link to={`/products/${props.id}`}>See More...</Link>
+        <Link target="_blank" to={`/products/${props.id}`}>
+          See More...
+        </Link>
       </div>
     </div>
   );

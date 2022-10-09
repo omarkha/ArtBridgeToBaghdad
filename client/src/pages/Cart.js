@@ -5,12 +5,14 @@ import { CartContext } from "../context/cartContext";
 import Images from "../images";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
+import { useShoppingCart } from "use-shopping-cart";
+import useCheckout from "../utils/useCheckout";
 
 const Cart = () => {
-  const { cartItems, addCartItem, removeCartItem } = useContext(CartContext);
-
-  const removeItem = (id) => {
-    removeCartItem(id);
+  const { cartDetails, removeItem, cartCount } = useShoppingCart();
+  const handleCheckout = useCheckout();
+  const removeCartItem = (id) => {
+    removeItem(id);
   };
 
   const [total, setTotal] = useState(0);
@@ -54,6 +56,10 @@ const Cart = () => {
     }
   };
 
+  const cartItems = Object.keys(cartDetails).map((key) => {
+    return cartDetails[key];
+  });
+
   useEffect(() => getTotal(), [cartItems]);
   return (
     <div className="container">
@@ -70,9 +76,9 @@ const Cart = () => {
               price={e.price}
               width={e.width}
               height={e.height}
-              id={e.id}
-              key={e.id}
-              removeItem={removeItem}
+              id={e._id}
+              key={e._id}
+              removeItem={removeCartItem}
             />
           ))
         ) : (
@@ -87,20 +93,13 @@ const Cart = () => {
           </h3>
         </div>
 
-        <StripeCheckout
-          stripeKey="pk_test_51LpwKaItBHTQUADWH08XmDkJCem08nkWM2stMm9yG9cEjPqCU2wBnkAP6mQt9HXgdAAMYdigiaQjiq6rZziLs4DS00qfYCnAIw"
-          label="Pay Now"
-          name="Pay with Credit Card"
-          billingAddress
-          shippingAddress
-          amount={total * 100}
-          description={`your total is ${total}`}
-          token={payNow}
-        />
-
-        <Link to="./purchase" className="btn btn-success">
+        <button
+          onClick={handleCheckout}
+          disabled={!cartCount}
+          className="btn btn-success"
+        >
           Purchase Items
-        </Link>
+        </button>
       </div>
     </div>
   );

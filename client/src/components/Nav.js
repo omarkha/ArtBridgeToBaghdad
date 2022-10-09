@@ -11,9 +11,11 @@ import { GiEarthAfricaEurope } from "react-icons/gi";
 import "bootstrap/dist/css/bootstrap.css";
 import Images from "../images/index";
 import { CartContext } from "../context/cartContext";
+import { useShoppingCart } from "use-shopping-cart";
 
 const Nav = () => {
   const { cartItems } = useContext(CartContext);
+  const { cartCount } = useShoppingCart();
 
   const [expanded, setExpanded] = useState(false);
 
@@ -87,7 +89,7 @@ const Nav = () => {
                 className="cart-icon nav-link border border-rounded px-3"
                 to="cart"
               >
-                {cartItems.length + " items in " + " "}
+                {cartCount + " items in " + " "}
                 <BsCartCheckFill style={{ fontSize: "21px" }} />
               </Link>
             </li>

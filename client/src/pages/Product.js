@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useContext } from "react";
-import { CartContext } from "../context/cartContext";
 import { FaShareAlt } from "react-icons/fa";
 import { AiFillLike } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
+import { useShoppingCart } from "use-shopping-cart";
+import toast from "react-hot-toast";
+import formatProductPrice from "../utils/formatProductPrice";
 
 const Product = (props) => {
   const { productId } = useParams();
@@ -27,37 +29,48 @@ const Product = (props) => {
 
   //cart functions
 
+  const { addItem, removeItem, cartCount, cartDetails, totalPrice, clearCart } =
+    useShoppingCart();
+
   const id = productId;
 
-  const { cartItems, addCartItem, removeCartItem, printCartItems } =
-    useContext(CartContext);
   const [added, setAdded] = useState(false);
   const checkAdded = () => {
-    cartItems.map((item) => (item.id === id ? setAdded(true) : ""));
-  };
-
-  const removeItem = () => {
-    removeCartItem(id);
-    setAdded(false);
-  };
-
-  const addItem = () => {
-    addCartItem(
-      "painting",
-      id,
-      product.img_url,
-      product.price,
-      product.width,
-      product.height,
-      product.title
+    Object.keys(cartDetails).map((item) =>
+      cartDetails[item]._id === id ? setAdded(true) : null
     );
-    setAdded(true);
   };
 
-  useEffect(() => checkAdded(), [cartItems]);
+  const removeItemFromCart = () => {
+    Object.keys(cartDetails).map((e, i) => {
+      if (cartDetails[e]._id === productId) {
+        removeItem(cartDetails[e].id);
+      }
+    });
+
+    setAdded(false);
+    toast.success(
+      product.title
+        ? `${product.title} has been Removed to Your Cart`
+        : "Item Removed to Your Cart"
+    );
+  };
+
+  const addItemToCart = () => {
+    setAdded(true);
+    addItem(product);
+    toast.success(
+      product.title
+        ? `${product.title} has been Added to Your Cart!`
+        : "Item Added to Your Cart!"
+    );
+  };
+
+  useEffect(() => checkAdded(), [cartDetails]);
+
+  const price = formatProductPrice(product);
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
-
   return (
     <div className="productpage">
       <div className="container">
@@ -82,32 +95,31 @@ const Product = (props) => {
             <div className="painting-buttons">
               <button
                 className="btn btn-primary text-light"
-                onClick={() => console.log(props.id)}
+                onClick={() => console.log(productId)}
               >
                 <FaShareAlt />
               </button>
 
               <button
                 className="btn btn-primary text-light"
-                onClick={() => printCartItems()}
+                onClick={() => console.log(cartDetails)}
               >
                 <AiFillLike />
               </button>
               <button
                 onClick={() => {
-                  if (cartItems.length > 0) {
+                  if (cartCount > 0) {
                     checkAdded();
-                    if (!added) {
-                      cartItems.map((item) =>
-                        item.id === id ? removeItem() : addItem()
-                      );
+
+                    if (added) {
+                      removeItemFromCart();
                     } else {
-                      removeItem();
+                      addItemToCart();
                     }
                   } else {
-                    addItem();
+                    addItemToCart();
                   }
-                  printCartItems();
+                  console.log(cartDetails);
                 }}
                 className={addButtonStyle}
               >

@@ -1,12 +1,16 @@
 import React, { useEffect, useState, useContext } from "react";
 import Painting from "../components/Painting";
 import Images from "../images";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { CartContext } from "../context/cartContext";
 import ReactPaginate from "react-paginate";
 import axios from "axios";
 import { useQuery } from "react-query";
+import { useNavigate } from "react-router-dom";
+
 const Paintings = (props) => {
+  const { pagenumber } = useParams();
+
   const { cartItems, addCartItem, removeCartItem, printCartItems } =
     useContext(CartContext);
   const [added, setAdded] = useState(false);
@@ -14,6 +18,10 @@ const Paintings = (props) => {
     cartItems.map((item) =>
       item.id === enlargedImage.id ? setAdded(true) : ""
     );
+  };
+
+  const checkPageNumber = () => {
+    pagenumber !== undefined ? setCurrentPage(pagenumber) : setCurrentPage(0);
   };
 
   const removeItem = () => {
@@ -43,7 +51,7 @@ const Paintings = (props) => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
 
-  const paintingsPerPage = 12;
+  const paintingsPerPage = 9;
   const [paintings, setPaintings] = useState([]);
   const pagesVisited = currentPage * paintingsPerPage;
   const displayPaintings = paintings.slice(
@@ -82,10 +90,14 @@ const Paintings = (props) => {
       console.log(res);
     };
     fetchPaintings();
-  }, []);
+    checkPageNumber();
+  }, [pagenumber]);
+
+  const navigate = useNavigate();
 
   const changePage = ({ selected }) => {
     setCurrentPage(selected);
+    navigate(`/paintings/${selected}`);
   };
 
   return (
@@ -107,6 +119,7 @@ const Paintings = (props) => {
                 title={painting.title}
                 img_url={painting.img_url}
                 onEnlarge={onEnlarge}
+                product={painting}
               />
             );
           })}
