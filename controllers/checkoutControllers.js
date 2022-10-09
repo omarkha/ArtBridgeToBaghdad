@@ -1,6 +1,16 @@
 const Stripe = require("stripe")(process.env.STRIPE_API_SECRET);
-const { default: axios } = require("axios");
+const axios = require("axios");
 const { validateCartItems } = require("use-shopping-cart/utilities");
+const Painting = require("../models/painting.model");
+
+const getPaintings = async (req, res) => {
+  try {
+    const paint = await Painting.find();
+    res.json(paint);
+  } catch (err) {
+    res.send("err " + err);
+  }
+};
 
 const createCheckoutSession = async (req, res) => {
   try {
@@ -9,20 +19,14 @@ const createCheckoutSession = async (req, res) => {
         ? req.headers.origin
         : "http://localhost:5000";
 
-    const products = await axios
-      .get(`${origin}/api/paintings`)
-      .then((res) => {
-        res.data;
-        res.status(200);
-      })
-      .catch((err) => console.log("point1: " + err));
+    const products = await Painting.find();
 
     const cartItems = req.body;
     const line_items = validateCartItems(products, cartItems);
 
     const params = {
       submit_type: "pay",
-      payment_method_type: ["card"],
+      payment_method_types: ["card"],
       billing_address_collection: "auto",
       shipping_address_collection: {
         allowed_countries: ["US", "CA", "UK"],
