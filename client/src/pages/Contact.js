@@ -15,11 +15,10 @@ const Contact = () => {
           <h3>Contact Info:</h3>
 
           <div>
-            <p className="text-cyan">
+            <p className="text-dark">
               Email: amal4ch@gmail.com
               <br />
-              <br />
-              Phone: 845 - 616 - 7364
+              Phone: 1 (845) 616 - 7364
             </p>
           </div>
         </div>
@@ -29,7 +28,7 @@ const Contact = () => {
               <h3>Linkedin</h3>
               <div>
                 <img src={Images.linkedin_icon} />
-                <p className="text-light">Connect with me on Linkedin!</p>
+                <p className="text-dark">Connect with me on Linkedin!</p>
               </div>
             </a>
           </div>
@@ -39,7 +38,7 @@ const Contact = () => {
               <h3>Facebook</h3>
               <div>
                 <img src={Images.facebook_icon} />
-                <p className="text-light">My facebook page!</p>
+                <p className="text-dark">My facebook page!</p>
               </div>
             </a>
           </div>
@@ -48,7 +47,7 @@ const Contact = () => {
             <h3>Instagram</h3>
             <div>
               <img src={Images.instagram_icon} />
-              <p className="text-light">Follow me on Instagram!</p>
+              <p className="text-dark">Follow me on Instagram!</p>
             </div>
           </div>
 
@@ -56,7 +55,7 @@ const Contact = () => {
             <h3>Twitter</h3>
             <div>
               <img src={Images.twitter_icon} />
-              <p className="text-light">My tweets on Twitter!</p>
+              <p className="text-dark">My tweets on Twitter!</p>
             </div>
           </div>
         </div>
@@ -65,7 +64,7 @@ const Contact = () => {
         <div className="container-lg my-5">
           <div className="text-center">
             <h2>Get in Touch</h2>
-            <p className="lead">
+            <p className="text-dark">
               Questions to ask? fill out the form to contact me directly
             </p>
           </div>

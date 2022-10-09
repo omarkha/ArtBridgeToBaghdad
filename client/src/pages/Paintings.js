@@ -43,7 +43,7 @@ const Paintings = (props) => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
 
-  const paintingsPerPage = 10;
+  const paintingsPerPage = 12;
   const [paintings, setPaintings] = useState([]);
   const pagesVisited = currentPage * paintingsPerPage;
   const displayPaintings = paintings.slice(
@@ -95,7 +95,7 @@ const Paintings = (props) => {
       </div>
 
       <div className="results bg-dark">
-        <div className="row gap-5 justify-content-center justify-items-center container-lg">
+        <div className="paintings-section gap-5 justify-content-center justify-items-center container-lg">
           {displayPaintings.map((painting) => {
             return (
               <Painting

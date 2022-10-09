@@ -38,8 +38,8 @@ const Painting = (props) => {
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (
-    <div data-aos="fade" className="painting col-md-7" key={props.id}>
-      <div>
+    <div className="painting col-md-7" key={props.id}>
+      <div className="img-div">
         <img
           src={props.img_url}
           onClick={() =>
