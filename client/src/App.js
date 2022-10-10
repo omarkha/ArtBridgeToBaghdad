@@ -13,11 +13,12 @@ import ControlPanel from "./pages/admin-pages/ControlPanel";
 import Inventory from "./pages/admin-pages/Inventory";
 import Purchase from "./pages/Purchase";
 import CartContextProvider, { CartContext } from "./context/cartContext";
-import PaymentAccepted from "./pages/PaymentAccepted";
+import PaymentAccepted from "./pages/Result";
 import Product from "./pages/Product";
 import { loadStripe } from "@stripe/stripe-js";
 import { CartProvider } from "use-shopping-cart";
 import { Toaster } from "react-hot-toast";
+import Result from "./pages/Result";
 function App() {
   const stripePromise =
     "pk_test_51LpwKaItBHTQUADWH08XmDkJCem08nkWM2stMm9yG9cEjPqCU2wBnkAP6mQt9HXgdAAMYdigiaQjiq6rZziLs4DS00qfYCnAIw";
@@ -47,7 +48,7 @@ function App() {
               <Route path="/control-panel" element={<ControlPanel />} />
               <Route path="/control-panel/inventory" element={<Inventory />} />
               <Route path="/products/:productId" element={<Product />} />
-              <Route path="/paymentsuccess" element={<PaymentAccepted />} />
+              <Route path="/result" element={<Result />} />
             </Routes>
 
             <Footer />

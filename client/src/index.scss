@@ -909,10 +909,22 @@ aside li {
   background-color: rgba(25, 25, 25, 0.82);
   width: 38%;
   padding: 34px 13px;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-area div {
   margin: 13px;
+}
+
+.result-page section {
+  margin: 89px auto;
+  margin-bottom: 233px;
+  border: 2px solid rgb(101, 185, 30);
+  border-radius: 55px;
+  width: fit-content;
+  padding: 25px 50px;
+  background: linear-gradient(34deg, rgb(230, 255, 230), rgb(205, 255, 205));
 }
 
 .page {
@@ -922,6 +934,10 @@ aside li {
   display: block;
   margin: 13px;
   color: rgb(200, 101, 160);
+}
+
+.input-area input[type="text"] {
+  text-align: center;
 }
 
 .results-area {

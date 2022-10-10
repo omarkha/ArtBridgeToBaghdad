@@ -8,6 +8,24 @@ const uri =
     ? "https://artbridgetobaghdad.herokuapp.com"
     : "http://localhost:5000";
 
+const getCheckoutSession = async (req, res) => {
+  const sessionId = req.params;
+  try {
+    if (!sessionId.startsWith("cs_")) {
+      throw Error("Incorrect checkout Session Id");
+    }
+    const checkout_session = await stripe.checkout.sessions.retrieve(
+      sessionId,
+      {
+        expand: ["payment_intent"],
+      }
+    );
+    res.status(200).json(checkout_session);
+  } catch (error) {
+    res.status(500).json({ statusCode: 500, message: error.message });
+  }
+};
+
 const createCheckoutSession = async (req, res) => {
   try {
     let line_items;

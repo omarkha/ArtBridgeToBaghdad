@@ -5,9 +5,9 @@ import { RiCompassDiscoverLine } from "react-icons/ri";
 import axios from "axios";
 
 const Inventory = () => {
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-  const [price, setPrice] = useState(0);
+  const [width, setWidth] = useState();
+  const [height, setHeight] = useState();
+  const [price, setPrice] = useState();
   const [title, setTitle] = useState("");
   const [imageSelected, setImageSelected] = useState("www.image.com");
   const [file, setFile] = useState();
@@ -119,15 +119,7 @@ const Inventory = () => {
         </section>
         <section className="results-area">
           <div className="inventory-area">
-            <Painting
-              width={width}
-              height={height}
-              price={price}
-              img_url={image}
-              title={title}
-              key="er23123"
-              id="er23123"
-            />
+            <div></div>
           </div>
         </section>
       </div>
