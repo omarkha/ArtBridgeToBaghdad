@@ -1,12 +1,20 @@
-const Stripe = require("stripe")(process.env.STRIPE_API_SECRET);
+const Stripe = require("stripe")(
+  "sk_test_51LpwKaItBHTQUADWCBZdsRb1sxlJPF7BB1dngIlUmwt6eArktrjk2NGt50yLL5XxRmR2t2YinSiVXMCtwIhfhshr00VsIFkZGX"
+);
 const axios = require("axios");
 const { validateCartItems } = require("use-shopping-cart/utilities");
 const Painting = require("../models/painting.model");
 
+const uri =
+  process.env.NODE_ENV === "production"
+    ? "https://artbridgetobaghdad.herokuapp.com"
+    : "http://localhost:5000";
+
 const getPaintings = async (req, res) => {
   try {
-    const paint = await Painting.find();
-    res.json(paint);
+    const paint = await axios
+      .get(`${uri}/api/paintings`)
+      .then((res) => (products = res.json(paint)));
   } catch (err) {
     res.send("err " + err);
   }
@@ -14,23 +22,25 @@ const getPaintings = async (req, res) => {
 
 const createCheckoutSession = async (req, res) => {
   try {
+    let line_items;
+    const cartItems = req.body;
     const origin =
       process.env.NODE_ENV === "production"
         ? req.headers.origin
         : "http://localhost:5000";
+    await axios.get(`${uri}/api/paintings`).then((res) => {
+      line_items = validateCartItems(res.data, cartItems);
+    });
 
-    const products = await Painting.find();
-
-    const cartItems = req.body;
-    const line_items = validateCartItems(products, cartItems);
-
+    console.log(line_items);
     const params = {
       submit_type: "pay",
       payment_method_types: ["card"],
       billing_address_collection: "auto",
       shipping_address_collection: {
-        allowed_countries: ["US", "CA", "UK"],
+        allowed_countries: ["US", "CA"],
       },
+      currency: "USD",
       line_items,
       success_url: `${origin}/result?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: origin,

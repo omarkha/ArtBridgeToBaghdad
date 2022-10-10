@@ -13,6 +13,8 @@ const Painting = (props) => {
   const { addItem, removeItem, cartCount, cartDetails, totalPrice, clearCart } =
     useShoppingCart();
 
+  const [product, setProduct] = useState(props.product);
+
   const id = props.id;
 
   const [added, setAdded] = useState(false);
@@ -31,40 +33,43 @@ const Painting = (props) => {
 
     setAdded(false);
     toast.success(
-      props.title
-        ? `${props.title} has been Removed to Your Cart`
+      product.title
+        ? `${product.title} has been Removed to Your Cart`
         : "Item Removed to Your Cart"
     );
   };
 
   const addItemToCart = () => {
+    console.log(product.price);
     setAdded(true);
-    addItem(props.product);
+    addItem(product);
     toast.success(
-      props.title
-        ? `${props.title} has been Added to Your Cart!`
+      product.title
+        ? `${product.title} has been Added to Your Cart!`
         : "Item Added to Your Cart!"
     );
   };
 
-  useEffect(() => checkAdded(), [cartDetails]);
+  useEffect(() => {
+    checkAdded();
+  }, [cartDetails]);
 
-  const price = formatProductPrice(props.product);
+  const price = formatProductPrice(product);
 
   const addButtonStyle = added ? "btn btn-danger" : "btn btn-success";
   return (
     <div className="painting col-md-7" key={props.id}>
       <div className="img-div">
         <img
-          src={props.img_url}
+          src={product.img_url}
           onClick={() =>
             props.onEnlarge({
-              img_url: props.img_url,
-              title: props.title,
-              price: props.price,
-              width: props.width,
-              height: props.height,
-              id: props.id,
+              img_url: product.img_url,
+              title: product.title,
+              price: product.price,
+              width: product.width,
+              height: product.height,
+              id: product.id,
             })
           }
           data-bs-toggle="modal"
@@ -73,7 +78,7 @@ const Painting = (props) => {
       </div>
       <div className="info text-dark">
         <h4>
-          {props.width} " / {props.height} "{" "}
+          {product.width} " / {product.height} "{" "}
         </h4>
         <h3 className="lead text-dark">{props.title}</h3>
         <h5 className="text-dark">{price}</h5>

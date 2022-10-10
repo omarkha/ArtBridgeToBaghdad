@@ -15,14 +15,18 @@ const SelectedPainting = (props) => {
       <button onClick={() => removeItem()}>
         <TiDeleteOutline className="icon" />
       </button>
-      <img src={props.img_url} />
-      <h3 className="h5">{props.title}</h3>
-      <ul className="list-group list-group-flush">
-        <li className="list-group-item">
-          {props.width + ' " x ' + props.height + ' " '}
-        </li>
-        <li className="list-group-item">{"$" + props.price}</li>
-      </ul>
+      <div>
+        <img src={props.img_url} />
+      </div>
+      <div>
+        <h3 className="h5">{props.title}</h3>
+        <ul className="list-group list-group-flush">
+          <li className="list-group-item">
+            {props.width + ' " x ' + props.height + ' " '}
+          </li>
+          <li className="list-group-item">{"$" + props.price}</li>
+        </ul>
+      </div>
     </div>
   );
 };

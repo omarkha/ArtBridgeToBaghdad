@@ -7,10 +7,7 @@ export default function useCheckout() {
 
   async function handleCheckout() {
     const session = await axios
-      .post(
-        "https://artbridgetobaghdad.herokuapp.com/api/checkout-sessions",
-        cartDetails
-      )
+      .post("http://localhost:5000/api/checkout-sessions", cartDetails)
       .then((res) => res.data)
       .catch((err) => {
         toast.error("Checkout Failed :(");

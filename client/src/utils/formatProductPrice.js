@@ -2,8 +2,8 @@ import { formatCurrencyString } from "use-shopping-cart";
 
 export default function formatProductPrice(product) {
   return formatCurrencyString({
-    value: product.price * 100,
+    value: product.price,
     currency: "USD",
-    language: "English",
+    language: navigator.language,
   });
 }
