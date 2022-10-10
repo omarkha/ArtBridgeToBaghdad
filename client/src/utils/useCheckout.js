@@ -8,7 +8,7 @@ export default function useCheckout() {
 
   async function handleCheckout() {
     const session = await axios
-      .post("http://localhost:5000/api/checkout-sessions", cartDetails)
+      .post("/api/checkout-sessions", cartDetails)
       .then((res) => {
         console.log(res.data);
         return res.data;
