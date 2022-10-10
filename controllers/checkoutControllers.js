@@ -1,4 +1,4 @@
-const Stripe = require("stripe")(
+const stripe = require("stripe")(
   "sk_test_51LpwKaItBHTQUADWCBZdsRb1sxlJPF7BB1dngIlUmwt6eArktrjk2NGt50yLL5XxRmR2t2YinSiVXMCtwIhfhshr00VsIFkZGX"
 );
 const axios = require("axios");
@@ -47,7 +47,7 @@ const createCheckoutSession = async (req, res) => {
       mode: "payment",
     };
 
-    const checkoutSession = await Stripe.checkout.sessions.create(params);
+    const checkoutSession = await stripe.checkout.sessions.create(params);
 
     res.status(200).json(checkoutSession);
   } catch (err) {
