@@ -19,10 +19,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { CartProvider } from "use-shopping-cart";
 import { Toaster } from "react-hot-toast";
 function App() {
-  const stripePromise = loadStripe(
-    "pk_test_51LpwKaItBHTQUADWH08XmDkJCem08nkWM2stMm9yG9cEjPqCU2wBnkAP6mQt9HXgdAAMYdigiaQjiq6rZziLs4DS00qfYCnAIw"
-  );
-
+  const stripePromise =
+    "pk_test_51LpwKaItBHTQUADWH08XmDkJCem08nkWM2stMm9yG9cEjPqCU2wBnkAP6mQt9HXgdAAMYdigiaQjiq6rZziLs4DS00qfYCnAIw";
   return (
     <Router>
       <div className="App">

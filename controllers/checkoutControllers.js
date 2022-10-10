@@ -1,6 +1,4 @@
-const stripe = require("stripe")(
-  "sk_test_51LpwKaItBHTQUADWCBZdsRb1sxlJPF7BB1dngIlUmwt6eArktrjk2NGt50yLL5XxRmR2t2YinSiVXMCtwIhfhshr00VsIFkZGX"
-);
+const stripe = require("stripe")(process.env.STRIPE_API_SECRET);
 const axios = require("axios");
 const { validateCartItems } = require("use-shopping-cart/utilities");
 const Painting = require("../models/painting.model");
@@ -9,16 +7,6 @@ const uri =
   process.env.NODE_ENV === "production"
     ? "https://artbridgetobaghdad.herokuapp.com"
     : "http://localhost:5000";
-
-const getPaintings = async (req, res) => {
-  try {
-    const paint = await axios
-      .get(`${uri}/api/paintings`)
-      .then((res) => (products = res.json(paint)));
-  } catch (err) {
-    res.send("err " + err);
-  }
-};
 
 const createCheckoutSession = async (req, res) => {
   try {
