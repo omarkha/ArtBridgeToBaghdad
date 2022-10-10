@@ -9,7 +9,7 @@ import { useShoppingCart } from "use-shopping-cart";
 import useCheckout from "../utils/useCheckout";
 
 const Cart = () => {
-  const { cartDetails, removeItem, cartCount } = useShoppingCart();
+  const { cartDetails, removeItem, cartCount, tota } = useShoppingCart();
   const handleCheckout = useCheckout();
   const removeCartItem = (id) => {
     removeItem(id);
@@ -64,20 +64,19 @@ const Cart = () => {
   return (
     <div className="container">
       {" "}
-      <h1 className="display-5 my-5">
-        {" "}
-        You have {cartItems.length} items in your Cart
-      </h1>
+      <h1 className="display-5 my-5"> Your Cart</h1>
       <div className="cart-view">
         {cartItems.length > 0 ? (
           cartItems.map((e, i) => (
             <SelectedPainting
               img_url={e.img_url}
               price={e.price}
+              title={e.name}
               width={e.width}
               height={e.height}
               id={e._id}
               key={e._id}
+              product={e}
               removeItem={removeCartItem}
             />
           ))
@@ -89,14 +88,14 @@ const Cart = () => {
         <div className="cart-info">
           <h3>{"You have " + cartItems.length + "  items selected"}</h3>
           <h3 id="cart-total" onClick={() => getTotal()}>
-            {"The total is $" + Math.floor(printTotal() * 100) / 100}
+            {"The total is $" + Math.floor(printTotal()) / 100}
           </h3>
         </div>
 
         <button
           onClick={handleCheckout}
           disabled={!cartCount}
-          className="btn btn-success"
+          className="btn-slide-purchase"
         >
           Purchase Items
         </button>

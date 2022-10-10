@@ -34,18 +34,18 @@ const Painting = (props) => {
     setAdded(false);
     toast.success(
       product.title
-        ? `${product.title} has been Removed to Your Cart`
-        : "Item Removed to Your Cart"
+        ? `${product.name} has been Removed From Your Cart`
+        : "Item Removed From Your Cart"
     );
   };
 
   const addItemToCart = () => {
-    console.log(product.price);
+    console.log("price: ", product.price, ". ID: ", product._id);
     setAdded(true);
     addItem(product);
     toast.success(
-      product.title
-        ? `${product.title} has been Added to Your Cart!`
+      product.name
+        ? `${product.name} has been Added to Your Cart!`
         : "Item Added to Your Cart!"
     );
   };

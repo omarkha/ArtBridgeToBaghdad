@@ -7,17 +7,19 @@ import { Parallax } from "react-parallax";
 import { Link } from "react-router-dom";
 import displayimage from "../images/displayimage.jpg";
 import bgx from "../images/background_x.png";
-import bgx2 from "../images/sunbg.png";
+import bgx2 from "../images/sunbg2.png";
 import logo2 from "../images/logo2.png";
+import arabknight from "../images/arabknight.png";
 
 const Home = () => {
   const carouselImages = [Images.amal_image, Images.amal_image_2];
+
   return (
     <div className="home">
       <Parallax
         strength={-200}
         blur={{ min: -9, max: 15 }}
-        bgImage={bgx}
+        bgImage={bgx2}
         className="home-hero-background"
       >
         <div className="heading container-lg">
@@ -46,8 +48,12 @@ const Home = () => {
                 by Traditional Iraqi Artist, <br /> Amal Maseer
               </h6>
               <p className="py-3">
-                <Link className="btn-slide my-5" to="/about" role="button">
-                  Our Story
+                <Link
+                  className="btn-slide py-3 px-5 my-5"
+                  to="/paintings"
+                  role="button"
+                >
+                  View Gallery
                 </Link>
               </p>
             </div>
@@ -55,7 +61,7 @@ const Home = () => {
         </div>
       </Parallax>
       <Parallax
-        bgImage={bgx2}
+        bgImage={bgx}
         style={{ mixBlendMode: "darken" }}
         strength={-100}
       >
@@ -160,7 +166,7 @@ const Home = () => {
           </div>
         </div>
       </Parallax>
-      <Parallax strength={-200} bgImage={Images.painting_knights}>
+      <Parallax strength={-200} bgImage={arabknight}>
         <div style={{ height: "1597px", margin: "0 auto" }}>
           <div className="container-lg">
             <h3
@@ -175,7 +181,11 @@ const Home = () => {
               className="col-md-12 row my-5 parag"
               style={{ position: "relative", top: "610px" }}
             >
-              <img className="col-md-4" src={Images.amal_image} />
+              <img
+                id="amalsphoto"
+                className="col-md-4"
+                src={Images.amal_image}
+              />
               <div className="col-md-8 mt-5 px-5">
                 <p className="text-light h2 text-shadow">
                   Welcome to my online shop!
@@ -183,6 +193,16 @@ const Home = () => {
                   <br />
                   I'm Amal Maseer, owner of the Art Bridge to Baghdad gallery.
                   Thanks for your visit, Enjoy your time and happy scrolling!
+                </p>
+                <br />
+                <p className="py-3">
+                  <Link
+                    className="btn-slide text-light my-5"
+                    to="/about"
+                    role="button"
+                  >
+                    Click Her For My Story
+                  </Link>
                 </p>
               </div>
             </div>

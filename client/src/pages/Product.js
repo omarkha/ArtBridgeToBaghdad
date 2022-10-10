@@ -80,52 +80,59 @@ const Product = (props) => {
           </div>
           <div className="product-info">
             <label>title</label>
-            <h4>{product.title ? product.title : "Art Bridge To Baghdad"}</h4>
-            <labe>dimensions</labe>
+            <h1 className="h4">
+              {product.name ? product.name : "Art Bridge To Baghdad"}
+            </h1>
+            <label>dimensions</label>
             <h4>
               {product.height} in / {product.width} in
             </h4>
-            <labe>price</labe>
-            <h4>${product.price}</h4>
+            <label>price</label>
+            <h4>{price}</h4>
             <label>Item ID</label>
             <h6>{product._id}</h6>
             <h3>
-              This Item is {product.isSold === true ? "Sold" : "Available!"}
+              This Item is {product.is_sold === true ? "Sold!" : "Available!"}
             </h3>
-            <div className="painting-buttons">
-              <button
-                className="btn btn-primary text-light"
-                onClick={() => console.log(productId)}
-              >
-                <FaShareAlt />
-              </button>
 
-              <button
-                className="btn btn-primary text-light"
-                onClick={() => console.log(cartDetails)}
-              >
-                <AiFillLike />
-              </button>
-              <button
-                onClick={() => {
-                  if (cartCount > 0) {
-                    checkAdded();
+            {props.is_sold ? (
+              "This Item has Been Sold!"
+            ) : (
+              <div className="painting-buttons">
+                <button
+                  className="btn btn-primary text-light"
+                  onClick={() => console.log(productId)}
+                >
+                  <FaShareAlt />
+                </button>
 
-                    if (added) {
-                      removeItemFromCart();
+                <button
+                  className="btn btn-primary text-light"
+                  onClick={() => console.log(cartDetails)}
+                >
+                  <AiFillLike />
+                </button>
+                <button
+                  onClick={() => {
+                    if (cartCount > 0) {
+                      checkAdded();
+
+                      if (added) {
+                        removeItemFromCart();
+                      } else {
+                        addItemToCart();
+                      }
                     } else {
                       addItemToCart();
                     }
-                  } else {
-                    addItemToCart();
-                  }
-                  console.log(cartDetails);
-                }}
-                className={addButtonStyle}
-              >
-                {added ? "remove" : "add to cart"}
-              </button>
-            </div>
+                    console.log(cartDetails);
+                  }}
+                  className={addButtonStyle}
+                >
+                  {added ? "remove" : "add to cart"}
+                </button>
+              </div>
+            )}
           </div>
         </section>
       </div>

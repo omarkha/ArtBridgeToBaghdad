@@ -20,7 +20,7 @@ export default function useCheckout() {
     console.log(session.id);
 
     if (session) {
-      redirectToCheckout({ sessionId: session.id });
+      redirectToCheckout(session.id);
     }
   }
 

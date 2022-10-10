@@ -48,7 +48,7 @@ const Paintings = (props) => {
 
   //////////
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(0);
 
   const paintingsPerPage = 9;
@@ -81,6 +81,7 @@ const Paintings = (props) => {
   };
 
   useEffect(() => {
+    setLoading(true);
     const fetchPaintings = async () => {
       const res = await axios.get(
         "https://artbridgetobaghdad.herokuapp.com/api/paintings"
@@ -108,21 +109,27 @@ const Paintings = (props) => {
 
       <div className="results bg-dark">
         <div className="paintings-section gap-5 justify-content-center justify-items-center container-lg">
-          {displayPaintings.map((painting) => {
-            return (
-              <Painting
-                id={painting._id}
-                key={painting._id}
-                price={painting.price}
-                height={painting.height}
-                width={painting.width}
-                title={painting.title}
-                img_url={painting.img_url}
-                onEnlarge={onEnlarge}
-                product={painting}
-              />
-            );
-          })}
+          {loading ? (
+            <div class="spinner-border" color="#fff" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          ) : (
+            displayPaintings.map((painting) => {
+              return (
+                <Painting
+                  id={painting._id}
+                  key={painting._id}
+                  price={painting.price}
+                  height={painting.height}
+                  width={painting.width}
+                  title={painting.name}
+                  img_url={painting.image}
+                  onEnlarge={onEnlarge}
+                  product={painting}
+                />
+              );
+            })
+          )}
         </div>
       </div>
 

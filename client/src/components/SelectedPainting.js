@@ -1,10 +1,13 @@
 import React from "react";
 import { TiDeleteOutline } from "react-icons/ti";
+import formatProductPrice from "../utils/formatProductPrice";
 
 const SelectedPainting = (props) => {
   const removeItem = () => {
     props.removeItem(props.id);
   };
+
+  const price = formatProductPrice(props.product);
   return (
     <div
       className="card selected-painting"
@@ -24,7 +27,7 @@ const SelectedPainting = (props) => {
           <li className="list-group-item">
             {props.width + ' " x ' + props.height + ' " '}
           </li>
-          <li className="list-group-item">{"$" + props.price}</li>
+          <li className="list-group-item">{price}</li>
         </ul>
       </div>
     </div>

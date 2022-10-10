@@ -10,9 +10,6 @@ const paintingSchema = new Schema(
     shares: {
       type: Number,
     },
-    title: {
-      type: String,
-    },
     height: {
       type: Number,
       required: true,
@@ -41,6 +38,17 @@ const paintingSchema = new Schema(
     },
     price: {
       type: Number,
+      required: true,
+    },
+    artist: {
+      type: String,
+    },
+    image: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
       required: true,
     },
   },
