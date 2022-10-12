@@ -1,7 +1,7 @@
 # artbridgetobaghdad
 
 
-The Art Bridge To Baghdad is a website I made for my mother. She is an artist and a painter who sells her artwork in Galleries across the Globe.
+The Art Bridge To Baghdad is a website I made for my mother. She is an artist and a painter who sells her artwork in Galleries across the Globe and especaiily in the US. Mainly.
 
 The technologies I utilized on this project are HTML, CSS, JavaScript, Sass, Bootstrap, Stripe, React.js, Node.js, Express.js, MongoDB, Mongoose, and I deployed the website to Heroku.
 
