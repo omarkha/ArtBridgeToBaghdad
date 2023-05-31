@@ -41,7 +41,7 @@ const Cart = () => {
   const payNow = async (token) => {
     try {
       const response = await axios({
-        url: "http://localhost:5000/payment",
+        url: "http://artbridgetobaghdad.onrender.com/payment",
         method: "post",
         data: {
           amount: total * 100,
