@@ -12,9 +12,8 @@
     "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "cd client && rm -rf build && npm install",
-    "eject": "react-scripts eject",
-    "postbuild": "npm run build"
+    "build": "cd client && rm -rf build && npm run build",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
