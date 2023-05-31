@@ -84,7 +84,7 @@ const Paintings = (props) => {
     setLoading(true);
     const fetchPaintings = async () => {
       const res = await axios.get(
-        "https://artbridgetobaghdad.herokuapp.com/api/paintings"
+        "https://artbridgetobaghdad.onrender.com/api/paintings"
       );
       setPaintings(res.data);
       setLoading(false);
