@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 const NewsLetter = () => {
-  const URI_Atlas = "https://artbridgetobaghdad.herokuapp.com";
+  const URI_Atlas = "https://artbridgetobaghdad.onrender.com";
   const URI_Local = "http://localhost:5000";
 
   const [name, setName] = useState("");
